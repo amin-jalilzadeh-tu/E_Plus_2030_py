@@ -1,0 +1,3358 @@
+!- Windows Line endings 
+
+Version,
+    23.2;                     !- Version Identifier
+
+SimulationControl,
+    Yes,                      !- Do Zone Sizing Calculation
+    Yes,                      !- Do System Sizing Calculation
+    Yes,                      !- Do Plant Sizing Calculation
+    No,                       !- Run Simulation for Sizing Periods
+    Yes,                      !- Run Simulation for Weather File Run Periods
+    No,                       !- Do HVAC Sizing Simulation for Sizing Periods
+    ;                         !- Maximum Number of HVAC Sizing Simulation Passes
+
+BUILDING,
+    Sample_Building_1,        !- Name
+    135,                      !- North Axis
+    Suburbs,                  !- Terrain
+    0.04,                     !- Loads Convergence Tolerance Value
+    0.4,                      !- Temperature Convergence Tolerance Value
+    FullExterior,             !- Solar Distribution
+    25,                       !- Maximum Number of Warmup Days
+    1;                        !- Minimum Number of Warmup Days
+
+Timestep,
+    4;                        !- Number of Timesteps per Hour
+
+Site:Location,
+    Amsterdam_Netherlands,    !- Name
+    52.37,                    !- Latitude
+    4.89,                     !- Longitude
+    1,                        !- Time Zone
+    -2;                       !- Elevation
+
+SizingPeriod:DesignDay,
+    Netherlands Ann Htg 99.6% Condns DB,    !- Name
+    1,                        !- Month
+    21,                       !- Day of Month
+    WinterDesignDay,          !- Day Type
+    -5,                       !- Maximum DryBulb Temperature
+    0,                        !- Daily DryBulb Temperature Range
+    ,                         !- DryBulb Temperature Range Modifier Type
+    ,                         !- DryBulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                  !- Humidity Condition Type
+    -5,                       !- Wetbulb or DewPoint at Maximum DryBulb
+    ,                         !- Humidity Condition Day Schedule Name
+    ,                         !- Humidity Ratio at Maximum DryBulb
+    ,                         !- Enthalpy at Maximum DryBulb
+    ,                         !- Daily WetBulb Temperature Range
+    102000,                   !- Barometric Pressure
+    4,                        !- Wind Speed
+    270,                      !- Wind Direction
+    No,                       !- Rain Indicator
+    No,                       !- Snow Indicator
+    No,                       !- Daylight Saving Time Indicator
+    ASHRAEClearSky,           !- Solar Model Indicator
+    ,                         !- Beam Solar Day Schedule Name
+    ,                         !- Diffuse Solar Day Schedule Name
+    ,                         !- ASHRAE Clear Sky Optical Depth for Beam Irradiance taub
+    ,                         !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance taud
+    0;                        !- Sky Clearness
+
+SizingPeriod:DesignDay,
+    Netherlands Ann Clg 1% Condns DB=>MWB,    !- Name
+    7,                        !- Month
+    21,                       !- Day of Month
+    SummerDesignDay,          !- Day Type
+    28,                       !- Maximum DryBulb Temperature
+    10,                       !- Daily DryBulb Temperature Range
+    ,                         !- DryBulb Temperature Range Modifier Type
+    ,                         !- DryBulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                  !- Humidity Condition Type
+    17,                       !- Wetbulb or DewPoint at Maximum DryBulb
+    ,                         !- Humidity Condition Day Schedule Name
+    ,                         !- Humidity Ratio at Maximum DryBulb
+    ,                         !- Enthalpy at Maximum DryBulb
+    ,                         !- Daily WetBulb Temperature Range
+    102000,                   !- Barometric Pressure
+    3.5,                      !- Wind Speed
+    90,                       !- Wind Direction
+    No,                       !- Rain Indicator
+    No,                       !- Snow Indicator
+    No,                       !- Daylight Saving Time Indicator
+    ASHRAEClearSky,           !- Solar Model Indicator
+    ,                         !- Beam Solar Day Schedule Name
+    ,                         !- Diffuse Solar Day Schedule Name
+    ,                         !- ASHRAE Clear Sky Optical Depth for Beam Irradiance taub
+    ,                         !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance taud
+    1;                        !- Sky Clearness
+
+RunPeriod,
+    Run Period 1,             !- Name
+    1,                        !- Begin Month
+    1,                        !- Begin Day of Month
+    ,                         !- Begin Year
+    12,                       !- End Month
+    31,                       !- End Day of Month
+    ,                         !- End Year
+    Tuesday,                  !- Day of Week for Start Day
+    Yes,                      !- Use Weather File Holidays and Special Days
+    Yes,                      !- Use Weather File Daylight Saving Period
+    No,                       !- Apply Weekend Holiday Rule
+    Yes,                      !- Use Weather File Rain Indicators
+    Yes;                      !- Use Weather File Snow Indicators
+
+SITE:GROUNDTEMPERATURE:BUILDINGSURFACE,
+    2.6394267984578836,       !- January Ground Temperature
+    3.5375161328340003,       !- February Ground Temperature
+    4.550058636738239,        !- March Ground Temperature
+    7.558026845372057,        !- April Ground Temperature
+    14.472942428328025,       !- May Ground Temperature
+    16.176699487422912,       !- June Ground Temperature
+    18.78435913540969,        !- July Ground Temperature
+    17.673877665258832,       !- August Ground Temperature
+    14.84384363937054,        !- September Ground Temperature
+    9.059594438876141,        !- October Ground Temperature
+    6.65591392441081,         !- November Ground Temperature
+    4.0107105762067246;       !- December Ground Temperature
+
+SCHEDULETYPELIMITS,
+    Temperature,              !- Name
+    -100,                     !- Lower Limit Value
+    200,                      !- Upper Limit Value
+    CONTINUOUS,               !- Numeric Type
+    Dimensionless;            !- Unit Type
+
+SCHEDULETYPELIMITS,
+    ControlType,              !- Name
+    0,                        !- Lower Limit Value
+    4,                        !- Upper Limit Value
+    DISCRETE,                 !- Numeric Type
+    Dimensionless;            !- Unit Type
+
+Schedule:Compact,
+    ALWAYS22C,                !- Name
+    Temperature,              !- Schedule Type Limits Name
+    Through: 12/31,           !- Field 1
+    For: AllDays,             !- Field 2
+    Until: 24:00,             !- Field 3
+    22.0;                     !- Field 4
+
+SCHEDULE:COMPACT,
+    LightsSchedule,           !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    Through: 12/31,           !- Field 1
+    For: WeekDays,            !- Field 2
+    Until: 24:00,0.50,        !- Field 3
+    For: Saturday,            !- Field 4
+    Until: 24:00,0.50,        !- Field 5
+    For: Sunday,              !- Field 6
+    Until: 24:00,0.50;        !- Field 7
+
+SCHEDULE:COMPACT,
+    ParasiticSchedule,        !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    Through: 12/31,           !- Field 1
+    For: AllDays,             !- Field 2
+    Until: 24:00,1.0;         !- Field 3
+
+SCHEDULE:COMPACT,
+    MyDHW_1_UseFraction,      !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    Through: 12/31,           !- Field 1
+    For: AllDays,             !- Field 2
+    Until: 06:00, 0.0,        !- Field 3
+    Until: 08:00, 0.62,       !- Field 4
+    Until: 10:00, 0.98,       !- Field 5
+    Until: 17:00, 0.20,       !- Field 6
+    Until: 21:00, 0.69,       !- Field 7
+    Until: 24:00, 0.62;       !- Field 8
+
+SCHEDULE:COMPACT,
+    MyDHW_1_Setpoint,         !- Name
+    Temperature,              !- Schedule Type Limits Name
+    Through: 12/31,           !- Field 1
+    For: AllDays,             !- Field 2
+    Until: 24:00, 59.472942428328025;    !- Field 3
+
+SCHEDULE:COMPACT,
+    ZONE CONTROL TYPE SCHEDULE,    !- Name
+    ControlType,              !- Schedule Type Limits Name
+    Through: 12/31,           !- Field 1
+    For: AllDays,             !- Field 2
+    Until: 24:00,4;           !- Field 3
+
+SCHEDULE:COMPACT,
+    ZONE HEATING SETPOINTS,    !- Name
+    Temperature,              !- Schedule Type Limits Name
+    Through: 12/31,           !- Field 1
+    For: AllDays,             !- Field 2
+    Until: 07:00,15.05,       !- Field 3
+    Until: 19:00,21.28,       !- Field 4
+    Until: 24:00,15.05;       !- Field 5
+
+SCHEDULE:COMPACT,
+    ZONE COOLING SETPOINTS,    !- Name
+    Temperature,              !- Schedule Type Limits Name
+    Through: 12/31,           !- Field 1
+    For: AllDays,             !- Field 2
+    Until: 07:00,25.45,       !- Field 3
+    Until: 19:00,23.55,       !- Field 4
+    Until: 24:00,25.45;       !- Field 5
+
+SCHEDULE:COMPACT,
+    VentSched_DayNight,       !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    Through: 12/31,           !- Field 1
+    For: AllDays,             !- Field 2
+    Until: 06:00,0.5,         !- Field 3
+    Until: 22:00,1.0,         !- Field 4
+    Until: 24:00,0.5;         !- Field 5
+
+SCHEDULE:COMPACT,
+    WorkHoursSched,           !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    Through: 12/31,           !- Field 1
+    For: Weekdays,            !- Field 2
+    Until: 09:00,0.2,         !- Field 3
+    Until: 17:00,1.0,         !- Field 4
+    Until: 24:00,0.2,         !- Field 5
+    For: Saturday Sunday Holiday,    !- Field 6
+    Until: 24:00,0.2;         !- Field 7
+
+SCHEDULE:CONSTANT,
+    AlwaysOnSched,            !- Name
+    Fraction,                 !- Schedule Type Limits Name
+    1;                        !- Hourly Value
+
+MATERIAL,
+    DoorPanel_Range,          !- Name
+    MediumRough,              !- Roughness
+    0.1427511830744934,       !- Thickness
+    1.4825087955107357,       !- Conductivity
+    622.3210738148823,        !- Density
+    2347.2942428328024,       !- Specific Heat
+    0.9,                      !- Thermal Absorptance
+    0.7,                      !- Solar Absorptance
+    0.7;                      !- Visible Absorptance
+
+MATERIAL,
+    ground_floor_OpaqueMat,    !- Name
+    MediumRough,              !- Roughness
+    1.005307e-01,             !- Thickness
+    2.872306e-02,             !- Conductivity
+    2229.976887555905,        !- Density
+    877.2470740301609,        !- Specific Heat
+    0.9,                      !- Thermal Absorptance
+    0.7,                      !- Solar Absorptance
+    0.7;                      !- Visible Absorptance
+
+MATERIAL,
+    exterior_wall_OpaqueMat,    !- Name
+    MediumRough,              !- Roughness
+    1.965548e-01,             !- Thickness
+    5.615851e-02,             !- Conductivity
+    2283.6594545112625,       !- Density
+    859.2745843380148,        !- Specific Heat
+    0.9,                      !- Thermal Absorptance
+    0.7,                      !- Solar Absorptance
+    0.7;                      !- Visible Absorptance
+
+MATERIAL,
+    inter_floor_OpaqueMat,    !- Name
+    MediumSmooth,             !- Roughness
+    0.1268369482695464,       !- Thickness
+    0.0634184741347732,       !- Conductivity
+    1815.9583953847255,       !- Density
+    823.279088636103,         !- Specific Heat
+    0.9,                      !- Thermal Absorptance
+    0.7,                      !- Solar Absorptance
+    0.7;                      !- Visible Absorptance
+
+MATERIAL,
+    interior_wall_OpaqueMat,    !- Name
+    MediumSmooth,             !- Roughness
+    0.1468327293856247,       !- Thickness
+    9.788849e-02,             !- Conductivity
+    821.8262011333976,        !- Density
+    834.2277296396194,        !- Specific Heat
+    0.9,                      !- Thermal Absorptance
+    0.7,                      !- Solar Absorptance
+    0.7;                      !- Visible Absorptance
+
+MATERIAL,
+    windows_OpaqueMat,        !- Name
+    MediumRough,              !- Roughness
+    2.327137e-01,             !- Thickness
+    0.8144979892730767,       !- Conductivity
+    622.9048071964104,        !- Density
+    2206.4200487808075,       !- Specific Heat
+    0.9,                      !- Thermal Absorptance
+    0.7,                      !- Solar Absorptance
+    0.7;                      !- Visible Absorptance
+
+MATERIAL,
+    doors_OpaqueMat,          !- Name
+    MediumRough,              !- Roughness
+    1.835195e-01,             !- Thickness
+    0.6423182819083558,       !- Conductivity
+    645.8851852587399,        !- Density
+    2252.9760332996107,       !- Specific Heat
+    0.9,                      !- Thermal Absorptance
+    0.7,                      !- Solar Absorptance
+    0.7;                      !- Visible Absorptance
+
+MATERIAL:NOMASS,
+    flat_roof_OpaqueMat,      !- Name
+    MediumRough,              !- Roughness
+    3.5,                      !- Thermal Resistance
+    0.9,                      !- Thermal Absorptance
+    0.7,                      !- Solar Absorptance
+    0.7;                      !- Visible Absorptance
+
+WINDOWMATERIAL:GLAZING,
+    Glazing_Clear_3mm,        !- Name
+    SpectralAverage,          !- Optical Data Type
+    ,                         !- Window Glass Spectral Data Set Name
+    0.003,                    !- Thickness
+    0.7735339897484582,       !- Solar Transmittance at Normal Incidence
+    7.892180e-02,             !- Front Side Solar Reflectance at Normal Incidence
+    7.086939e-02,             !- Back Side Solar Reflectance at Normal Incidence
+    0.8684384363937054,       !- Visible Transmittance at Normal Incidence
+    6.029797e-02,             !- Front Side Visible Reflectance at Normal Incidence
+    6.218638e-02,             !- Back Side Visible Reflectance at Normal Incidence
+    0,                        !- Infrared Transmittance at Normal Incidence
+    0.84,                     !- Front Side Infrared Hemispherical Emissivity
+    0.84,                     !- Back Side Infrared Hemispherical Emissivity
+    1.0005355288103361,       !- Conductivity
+    1,                        !- Dirt Correction Factor for Solar and Visible Transmittance
+    No,                       !- Solar Diffusing
+    72000000000,              !- Youngs modulus
+    0.22;                     !- Poissons ratio
+
+WINDOWMATERIAL:GLAZING,
+    ground_floor_WindowMat,    !- Name
+    SpectralAverage,          !- Optical Data Type
+    ,                         !- Window Glass Spectral Data Set Name
+    0.003,                    !- Thickness
+    0.7644088124408139,       !- Solar Transmittance at Normal Incidence
+    7.589266e-02,             !- Front Side Solar Reflectance at Normal Incidence
+    7.809430e-02,             !- Back Side Solar Reflectance at Normal Incidence
+    0.8601299751935612,       !- Visible Transmittance at Normal Incidence
+    6.805819e-02,             !- Front Side Visible Reflectance at Normal Incidence
+    6.698139e-02,             !- Back Side Visible Reflectance at Normal Incidence
+    0,                        !- Infrared Transmittance at Normal Incidence
+    0.84,                     !- Front Side Infrared Hemispherical Emissivity
+    0.84,                     !- Back Side Infrared Hemispherical Emissivity
+    8.400000e-04,             !- Conductivity
+    1,                        !- Dirt Correction Factor for Solar and Visible Transmittance
+    No,                       !- Solar Diffusing
+    72000000000,              !- Youngs modulus
+    0.22;                     !- Poissons ratio
+
+WINDOWMATERIAL:GLAZING,
+    exterior_wall_WindowMat,    !- Name
+    SpectralAverage,          !- Optical Data Type
+    ,                         !- Window Glass Spectral Data Set Name
+    0.003,                    !- Thickness
+    0.7619343275366693,       !- Solar Transmittance at Normal Incidence
+    0.0784749436634746,       !- Front Side Solar Reflectance at Normal Incidence
+    7.603726e-02,             !- Back Side Solar Reflectance at Normal Incidence
+    0.8761425654654876,       !- Visible Transmittance at Normal Incidence
+    6.729732e-02,             !- Front Side Visible Reflectance at Normal Incidence
+    6.536228e-02,             !- Back Side Visible Reflectance at Normal Incidence
+    0,                        !- Infrared Transmittance at Normal Incidence
+    0.84,                     !- Front Side Infrared Hemispherical Emissivity
+    0.84,                     !- Back Side Infrared Hemispherical Emissivity
+    0.00096,                  !- Conductivity
+    1,                        !- Dirt Correction Factor for Solar and Visible Transmittance
+    No,                       !- Solar Diffusing
+    72000000000,              !- Youngs modulus
+    0.22;                     !- Poissons ratio
+
+WINDOWMATERIAL:GLAZING,
+    flat_roof_WindowMat,      !- Name
+    SpectralAverage,          !- Optical Data Type
+    ,                         !- Window Glass Spectral Data Set Name
+    0.003,                    !- Thickness
+    0.7710408126254645,       !- Solar Transmittance at Normal Incidence
+    7.829405e-02,             !- Front Side Solar Reflectance at Normal Incidence
+    7.618520e-02,             !- Back Side Solar Reflectance at Normal Incidence
+    0.8772341380062155,       !- Visible Transmittance at Normal Incidence
+    6.577352e-02,             !- Front Side Visible Reflectance at Normal Incidence
+    6.704572e-02,             !- Back Side Visible Reflectance at Normal Incidence
+    0,                        !- Infrared Transmittance at Normal Incidence
+    0.84,                     !- Front Side Infrared Hemispherical Emissivity
+    0.84,                     !- Back Side Infrared Hemispherical Emissivity
+    0.00096,                  !- Conductivity
+    1,                        !- Dirt Correction Factor for Solar and Visible Transmittance
+    No,                       !- Solar Diffusing
+    72000000000,              !- Youngs modulus
+    0.22;                     !- Poissons ratio
+
+WINDOWMATERIAL:GLAZING,
+    inter_floor_WindowMat,    !- Name
+    SpectralAverage,          !- Optical Data Type
+    ,                         !- Window Glass Spectral Data Set Name
+    0.003,                    !- Thickness
+    0.7620200285881946,       !- Solar Transmittance at Normal Incidence
+    7.277974e-02,             !- Front Side Solar Reflectance at Normal Incidence
+    7.635684e-02,             !- Back Side Solar Reflectance at Normal Incidence
+    0.8672966435794017,       !- Visible Transmittance at Normal Incidence
+    6.370181e-02,             !- Front Side Visible Reflectance at Normal Incidence
+    6.209507e-02,             !- Back Side Visible Reflectance at Normal Incidence
+    0,                        !- Infrared Transmittance at Normal Incidence
+    0.84,                     !- Front Side Infrared Hemispherical Emissivity
+    0.84,                     !- Back Side Infrared Hemispherical Emissivity
+    0.0015,                   !- Conductivity
+    1,                        !- Dirt Correction Factor for Solar and Visible Transmittance
+    No,                       !- Solar Diffusing
+    72000000000,              !- Youngs modulus
+    0.22;                     !- Poissons ratio
+
+WINDOWMATERIAL:GLAZING,
+    interior_wall_WindowMat,    !- Name
+    SpectralAverage,          !- Optical Data Type
+    ,                         !- Window Glass Spectral Data Set Name
+    0.003,                    !- Thickness
+    0.7745825359590071,       !- Solar Transmittance at Normal Incidence
+    7.163402e-02,             !- Front Side Solar Reflectance at Normal Incidence
+    7.379455e-02,             !- Back Side Solar Reflectance at Normal Incidence
+    0.8797904670127319,       !- Visible Transmittance at Normal Incidence
+    6.640000e-02,             !- Front Side Visible Reflectance at Normal Incidence
+    6.556950e-02,             !- Back Side Visible Reflectance at Normal Incidence
+    0,                        !- Infrared Transmittance at Normal Incidence
+    0.84,                     !- Front Side Infrared Hemispherical Emissivity
+    0.84,                     !- Back Side Infrared Hemispherical Emissivity
+    0.00201,                  !- Conductivity
+    1,                        !- Dirt Correction Factor for Solar and Visible Transmittance
+    No,                       !- Solar Diffusing
+    72000000000,              !- Youngs modulus
+    0.22;                     !- Poissons ratio
+
+WINDOWMATERIAL:GLAZING,
+    windows_WindowMat,        !- Name
+    SpectralAverage,          !- Optical Data Type
+    ,                         !- Window Glass Spectral Data Set Name
+    0.003,                    !- Thickness
+    0.7663090609611817,       !- Solar Transmittance at Normal Incidence
+    7.267741e-02,             !- Front Side Solar Reflectance at Normal Incidence
+    7.210983e-02,             !- Back Side Solar Reflectance at Normal Incidence
+    0.8788581942867011,       !- Visible Transmittance at Normal Incidence
+    0.0687636762647267,       !- Front Side Visible Reflectance at Normal Incidence
+    6.314678e-02,             !- Back Side Visible Reflectance at Normal Incidence
+    0,                        !- Infrared Transmittance at Normal Incidence
+    0.84,                     !- Front Side Infrared Hemispherical Emissivity
+    0.84,                     !- Back Side Infrared Hemispherical Emissivity
+    0.0105,                   !- Conductivity
+    1,                        !- Dirt Correction Factor for Solar and Visible Transmittance
+    No,                       !- Solar Diffusing
+    72000000000,              !- Youngs modulus
+    0.22;                     !- Poissons ratio
+
+WINDOWMATERIAL:GLAZING,
+    doors_WindowMat,          !- Name
+    SpectralAverage,          !- Optical Data Type
+    ,                         !- Window Glass Spectral Data Set Name
+    0.003,                    !- Thickness
+    0.7649325501538797,       !- Solar Transmittance at Normal Incidence
+    7.561368e-02,             !- Front Side Solar Reflectance at Normal Incidence
+    7.262742e-02,             !- Back Side Solar Reflectance at Normal Incidence
+    0.8716917198044708,       !- Visible Transmittance at Normal Incidence
+    6.897823e-02,             !- Front Side Visible Reflectance at Normal Incidence
+    6.399401e-02,             !- Back Side Visible Reflectance at Normal Incidence
+    0,                        !- Infrared Transmittance at Normal Incidence
+    0.84,                     !- Front Side Infrared Hemispherical Emissivity
+    0.84,                     !- Back Side Infrared Hemispherical Emissivity
+    0.0105,                   !- Conductivity
+    1,                        !- Dirt Correction Factor for Solar and Visible Transmittance
+    No,                       !- Solar Diffusing
+    72000000000,              !- Youngs modulus
+    0.22;                     !- Poissons ratio
+
+CONSTRUCTION,
+    CEILING1C,                !- Name
+    DoorPanel_Range;          !- Outside Layer
+
+CONSTRUCTION,
+    Ext_Walls1C,              !- Name
+    DoorPanel_Range;          !- Outside Layer
+
+CONSTRUCTION,
+    Int_Walls1C,              !- Name
+    DoorPanel_Range;          !- Outside Layer
+
+CONSTRUCTION,
+    Roof1C,                   !- Name
+    DoorPanel_Range;          !- Outside Layer
+
+CONSTRUCTION,
+    GroundFloor1C,            !- Name
+    DoorPanel_Range;          !- Outside Layer
+
+CONSTRUCTION,
+    IntFloor1C,               !- Name
+    DoorPanel_Range;          !- Outside Layer
+
+CONSTRUCTION,
+    WINDOW1C,                 !- Name
+    Glazing_Clear_3mm;        !- Outside Layer
+
+CONSTRUCTION,
+    ground_floor_Construction,    !- Name
+    ground_floor_OpaqueMat;    !- Outside Layer
+
+CONSTRUCTION,
+    ground_floor_WindowConst,    !- Name
+    ground_floor_WindowMat;    !- Outside Layer
+
+CONSTRUCTION,
+    exterior_wall_Construction,    !- Name
+    exterior_wall_OpaqueMat;    !- Outside Layer
+
+CONSTRUCTION,
+    exterior_wall_WindowConst,    !- Name
+    exterior_wall_WindowMat;    !- Outside Layer
+
+CONSTRUCTION,
+    flat_roof_Construction,    !- Name
+    flat_roof_OpaqueMat;      !- Outside Layer
+
+CONSTRUCTION,
+    flat_roof_WindowConst,    !- Name
+    flat_roof_WindowMat;      !- Outside Layer
+
+CONSTRUCTION,
+    inter_floor_Construction,    !- Name
+    inter_floor_OpaqueMat;    !- Outside Layer
+
+CONSTRUCTION,
+    inter_floor_WindowConst,    !- Name
+    inter_floor_WindowMat;    !- Outside Layer
+
+CONSTRUCTION,
+    interior_wall_Construction,    !- Name
+    interior_wall_OpaqueMat;    !- Outside Layer
+
+CONSTRUCTION,
+    interior_wall_WindowConst,    !- Name
+    interior_wall_WindowMat;    !- Outside Layer
+
+CONSTRUCTION,
+    windows_Construction,     !- Name
+    windows_OpaqueMat;        !- Outside Layer
+
+CONSTRUCTION,
+    windows_WindowConst,      !- Name
+    windows_WindowMat;        !- Outside Layer
+
+CONSTRUCTION,
+    doors_Construction,       !- Name
+    doors_OpaqueMat;          !- Outside Layer
+
+CONSTRUCTION,
+    doors_WindowConst,        !- Name
+    doors_WindowMat;          !- Outside Layer
+
+GlobalGeometryRules,
+    UpperLeftCorner,          !- Starting Vertex Position
+    CounterClockWise,         !- Vertex Entry Direction
+    Relative;                 !- Coordinate System
+
+ZONE,
+    Zone1_FrontPerimeter,     !- Name
+    0,                        !- Direction of Relative North
+    0,                        !- X Origin
+    0,                        !- Y Origin
+    0,                        !- Z Origin
+    1,                        !- Type
+    1,                        !- Multiplier
+    autocalculate,            !- Ceiling Height
+    autocalculate,            !- Volume
+    autocalculate,            !- Floor Area
+    ,                         !- Zone Inside Convection Algorithm
+    ,                         !- Zone Outside Convection Algorithm
+    Yes;                      !- Part of Total Floor Area
+
+ZONE,
+    Zone1_RightPerimeter,     !- Name
+    0,                        !- Direction of Relative North
+    0,                        !- X Origin
+    0,                        !- Y Origin
+    0,                        !- Z Origin
+    1,                        !- Type
+    1,                        !- Multiplier
+    autocalculate,            !- Ceiling Height
+    autocalculate,            !- Volume
+    autocalculate,            !- Floor Area
+    ,                         !- Zone Inside Convection Algorithm
+    ,                         !- Zone Outside Convection Algorithm
+    Yes;                      !- Part of Total Floor Area
+
+ZONE,
+    Zone1_RearPerimeter,      !- Name
+    0,                        !- Direction of Relative North
+    0,                        !- X Origin
+    0,                        !- Y Origin
+    0,                        !- Z Origin
+    1,                        !- Type
+    1,                        !- Multiplier
+    autocalculate,            !- Ceiling Height
+    autocalculate,            !- Volume
+    autocalculate,            !- Floor Area
+    ,                         !- Zone Inside Convection Algorithm
+    ,                         !- Zone Outside Convection Algorithm
+    Yes;                      !- Part of Total Floor Area
+
+ZONE,
+    Zone1_LeftPerimeter,      !- Name
+    0,                        !- Direction of Relative North
+    0,                        !- X Origin
+    0,                        !- Y Origin
+    0,                        !- Z Origin
+    1,                        !- Type
+    1,                        !- Multiplier
+    autocalculate,            !- Ceiling Height
+    autocalculate,            !- Volume
+    autocalculate,            !- Floor Area
+    ,                         !- Zone Inside Convection Algorithm
+    ,                         !- Zone Outside Convection Algorithm
+    Yes;                      !- Part of Total Floor Area
+
+ZONE,
+    Zone1_Core,               !- Name
+    0,                        !- Direction of Relative North
+    0,                        !- X Origin
+    0,                        !- Y Origin
+    0,                        !- Z Origin
+    1,                        !- Type
+    1,                        !- Multiplier
+    autocalculate,            !- Ceiling Height
+    autocalculate,            !- Volume
+    autocalculate,            !- Floor Area
+    ,                         !- Zone Inside Convection Algorithm
+    ,                         !- Zone Outside Convection Algorithm
+    Yes;                      !- Part of Total Floor Area
+
+ZONE,
+    Zone2_FrontPerimeter,     !- Name
+    0,                        !- Direction of Relative North
+    0,                        !- X Origin
+    0,                        !- Y Origin
+    0,                        !- Z Origin
+    1,                        !- Type
+    1,                        !- Multiplier
+    autocalculate,            !- Ceiling Height
+    autocalculate,            !- Volume
+    autocalculate,            !- Floor Area
+    ,                         !- Zone Inside Convection Algorithm
+    ,                         !- Zone Outside Convection Algorithm
+    Yes;                      !- Part of Total Floor Area
+
+ZONE,
+    Zone2_RightPerimeter,     !- Name
+    0,                        !- Direction of Relative North
+    0,                        !- X Origin
+    0,                        !- Y Origin
+    0,                        !- Z Origin
+    1,                        !- Type
+    1,                        !- Multiplier
+    autocalculate,            !- Ceiling Height
+    autocalculate,            !- Volume
+    autocalculate,            !- Floor Area
+    ,                         !- Zone Inside Convection Algorithm
+    ,                         !- Zone Outside Convection Algorithm
+    Yes;                      !- Part of Total Floor Area
+
+ZONE,
+    Zone2_RearPerimeter,      !- Name
+    0,                        !- Direction of Relative North
+    0,                        !- X Origin
+    0,                        !- Y Origin
+    0,                        !- Z Origin
+    1,                        !- Type
+    1,                        !- Multiplier
+    autocalculate,            !- Ceiling Height
+    autocalculate,            !- Volume
+    autocalculate,            !- Floor Area
+    ,                         !- Zone Inside Convection Algorithm
+    ,                         !- Zone Outside Convection Algorithm
+    Yes;                      !- Part of Total Floor Area
+
+ZONE,
+    Zone2_LeftPerimeter,      !- Name
+    0,                        !- Direction of Relative North
+    0,                        !- X Origin
+    0,                        !- Y Origin
+    0,                        !- Z Origin
+    1,                        !- Type
+    1,                        !- Multiplier
+    autocalculate,            !- Ceiling Height
+    autocalculate,            !- Volume
+    autocalculate,            !- Floor Area
+    ,                         !- Zone Inside Convection Algorithm
+    ,                         !- Zone Outside Convection Algorithm
+    Yes;                      !- Part of Total Floor Area
+
+ZONE,
+    Zone2_Core,               !- Name
+    0,                        !- Direction of Relative North
+    0,                        !- X Origin
+    0,                        !- Y Origin
+    0,                        !- Z Origin
+    1,                        !- Type
+    1,                        !- Multiplier
+    autocalculate,            !- Ceiling Height
+    autocalculate,            !- Volume
+    autocalculate,            !- Floor Area
+    ,                         !- Zone Inside Convection Algorithm
+    ,                         !- Zone Outside Convection Algorithm
+    Yes;                      !- Part of Total Floor Area
+
+ZONELIST,
+    ALL_ZONES,                !- Name
+    Zone1_FrontPerimeter,     !- Zone 1 Name
+    Zone1_RightPerimeter,     !- Zone 2 Name
+    Zone1_RearPerimeter,      !- Zone 3 Name
+    Zone1_LeftPerimeter,      !- Zone 4 Name
+    Zone1_Core,               !- Zone 5 Name
+    Zone2_FrontPerimeter,     !- Zone 6 Name
+    Zone2_RightPerimeter,     !- Zone 7 Name
+    Zone2_RearPerimeter,      !- Zone 8 Name
+    Zone2_LeftPerimeter,      !- Zone 9 Name
+    Zone2_Core;               !- Zone 10 Name
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_FrontPerimeter_Floor,    !- Name
+    Floor,                    !- Surface Type
+    ground_floor_Construction,    !- Construction Name
+    Zone1_FrontPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Ground,                   !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.65685424949238,        !- Vertex 1 Xcoordinate
+    5.656854249492381,        !- Vertex 1 Ycoordinate
+    0,                        !- Vertex 1 Zcoordinate
+    0,                        !- Vertex 2 Xcoordinate
+    0,                        !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -2.318500e+00,            !- Vertex 3 Xcoordinate
+    2.220446e-16,             !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -5.656854249492379,       !- Vertex 4 Xcoordinate
+    3.3383546365953385,       !- Vertex 4 Ycoordinate
+    0;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_FrontPerimeter_Wall_0,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_FrontPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    0,                        !- Vertex 1 Xcoordinate
+    0,                        !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    0,                        !- Vertex 2 Xcoordinate
+    0,                        !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -5.65685424949238,        !- Vertex 3 Xcoordinate
+    5.656854249492381,        !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -5.65685424949238,        !- Vertex 4 Xcoordinate
+    5.656854249492381,        !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_FrontPerimeter_Wall_1,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_FrontPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.65685424949238,        !- Vertex 1 Xcoordinate
+    5.656854249492381,        !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -5.65685424949238,        !- Vertex 2 Xcoordinate
+    5.656854249492381,        !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -5.656854249492379,       !- Vertex 3 Xcoordinate
+    3.3383546365953385,       !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -5.656854249492379,       !- Vertex 4 Xcoordinate
+    3.3383546365953385,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_FrontPerimeter_Wall_2,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_FrontPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone1_Core_Wall_3,        !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.656854249492379,       !- Vertex 1 Xcoordinate
+    3.3383546365953385,       !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -5.656854249492379,       !- Vertex 2 Xcoordinate
+    3.3383546365953385,       !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -2.318500e+00,            !- Vertex 3 Xcoordinate
+    2.220446e-16,             !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    2.220446e-16,             !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_FrontPerimeter_Wall_3,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_FrontPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -2.318500e+00,            !- Vertex 1 Xcoordinate
+    2.220446e-16,             !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    2.220446e-16,             !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    0,                        !- Vertex 3 Xcoordinate
+    0,                        !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    0,                        !- Vertex 4 Xcoordinate
+    0,                        !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_FrontPerimeter_Ceiling,    !- Name
+    Ceiling,                  !- Surface Type
+    inter_floor_Construction,    !- Construction Name
+    Zone1_FrontPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone2_FrontPerimeter_Floor,    !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    0,                        !- Vertex 1 Xcoordinate
+    0,                        !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -5.65685424949238,        !- Vertex 2 Xcoordinate
+    5.656854249492381,        !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -5.656854249492379,       !- Vertex 3 Xcoordinate
+    3.3383546365953385,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    2.220446e-16,             !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_RightPerimeter_Floor,    !- Name
+    Floor,                    !- Surface Type
+    ground_floor_Construction,    !- Construction Name
+    Zone1_RightPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Ground,                   !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.65685424949238,        !- Vertex 1 Xcoordinate
+    5.656854249492381,        !- Vertex 1 Ycoordinate
+    0,                        !- Vertex 1 Zcoordinate
+    -5.656854249492379,       !- Vertex 2 Xcoordinate
+    3.3383546365953385,       !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -13.94495635439355,       !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    0;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_RightPerimeter_Wall_0,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_RightPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.65685424949238,        !- Vertex 1 Xcoordinate
+    5.656854249492381,        !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -5.65685424949238,        !- Vertex 2 Xcoordinate
+    5.656854249492381,        !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -1.626346e+01,            !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_RightPerimeter_Wall_1,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_RightPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -1.626346e+01,            !- Vertex 1 Xcoordinate
+    -4.949747468305831,       !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -1.626346e+01,            !- Vertex 2 Xcoordinate
+    -4.949747468305831,       !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -13.94495635439355,       !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -13.94495635439355,       !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_RightPerimeter_Wall_2,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_RightPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone1_Core_Wall_2,        !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -13.94495635439355,       !- Vertex 1 Xcoordinate
+    -4.949747468305831,       !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -13.94495635439355,       !- Vertex 2 Xcoordinate
+    -4.949747468305831,       !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -5.656854249492379,       !- Vertex 3 Xcoordinate
+    3.3383546365953385,       !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -5.656854249492379,       !- Vertex 4 Xcoordinate
+    3.3383546365953385,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_RightPerimeter_Wall_3,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_RightPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.656854249492379,       !- Vertex 1 Xcoordinate
+    3.3383546365953385,       !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -5.656854249492379,       !- Vertex 2 Xcoordinate
+    3.3383546365953385,       !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -5.65685424949238,        !- Vertex 3 Xcoordinate
+    5.656854249492381,        !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -5.65685424949238,        !- Vertex 4 Xcoordinate
+    5.656854249492381,        !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_RightPerimeter_Ceiling,    !- Name
+    Ceiling,                  !- Surface Type
+    inter_floor_Construction,    !- Construction Name
+    Zone1_RightPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone2_RightPerimeter_Floor,    !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.656854249492379,       !- Vertex 1 Xcoordinate
+    3.3383546365953385,       !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -5.65685424949238,        !- Vertex 2 Xcoordinate
+    5.656854249492381,        !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -1.626346e+01,            !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -13.94495635439355,       !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_RearPerimeter_Floor,    !- Name
+    Floor,                    !- Surface Type
+    ground_floor_Construction,    !- Construction Name
+    Zone1_RearPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Ground,                   !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -13.94495635439355,       !- Vertex 1 Xcoordinate
+    -4.949747468305831,       !- Vertex 1 Ycoordinate
+    0,                        !- Vertex 1 Zcoordinate
+    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -8.288102104901169,       !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -1.060660e+01,            !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    0;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_RearPerimeter_Wall_0,    !- Name
+    Wall,                     !- Surface Type
+    exterior_wall_Construction,    !- Construction Name
+    Zone1_RearPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Outdoors,                 !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    SunExposed,               !- Sun Exposure
+    WindExposed,              !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -1.626346e+01,            !- Vertex 1 Xcoordinate
+    -4.949747468305831,       !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -1.626346e+01,            !- Vertex 2 Xcoordinate
+    -4.949747468305831,       !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -1.060660e+01,            !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -1.060660e+01,            !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_RearPerimeter_Wall_1,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_RearPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -1.060660e+01,            !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -1.060660e+01,            !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -8.288102104901169,       !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -8.288102104901169,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_RearPerimeter_Wall_2,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_RearPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone1_Core_Wall_1,        !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -8.288102104901169,       !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -8.288102104901169,       !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -13.94495635439355,       !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -13.94495635439355,       !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_RearPerimeter_Wall_3,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_RearPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -13.94495635439355,       !- Vertex 1 Xcoordinate
+    -4.949747468305831,       !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -13.94495635439355,       !- Vertex 2 Xcoordinate
+    -4.949747468305831,       !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -1.626346e+01,            !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_RearPerimeter_Ceiling,    !- Name
+    Ceiling,                  !- Surface Type
+    inter_floor_Construction,    !- Construction Name
+    Zone1_RearPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone2_RearPerimeter_Floor,    !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -1.060660e+01,            !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -8.288102104901169,       !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -13.94495635439355,       !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_LeftPerimeter_Floor,    !- Name
+    Floor,                    !- Surface Type
+    ground_floor_Construction,    !- Construction Name
+    Zone1_LeftPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Ground,                   !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    0,                        !- Vertex 1 Xcoordinate
+    0,                        !- Vertex 1 Ycoordinate
+    0,                        !- Vertex 1 Zcoordinate
+    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -1.060660e+01,            !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -8.288102104901169,       !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    2.220446e-16,             !- Vertex 4 Ycoordinate
+    0;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_LeftPerimeter_Wall_0,    !- Name
+    Wall,                     !- Surface Type
+    exterior_wall_Construction,    !- Construction Name
+    Zone1_LeftPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Outdoors,                 !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    SunExposed,               !- Sun Exposure
+    WindExposed,              !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -1.060660e+01,            !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -1.060660e+01,            !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    0,                        !- Vertex 3 Xcoordinate
+    0,                        !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    0,                        !- Vertex 4 Xcoordinate
+    0,                        !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_LeftPerimeter_Wall_1,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_LeftPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    0,                        !- Vertex 1 Xcoordinate
+    0,                        !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    0,                        !- Vertex 2 Xcoordinate
+    0,                        !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -2.318500e+00,            !- Vertex 3 Xcoordinate
+    2.220446e-16,             !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    2.220446e-16,             !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_LeftPerimeter_Wall_2,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_LeftPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone1_Core_Wall_0,        !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -2.318500e+00,            !- Vertex 1 Xcoordinate
+    2.220446e-16,             !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    2.220446e-16,             !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -8.288102104901169,       !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -8.288102104901169,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_LeftPerimeter_Wall_3,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_LeftPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -8.288102104901169,       !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -8.288102104901169,       !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -1.060660e+01,            !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -1.060660e+01,            !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_LeftPerimeter_Ceiling,    !- Name
+    Ceiling,                  !- Surface Type
+    inter_floor_Construction,    !- Construction Name
+    Zone1_LeftPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone2_LeftPerimeter_Floor,    !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    0,                        !- Vertex 1 Xcoordinate
+    0,                        !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    2.220446e-16,             !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -8.288102104901169,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -1.060660e+01,            !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_Core_Floor,         !- Name
+    Floor,                    !- Surface Type
+    ground_floor_Construction,    !- Construction Name
+    Zone1_Core,               !- Zone Name
+    ,                         !- Space Name
+    Ground,                   !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -2.318500e+00,            !- Vertex 1 Xcoordinate
+    2.220446e-16,             !- Vertex 1 Ycoordinate
+    0,                        !- Vertex 1 Zcoordinate
+    -5.656854249492379,       !- Vertex 2 Xcoordinate
+    3.3383546365953385,       !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -13.94495635439355,       !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -8.288102104901169,       !- Vertex 4 Ycoordinate
+    0;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_Core_Wall_0,        !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_Core,               !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone1_LeftPerimeter_Wall_2,    !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -2.318500e+00,            !- Vertex 1 Xcoordinate
+    2.220446e-16,             !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    2.220446e-16,             !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -8.288102104901169,       !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -8.288102104901169,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_Core_Wall_1,        !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_Core,               !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone1_RearPerimeter_Wall_2,    !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -8.288102104901169,       !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -8.288102104901169,       !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -13.94495635439355,       !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -13.94495635439355,       !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_Core_Wall_2,        !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_Core,               !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone1_RightPerimeter_Wall_2,    !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -13.94495635439355,       !- Vertex 1 Xcoordinate
+    -4.949747468305831,       !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -13.94495635439355,       !- Vertex 2 Xcoordinate
+    -4.949747468305831,       !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -5.656854249492379,       !- Vertex 3 Xcoordinate
+    3.3383546365953385,       !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -5.656854249492379,       !- Vertex 4 Xcoordinate
+    3.3383546365953385,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_Core_Wall_3,        !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone1_Core,               !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone1_FrontPerimeter_Wall_2,    !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.656854249492379,       !- Vertex 1 Xcoordinate
+    3.3383546365953385,       !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -5.656854249492379,       !- Vertex 2 Xcoordinate
+    3.3383546365953385,       !- Vertex 2 Ycoordinate
+    0,                        !- Vertex 2 Zcoordinate
+    -2.318500e+00,            !- Vertex 3 Xcoordinate
+    2.220446e-16,             !- Vertex 3 Ycoordinate
+    0,                        !- Vertex 3 Zcoordinate
+    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    2.220446e-16,             !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone1_Core_Ceiling,       !- Name
+    Ceiling,                  !- Surface Type
+    inter_floor_Construction,    !- Construction Name
+    Zone1_Core,               !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone2_Core_Floor,         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.656854249492379,       !- Vertex 1 Xcoordinate
+    3.3383546365953385,       !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    2.220446e-16,             !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -8.288102104901169,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -13.94495635439355,       !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_FrontPerimeter_Floor,    !- Name
+    Floor,                    !- Surface Type
+    inter_floor_Construction,    !- Construction Name
+    Zone2_FrontPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone1_FrontPerimeter_Ceiling,    !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.65685424949238,        !- Vertex 1 Xcoordinate
+    5.656854249492381,        !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    0,                        !- Vertex 2 Xcoordinate
+    0,                        !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -2.318500e+00,            !- Vertex 3 Xcoordinate
+    2.220446e-16,             !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -5.656854249492379,       !- Vertex 4 Xcoordinate
+    3.3383546365953385,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_FrontPerimeter_Wall_0,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_FrontPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    0,                        !- Vertex 1 Xcoordinate
+    0,                        !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    0,                        !- Vertex 2 Xcoordinate
+    0,                        !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -5.65685424949238,        !- Vertex 3 Xcoordinate
+    5.656854249492381,        !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -5.65685424949238,        !- Vertex 4 Xcoordinate
+    5.656854249492381,        !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_FrontPerimeter_Wall_1,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_FrontPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.65685424949238,        !- Vertex 1 Xcoordinate
+    5.656854249492381,        !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -5.65685424949238,        !- Vertex 2 Xcoordinate
+    5.656854249492381,        !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -5.656854249492379,       !- Vertex 3 Xcoordinate
+    3.3383546365953385,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -5.656854249492379,       !- Vertex 4 Xcoordinate
+    3.3383546365953385,       !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_FrontPerimeter_Wall_2,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_FrontPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone2_Core_Wall_3,        !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.656854249492379,       !- Vertex 1 Xcoordinate
+    3.3383546365953385,       !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -5.656854249492379,       !- Vertex 2 Xcoordinate
+    3.3383546365953385,       !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -2.318500e+00,            !- Vertex 3 Xcoordinate
+    2.220446e-16,             !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    2.220446e-16,             !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_FrontPerimeter_Wall_3,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_FrontPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -2.318500e+00,            !- Vertex 1 Xcoordinate
+    2.220446e-16,             !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    2.220446e-16,             !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    0,                        !- Vertex 3 Xcoordinate
+    0,                        !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    0,                        !- Vertex 4 Xcoordinate
+    0,                        !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_FrontPerimeter_Roof,    !- Name
+    Roof,                     !- Surface Type
+    flat_roof_Construction,    !- Construction Name
+    Zone2_FrontPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Outdoors,                 !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    SunExposed,               !- Sun Exposure
+    WindExposed,              !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    0,                        !- Vertex 1 Xcoordinate
+    0,                        !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -5.65685424949238,        !- Vertex 2 Xcoordinate
+    5.656854249492381,        !- Vertex 2 Ycoordinate
+    8,                        !- Vertex 2 Zcoordinate
+    -5.656854249492379,       !- Vertex 3 Xcoordinate
+    3.3383546365953385,       !- Vertex 3 Ycoordinate
+    8,                        !- Vertex 3 Zcoordinate
+    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    2.220446e-16,             !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_RightPerimeter_Floor,    !- Name
+    Floor,                    !- Surface Type
+    inter_floor_Construction,    !- Construction Name
+    Zone2_RightPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone1_RightPerimeter_Ceiling,    !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.65685424949238,        !- Vertex 1 Xcoordinate
+    5.656854249492381,        !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -5.656854249492379,       !- Vertex 2 Xcoordinate
+    3.3383546365953385,       !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -13.94495635439355,       !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_RightPerimeter_Wall_0,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_RightPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.65685424949238,        !- Vertex 1 Xcoordinate
+    5.656854249492381,        !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -5.65685424949238,        !- Vertex 2 Xcoordinate
+    5.656854249492381,        !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -1.626346e+01,            !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_RightPerimeter_Wall_1,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_RightPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -1.626346e+01,            !- Vertex 1 Xcoordinate
+    -4.949747468305831,       !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -1.626346e+01,            !- Vertex 2 Xcoordinate
+    -4.949747468305831,       !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -13.94495635439355,       !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -13.94495635439355,       !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_RightPerimeter_Wall_2,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_RightPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone2_Core_Wall_2,        !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -13.94495635439355,       !- Vertex 1 Xcoordinate
+    -4.949747468305831,       !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -13.94495635439355,       !- Vertex 2 Xcoordinate
+    -4.949747468305831,       !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -5.656854249492379,       !- Vertex 3 Xcoordinate
+    3.3383546365953385,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -5.656854249492379,       !- Vertex 4 Xcoordinate
+    3.3383546365953385,       !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_RightPerimeter_Wall_3,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_RightPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.656854249492379,       !- Vertex 1 Xcoordinate
+    3.3383546365953385,       !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -5.656854249492379,       !- Vertex 2 Xcoordinate
+    3.3383546365953385,       !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -5.65685424949238,        !- Vertex 3 Xcoordinate
+    5.656854249492381,        !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -5.65685424949238,        !- Vertex 4 Xcoordinate
+    5.656854249492381,        !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_RightPerimeter_Roof,    !- Name
+    Roof,                     !- Surface Type
+    flat_roof_Construction,    !- Construction Name
+    Zone2_RightPerimeter,     !- Zone Name
+    ,                         !- Space Name
+    Outdoors,                 !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    SunExposed,               !- Sun Exposure
+    WindExposed,              !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.656854249492379,       !- Vertex 1 Xcoordinate
+    3.3383546365953385,       !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -5.65685424949238,        !- Vertex 2 Xcoordinate
+    5.656854249492381,        !- Vertex 2 Ycoordinate
+    8,                        !- Vertex 2 Zcoordinate
+    -1.626346e+01,            !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    8,                        !- Vertex 3 Zcoordinate
+    -13.94495635439355,       !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_RearPerimeter_Floor,    !- Name
+    Floor,                    !- Surface Type
+    inter_floor_Construction,    !- Construction Name
+    Zone2_RearPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone1_RearPerimeter_Ceiling,    !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -13.94495635439355,       !- Vertex 1 Xcoordinate
+    -4.949747468305831,       !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -8.288102104901169,       !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -1.060660e+01,            !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_RearPerimeter_Wall_0,    !- Name
+    Wall,                     !- Surface Type
+    exterior_wall_Construction,    !- Construction Name
+    Zone2_RearPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Outdoors,                 !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    SunExposed,               !- Sun Exposure
+    WindExposed,              !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -1.626346e+01,            !- Vertex 1 Xcoordinate
+    -4.949747468305831,       !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -1.626346e+01,            !- Vertex 2 Xcoordinate
+    -4.949747468305831,       !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -1.060660e+01,            !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -1.060660e+01,            !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_RearPerimeter_Wall_1,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_RearPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -1.060660e+01,            !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -1.060660e+01,            !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -8.288102104901169,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -8.288102104901169,       !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_RearPerimeter_Wall_2,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_RearPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone2_Core_Wall_1,        !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -8.288102104901169,       !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -8.288102104901169,       !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -13.94495635439355,       !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -13.94495635439355,       !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_RearPerimeter_Wall_3,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_RearPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -13.94495635439355,       !- Vertex 1 Xcoordinate
+    -4.949747468305831,       !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -13.94495635439355,       !- Vertex 2 Xcoordinate
+    -4.949747468305831,       !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -1.626346e+01,            !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_RearPerimeter_Roof,    !- Name
+    Roof,                     !- Surface Type
+    flat_roof_Construction,    !- Construction Name
+    Zone2_RearPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Outdoors,                 !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    SunExposed,               !- Sun Exposure
+    WindExposed,              !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -1.060660e+01,            !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -8.288102104901169,       !- Vertex 2 Ycoordinate
+    8,                        !- Vertex 2 Zcoordinate
+    -13.94495635439355,       !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    8,                        !- Vertex 3 Zcoordinate
+    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_LeftPerimeter_Floor,    !- Name
+    Floor,                    !- Surface Type
+    inter_floor_Construction,    !- Construction Name
+    Zone2_LeftPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone1_LeftPerimeter_Ceiling,    !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    0,                        !- Vertex 1 Xcoordinate
+    0,                        !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -1.060660e+01,            !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -8.288102104901169,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    2.220446e-16,             !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_LeftPerimeter_Wall_0,    !- Name
+    Wall,                     !- Surface Type
+    exterior_wall_Construction,    !- Construction Name
+    Zone2_LeftPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Outdoors,                 !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    SunExposed,               !- Sun Exposure
+    WindExposed,              !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -1.060660e+01,            !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -1.060660e+01,            !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    0,                        !- Vertex 3 Xcoordinate
+    0,                        !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    0,                        !- Vertex 4 Xcoordinate
+    0,                        !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_LeftPerimeter_Wall_1,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_LeftPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    0,                        !- Vertex 1 Xcoordinate
+    0,                        !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    0,                        !- Vertex 2 Xcoordinate
+    0,                        !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -2.318500e+00,            !- Vertex 3 Xcoordinate
+    2.220446e-16,             !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    2.220446e-16,             !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_LeftPerimeter_Wall_2,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_LeftPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone2_Core_Wall_0,        !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -2.318500e+00,            !- Vertex 1 Xcoordinate
+    2.220446e-16,             !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    2.220446e-16,             !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -8.288102104901169,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -8.288102104901169,       !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_LeftPerimeter_Wall_3,    !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_LeftPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Adiabatic,                !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -8.288102104901169,       !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -8.288102104901169,       !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -1.060660e+01,            !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -1.060660e+01,            !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_LeftPerimeter_Roof,    !- Name
+    Roof,                     !- Surface Type
+    flat_roof_Construction,    !- Construction Name
+    Zone2_LeftPerimeter,      !- Zone Name
+    ,                         !- Space Name
+    Outdoors,                 !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    SunExposed,               !- Sun Exposure
+    WindExposed,              !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    0,                        !- Vertex 1 Xcoordinate
+    0,                        !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    2.220446e-16,             !- Vertex 2 Ycoordinate
+    8,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -8.288102104901169,       !- Vertex 3 Ycoordinate
+    8,                        !- Vertex 3 Zcoordinate
+    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -1.060660e+01,            !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_Core_Floor,         !- Name
+    Floor,                    !- Surface Type
+    inter_floor_Construction,    !- Construction Name
+    Zone2_Core,               !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone1_Core_Ceiling,       !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -2.318500e+00,            !- Vertex 1 Xcoordinate
+    2.220446e-16,             !- Vertex 1 Ycoordinate
+    4,                        !- Vertex 1 Zcoordinate
+    -5.656854249492379,       !- Vertex 2 Xcoordinate
+    3.3383546365953385,       !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -13.94495635439355,       !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -8.288102104901169,       !- Vertex 4 Ycoordinate
+    4;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_Core_Wall_0,        !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_Core,               !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone2_LeftPerimeter_Wall_2,    !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -2.318500e+00,            !- Vertex 1 Xcoordinate
+    2.220446e-16,             !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    2.220446e-16,             !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -8.288102104901169,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -8.288102104901169,       !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_Core_Wall_1,        !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_Core,               !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone2_RearPerimeter_Wall_2,    !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -8.288102104901169,       !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -8.288102104901169,       !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -13.94495635439355,       !- Vertex 3 Xcoordinate
+    -4.949747468305831,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -13.94495635439355,       !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_Core_Wall_2,        !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_Core,               !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone2_RightPerimeter_Wall_2,    !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -13.94495635439355,       !- Vertex 1 Xcoordinate
+    -4.949747468305831,       !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -13.94495635439355,       !- Vertex 2 Xcoordinate
+    -4.949747468305831,       !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -5.656854249492379,       !- Vertex 3 Xcoordinate
+    3.3383546365953385,       !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -5.656854249492379,       !- Vertex 4 Xcoordinate
+    3.3383546365953385,       !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_Core_Wall_3,        !- Name
+    Wall,                     !- Surface Type
+    interior_wall_Construction,    !- Construction Name
+    Zone2_Core,               !- Zone Name
+    ,                         !- Space Name
+    Surface,                  !- Outside Boundary Condition
+    Zone2_FrontPerimeter_Wall_2,    !- Outside Boundary Condition Object
+    NoSun,                    !- Sun Exposure
+    NoWind,                   !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.656854249492379,       !- Vertex 1 Xcoordinate
+    3.3383546365953385,       !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -5.656854249492379,       !- Vertex 2 Xcoordinate
+    3.3383546365953385,       !- Vertex 2 Ycoordinate
+    4,                        !- Vertex 2 Zcoordinate
+    -2.318500e+00,            !- Vertex 3 Xcoordinate
+    2.220446e-16,             !- Vertex 3 Ycoordinate
+    4,                        !- Vertex 3 Zcoordinate
+    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    2.220446e-16,             !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+BUILDINGSURFACE:DETAILED,
+    Zone2_Core_Roof,          !- Name
+    Roof,                     !- Surface Type
+    flat_roof_Construction,    !- Construction Name
+    Zone2_Core,               !- Zone Name
+    ,                         !- Space Name
+    Outdoors,                 !- Outside Boundary Condition
+    ,                         !- Outside Boundary Condition Object
+    SunExposed,               !- Sun Exposure
+    WindExposed,              !- Wind Exposure
+    autocalculate,            !- View Factor to Ground
+    autocalculate,            !- Number of Vertices
+    -5.656854249492379,       !- Vertex 1 Xcoordinate
+    3.3383546365953385,       !- Vertex 1 Ycoordinate
+    8,                        !- Vertex 1 Zcoordinate
+    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    2.220446e-16,             !- Vertex 2 Ycoordinate
+    8,                        !- Vertex 2 Zcoordinate
+    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -8.288102104901169,       !- Vertex 3 Ycoordinate
+    8,                        !- Vertex 3 Zcoordinate
+    -13.94495635439355,       !- Vertex 4 Xcoordinate
+    -4.949747468305831,       !- Vertex 4 Ycoordinate
+    8;                        !- Vertex 4 Zcoordinate
+
+FENESTRATIONSURFACE:DETAILED,
+    Zone1_RearPerimeter_Wall_0 window,    !- Name
+    Window,                   !- Surface Type
+    Window1C,                 !- Construction Name
+    Zone1_RearPerimeter_Wall_0,    !- Building Surface Name
+    ,                         !- Outside Boundary Condition Object
+    autocalculate,            !- View Factor to Ground
+    ,                         !- Frame and Divider Name
+    1.0,                      !- Multiplier
+    autocalculate,            !- Number of Vertices
+    -1.626063e+01,            !- Vertex 1 Xcoordinate
+    -4.952575895430577,       !- Vertex 1 Ycoordinate
+    2.4639426798457884,       !- Vertex 1 Zcoordinate
+    -1.626063e+01,            !- Vertex 2 Xcoordinate
+    -4.952575895430577,       !- Vertex 2 Ycoordinate
+    1.5360573201542116,       !- Vertex 2 Zcoordinate
+    -10.60943014492296,       !- Vertex 3 Xcoordinate
+    -1.060377e+01,            !- Vertex 3 Ycoordinate
+    1.5360573201542116,       !- Vertex 3 Zcoordinate
+    -10.60943014492296,       !- Vertex 4 Xcoordinate
+    -1.060377e+01,            !- Vertex 4 Ycoordinate
+    2.4639426798457884;       !- Vertex 4 Zcoordinate
+
+FENESTRATIONSURFACE:DETAILED,
+    Zone1_LeftPerimeter_Wall_0 window,    !- Name
+    Window,                   !- Surface Type
+    Window1C,                 !- Construction Name
+    Zone1_LeftPerimeter_Wall_0,    !- Building Surface Name
+    ,                         !- Outside Boundary Condition Object
+    autocalculate,            !- View Factor to Ground
+    ,                         !- Frame and Divider Name
+    1.0,                      !- Multiplier
+    autocalculate,            !- Number of Vertices
+    -1.060130e+01,            !- Vertex 1 Xcoordinate
+    -1.060130e+01,            !- Vertex 1 Ycoordinate
+    2.4639426798457884,       !- Vertex 1 Zcoordinate
+    -1.060130e+01,            !- Vertex 2 Xcoordinate
+    -1.060130e+01,            !- Vertex 2 Ycoordinate
+    1.5360573201542116,       !- Vertex 2 Zcoordinate
+    -5.303301e-03,            !- Vertex 3 Xcoordinate
+    -5.303301e-03,            !- Vertex 3 Ycoordinate
+    1.5360573201542116,       !- Vertex 3 Zcoordinate
+    -5.303301e-03,            !- Vertex 4 Xcoordinate
+    -5.303301e-03,            !- Vertex 4 Ycoordinate
+    2.4639426798457884;       !- Vertex 4 Zcoordinate
+
+FENESTRATIONSURFACE:DETAILED,
+    Zone2_RearPerimeter_Wall_0 window,    !- Name
+    Window,                   !- Surface Type
+    Window1C,                 !- Construction Name
+    Zone2_RearPerimeter_Wall_0,    !- Building Surface Name
+    ,                         !- Outside Boundary Condition Object
+    autocalculate,            !- View Factor to Ground
+    ,                         !- Frame and Divider Name
+    1.0,                      !- Multiplier
+    autocalculate,            !- Number of Vertices
+    -1.626063e+01,            !- Vertex 1 Xcoordinate
+    -4.952575895430577,       !- Vertex 1 Ycoordinate
+    6.463942679845788,        !- Vertex 1 Zcoordinate
+    -1.626063e+01,            !- Vertex 2 Xcoordinate
+    -4.952575895430577,       !- Vertex 2 Ycoordinate
+    5.536057320154212,        !- Vertex 2 Zcoordinate
+    -10.60943014492296,       !- Vertex 3 Xcoordinate
+    -1.060377e+01,            !- Vertex 3 Ycoordinate
+    5.536057320154212,        !- Vertex 3 Zcoordinate
+    -10.60943014492296,       !- Vertex 4 Xcoordinate
+    -1.060377e+01,            !- Vertex 4 Ycoordinate
+    6.463942679845788;        !- Vertex 4 Zcoordinate
+
+FENESTRATIONSURFACE:DETAILED,
+    Zone2_LeftPerimeter_Wall_0 window,    !- Name
+    Window,                   !- Surface Type
+    Window1C,                 !- Construction Name
+    Zone2_LeftPerimeter_Wall_0,    !- Building Surface Name
+    ,                         !- Outside Boundary Condition Object
+    autocalculate,            !- View Factor to Ground
+    ,                         !- Frame and Divider Name
+    1.0,                      !- Multiplier
+    autocalculate,            !- Number of Vertices
+    -1.060130e+01,            !- Vertex 1 Xcoordinate
+    -1.060130e+01,            !- Vertex 1 Ycoordinate
+    6.463942679845788,        !- Vertex 1 Zcoordinate
+    -1.060130e+01,            !- Vertex 2 Xcoordinate
+    -1.060130e+01,            !- Vertex 2 Ycoordinate
+    5.536057320154212,        !- Vertex 2 Zcoordinate
+    -5.303301e-03,            !- Vertex 3 Xcoordinate
+    -5.303301e-03,            !- Vertex 3 Ycoordinate
+    5.536057320154212,        !- Vertex 3 Zcoordinate
+    -5.303301e-03,            !- Vertex 4 Xcoordinate
+    -5.303301e-03,            !- Vertex 4 Ycoordinate
+    6.463942679845788;        !- Vertex 4 Zcoordinate
+
+LIGHTS,
+    Lights_ALL_ZONES,         !- Name
+    ALL_ZONES,                !- Zone or ZoneList or Space or SpaceList Name
+    LightsSchedule,           !- Schedule Name
+    Watts/Area,               !- Design Level Calculation Method
+    ,                         !- Lighting Level
+    10,                       !- Watts per Zone Floor Area
+    ,                         !- Watts per Person
+    0,                        !- Return Air Fraction
+    0.7,                      !- Fraction Radiant
+    0.2,                      !- Fraction Visible
+    1,                        !- Fraction Replaceable
+    General,                  !- EndUse Subcategory
+    No,                       !- Return Air Fraction Calculated from Plenum Temperature
+    0,                        !- Return Air Fraction Function of Plenum Temperature Coefficient 1
+    0;                        !- Return Air Fraction Function of Plenum Temperature Coefficient 2
+
+ELECTRICEQUIPMENT,
+    Lighting_Parasitic_ALL_ZONES,    !- Name
+    ALL_ZONES,                !- Zone or ZoneList or Space or SpaceList Name
+    ParasiticSchedule,        !- Schedule Name
+    Watts/Area,               !- Design Level Calculation Method
+    ,                         !- Design Level
+    0.285,                    !- Watts per Zone Floor Area
+    ,                         !- Watts per Person
+    0,                        !- Fraction Latent
+    0,                        !- Fraction Radiant
+    1,                        !- Fraction Lost
+    General;                  !- EndUse Subcategory
+
+ZONEINFILTRATION:DESIGNFLOWRATE,
+    Infil_non_residential_D_Zone1_FrontPerimeter,    !- Name
+    Zone1_FrontPerimeter,     !- Zone or ZoneList or Space or SpaceList Name
+    AlwaysOnSched,            !- Schedule Name
+    Flow/Zone,                !- Design Flow Rate Calculation Method
+    4.049568e-04,             !- Design Flow Rate
+    ,                         !- Flow Rate per Floor Area
+    ,                         !- Flow Rate per Exterior Surface Area
+    ,                         !- Air Changes per Hour
+    1,                        !- Constant Term Coefficient
+    0,                        !- Temperature Term Coefficient
+    0,                        !- Velocity Term Coefficient
+    0;                        !- Velocity Squared Term Coefficient
+
+ZONEINFILTRATION:DESIGNFLOWRATE,
+    Infil_non_residential_D_Zone1_RightPerimeter,    !- Name
+    Zone1_RightPerimeter,     !- Zone or ZoneList or Space or SpaceList Name
+    AlwaysOnSched,            !- Schedule Name
+    Flow/Zone,                !- Design Flow Rate Calculation Method
+    4.049568e-04,             !- Design Flow Rate
+    ,                         !- Flow Rate per Floor Area
+    ,                         !- Flow Rate per Exterior Surface Area
+    ,                         !- Air Changes per Hour
+    1,                        !- Constant Term Coefficient
+    0,                        !- Temperature Term Coefficient
+    0,                        !- Velocity Term Coefficient
+    0;                        !- Velocity Squared Term Coefficient
+
+ZONEINFILTRATION:DESIGNFLOWRATE,
+    Infil_non_residential_D_Zone1_RearPerimeter,    !- Name
+    Zone1_RearPerimeter,      !- Zone or ZoneList or Space or SpaceList Name
+    AlwaysOnSched,            !- Schedule Name
+    Flow/Zone,                !- Design Flow Rate Calculation Method
+    4.049568e-04,             !- Design Flow Rate
+    ,                         !- Flow Rate per Floor Area
+    ,                         !- Flow Rate per Exterior Surface Area
+    ,                         !- Air Changes per Hour
+    1,                        !- Constant Term Coefficient
+    0,                        !- Temperature Term Coefficient
+    0,                        !- Velocity Term Coefficient
+    0;                        !- Velocity Squared Term Coefficient
+
+ZONEINFILTRATION:DESIGNFLOWRATE,
+    Infil_non_residential_D_Zone1_LeftPerimeter,    !- Name
+    Zone1_LeftPerimeter,      !- Zone or ZoneList or Space or SpaceList Name
+    AlwaysOnSched,            !- Schedule Name
+    Flow/Zone,                !- Design Flow Rate Calculation Method
+    4.049568e-04,             !- Design Flow Rate
+    ,                         !- Flow Rate per Floor Area
+    ,                         !- Flow Rate per Exterior Surface Area
+    ,                         !- Air Changes per Hour
+    1,                        !- Constant Term Coefficient
+    0,                        !- Temperature Term Coefficient
+    0,                        !- Velocity Term Coefficient
+    0;                        !- Velocity Squared Term Coefficient
+
+ZONEINFILTRATION:DESIGNFLOWRATE,
+    Infil_non_residential_D_Zone1_Core,    !- Name
+    Zone1_Core,               !- Zone or ZoneList or Space or SpaceList Name
+    AlwaysOnSched,            !- Schedule Name
+    Flow/Zone,                !- Design Flow Rate Calculation Method
+    4.049568e-04,             !- Design Flow Rate
+    ,                         !- Flow Rate per Floor Area
+    ,                         !- Flow Rate per Exterior Surface Area
+    ,                         !- Air Changes per Hour
+    1,                        !- Constant Term Coefficient
+    0,                        !- Temperature Term Coefficient
+    0,                        !- Velocity Term Coefficient
+    0;                        !- Velocity Squared Term Coefficient
+
+ZONEINFILTRATION:DESIGNFLOWRATE,
+    Infil_non_residential_D_Zone2_FrontPerimeter,    !- Name
+    Zone2_FrontPerimeter,     !- Zone or ZoneList or Space or SpaceList Name
+    AlwaysOnSched,            !- Schedule Name
+    Flow/Zone,                !- Design Flow Rate Calculation Method
+    4.049568e-04,             !- Design Flow Rate
+    ,                         !- Flow Rate per Floor Area
+    ,                         !- Flow Rate per Exterior Surface Area
+    ,                         !- Air Changes per Hour
+    1,                        !- Constant Term Coefficient
+    0,                        !- Temperature Term Coefficient
+    0,                        !- Velocity Term Coefficient
+    0;                        !- Velocity Squared Term Coefficient
+
+ZONEINFILTRATION:DESIGNFLOWRATE,
+    Infil_non_residential_D_Zone2_RightPerimeter,    !- Name
+    Zone2_RightPerimeter,     !- Zone or ZoneList or Space or SpaceList Name
+    AlwaysOnSched,            !- Schedule Name
+    Flow/Zone,                !- Design Flow Rate Calculation Method
+    4.049568e-04,             !- Design Flow Rate
+    ,                         !- Flow Rate per Floor Area
+    ,                         !- Flow Rate per Exterior Surface Area
+    ,                         !- Air Changes per Hour
+    1,                        !- Constant Term Coefficient
+    0,                        !- Temperature Term Coefficient
+    0,                        !- Velocity Term Coefficient
+    0;                        !- Velocity Squared Term Coefficient
+
+ZONEINFILTRATION:DESIGNFLOWRATE,
+    Infil_non_residential_D_Zone2_RearPerimeter,    !- Name
+    Zone2_RearPerimeter,      !- Zone or ZoneList or Space or SpaceList Name
+    AlwaysOnSched,            !- Schedule Name
+    Flow/Zone,                !- Design Flow Rate Calculation Method
+    4.049568e-04,             !- Design Flow Rate
+    ,                         !- Flow Rate per Floor Area
+    ,                         !- Flow Rate per Exterior Surface Area
+    ,                         !- Air Changes per Hour
+    1,                        !- Constant Term Coefficient
+    0,                        !- Temperature Term Coefficient
+    0,                        !- Velocity Term Coefficient
+    0;                        !- Velocity Squared Term Coefficient
+
+ZONEINFILTRATION:DESIGNFLOWRATE,
+    Infil_non_residential_D_Zone2_LeftPerimeter,    !- Name
+    Zone2_LeftPerimeter,      !- Zone or ZoneList or Space or SpaceList Name
+    AlwaysOnSched,            !- Schedule Name
+    Flow/Zone,                !- Design Flow Rate Calculation Method
+    4.049568e-04,             !- Design Flow Rate
+    ,                         !- Flow Rate per Floor Area
+    ,                         !- Flow Rate per Exterior Surface Area
+    ,                         !- Air Changes per Hour
+    1,                        !- Constant Term Coefficient
+    0,                        !- Temperature Term Coefficient
+    0,                        !- Velocity Term Coefficient
+    0;                        !- Velocity Squared Term Coefficient
+
+ZONEINFILTRATION:DESIGNFLOWRATE,
+    Infil_non_residential_D_Zone2_Core,    !- Name
+    Zone2_Core,               !- Zone or ZoneList or Space or SpaceList Name
+    AlwaysOnSched,            !- Schedule Name
+    Flow/Zone,                !- Design Flow Rate Calculation Method
+    4.049568e-04,             !- Design Flow Rate
+    ,                         !- Flow Rate per Floor Area
+    ,                         !- Flow Rate per Exterior Surface Area
+    ,                         !- Air Changes per Hour
+    1,                        !- Constant Term Coefficient
+    0,                        !- Temperature Term Coefficient
+    0,                        !- Velocity Term Coefficient
+    0;                        !- Velocity Squared Term Coefficient
+
+DESIGNSPECIFICATION:OUTDOORAIR,
+    DSOA_Global,              !- Name
+    Sum,                      !- Outdoor Air Method
+    0.00236,                  !- Outdoor Air Flow per Person
+    0.000305,                 !- Outdoor Air Flow per Zone Floor Area
+    0,                        !- Outdoor Air Flow per Zone
+    0;                        !- Outdoor Air Flow Air Changes per Hour
+
+DESIGNSPECIFICATION:ZONEAIRDISTRIBUTION,
+    DSZAD_Global,             !- Name
+    1,                        !- Zone Air Distribution Effectiveness in Cooling Mode
+    1,                        !- Zone Air Distribution Effectiveness in Heating Mode
+    ,                         !- Zone Air Distribution Effectiveness Schedule Name
+    0.3,                      !- Zone Secondary Recirculation Fraction
+    0;                        !- Minimum Zone Ventilation Efficiency
+
+SIZING:ZONE,
+    ALL_ZONES,                !- Zone or ZoneList Name
+    SupplyAirTemperature,     !- Zone Cooling Design Supply Air Temperature Input Method
+    13.278853596915768,       !- Zone Cooling Design Supply Air Temperature
+    ,                         !- Zone Cooling Design Supply Air Temperature Difference
+    SupplyAirTemperature,     !- Zone Heating Design Supply Air Temperature Input Method
+    40.12505377611333,        !- Zone Heating Design Supply Air Temperature
+    ,                         !- Zone Heating Design Supply Air Temperature Difference
+    9.275029e-03,             !- Zone Cooling Design Supply Air Humidity Ratio
+    4.223211e-03,             !- Zone Heating Design Supply Air Humidity Ratio
+    DSOA_Global,              !- Design Specification Outdoor Air Object Name
+    1,                        !- Zone Heating Sizing Factor
+    1,                        !- Zone Cooling Sizing Factor
+    DesignDay,                !- Cooling Design Air Flow Method
+    0,                        !- Cooling Design Air Flow Rate
+    0.000762,                 !- Cooling Minimum Air Flow per Zone Floor Area
+    0,                        !- Cooling Minimum Air Flow
+    0.2,                      !- Cooling Minimum Air Flow Fraction
+    DesignDay,                !- Heating Design Air Flow Method
+    0,                        !- Heating Design Air Flow Rate
+    0.002032,                 !- Heating Maximum Air Flow per Zone Floor Area
+    0.1415762,                !- Heating Maximum Air Flow
+    0.3,                      !- Heating Maximum Air Flow Fraction
+    DSZAD_Global,             !- Design Specification Zone Air Distribution Object Name
+    No,                       !- Account for Dedicated Outdoor Air System
+    NeutralSupplyAir,         !- Dedicated Outdoor Air System Control Strategy
+    autosize,                 !- Dedicated Outdoor Air Low Setpoint Temperature for Design
+    autosize,                 !- Dedicated Outdoor Air High Setpoint Temperature for Design
+    Sensible Load Only No Latent Load,    !- Zone Load Sizing Method
+    HumidityRatioDifference,    !- Zone Latent Cooling Design Supply Air Humidity Ratio Input Method
+    ,                         !- Zone Dehumidification Design Supply Air Humidity Ratio
+    0.005,                    !- Zone Cooling Design Supply Air Humidity Ratio Difference
+    HumidityRatioDifference,    !- Zone Latent Heating Design Supply Air Humidity Ratio Input Method
+    ,                         !- Zone Humidification Design Supply Air Humidity Ratio
+    0.005;                    !- Zone Humidification Design Supply Air Humidity Ratio Difference
+
+ZONECONTROL:THERMOSTAT,
+    Zone1_FrontPerimeter CONTROLS,    !- Name
+    Zone1_FrontPerimeter,     !- Zone or ZoneList Name
+    ZONE CONTROL TYPE SCHEDULE,    !- Control Type Schedule Name
+    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
+    Zone1_FrontPerimeter SETPOINTS,    !- Control 1 Name
+    ,                         !- Control 2 Object Type
+    ,                         !- Control 2 Name
+    ,                         !- Control 3 Object Type
+    ,                         !- Control 3 Name
+    ,                         !- Control 4 Object Type
+    ,                         !- Control 4 Name
+    0;                        !- Temperature Difference Between Cutout And Setpoint
+
+ZONECONTROL:THERMOSTAT,
+    Zone1_RightPerimeter CONTROLS,    !- Name
+    Zone1_RightPerimeter,     !- Zone or ZoneList Name
+    ZONE CONTROL TYPE SCHEDULE,    !- Control Type Schedule Name
+    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
+    Zone1_RightPerimeter SETPOINTS,    !- Control 1 Name
+    ,                         !- Control 2 Object Type
+    ,                         !- Control 2 Name
+    ,                         !- Control 3 Object Type
+    ,                         !- Control 3 Name
+    ,                         !- Control 4 Object Type
+    ,                         !- Control 4 Name
+    0;                        !- Temperature Difference Between Cutout And Setpoint
+
+ZONECONTROL:THERMOSTAT,
+    Zone1_RearPerimeter CONTROLS,    !- Name
+    Zone1_RearPerimeter,      !- Zone or ZoneList Name
+    ZONE CONTROL TYPE SCHEDULE,    !- Control Type Schedule Name
+    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
+    Zone1_RearPerimeter SETPOINTS,    !- Control 1 Name
+    ,                         !- Control 2 Object Type
+    ,                         !- Control 2 Name
+    ,                         !- Control 3 Object Type
+    ,                         !- Control 3 Name
+    ,                         !- Control 4 Object Type
+    ,                         !- Control 4 Name
+    0;                        !- Temperature Difference Between Cutout And Setpoint
+
+ZONECONTROL:THERMOSTAT,
+    Zone1_LeftPerimeter CONTROLS,    !- Name
+    Zone1_LeftPerimeter,      !- Zone or ZoneList Name
+    ZONE CONTROL TYPE SCHEDULE,    !- Control Type Schedule Name
+    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
+    Zone1_LeftPerimeter SETPOINTS,    !- Control 1 Name
+    ,                         !- Control 2 Object Type
+    ,                         !- Control 2 Name
+    ,                         !- Control 3 Object Type
+    ,                         !- Control 3 Name
+    ,                         !- Control 4 Object Type
+    ,                         !- Control 4 Name
+    0;                        !- Temperature Difference Between Cutout And Setpoint
+
+ZONECONTROL:THERMOSTAT,
+    Zone1_Core CONTROLS,      !- Name
+    Zone1_Core,               !- Zone or ZoneList Name
+    ZONE CONTROL TYPE SCHEDULE,    !- Control Type Schedule Name
+    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
+    Zone1_Core SETPOINTS,     !- Control 1 Name
+    ,                         !- Control 2 Object Type
+    ,                         !- Control 2 Name
+    ,                         !- Control 3 Object Type
+    ,                         !- Control 3 Name
+    ,                         !- Control 4 Object Type
+    ,                         !- Control 4 Name
+    0;                        !- Temperature Difference Between Cutout And Setpoint
+
+ZONECONTROL:THERMOSTAT,
+    Zone2_FrontPerimeter CONTROLS,    !- Name
+    Zone2_FrontPerimeter,     !- Zone or ZoneList Name
+    ZONE CONTROL TYPE SCHEDULE,    !- Control Type Schedule Name
+    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
+    Zone2_FrontPerimeter SETPOINTS,    !- Control 1 Name
+    ,                         !- Control 2 Object Type
+    ,                         !- Control 2 Name
+    ,                         !- Control 3 Object Type
+    ,                         !- Control 3 Name
+    ,                         !- Control 4 Object Type
+    ,                         !- Control 4 Name
+    0;                        !- Temperature Difference Between Cutout And Setpoint
+
+ZONECONTROL:THERMOSTAT,
+    Zone2_RightPerimeter CONTROLS,    !- Name
+    Zone2_RightPerimeter,     !- Zone or ZoneList Name
+    ZONE CONTROL TYPE SCHEDULE,    !- Control Type Schedule Name
+    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
+    Zone2_RightPerimeter SETPOINTS,    !- Control 1 Name
+    ,                         !- Control 2 Object Type
+    ,                         !- Control 2 Name
+    ,                         !- Control 3 Object Type
+    ,                         !- Control 3 Name
+    ,                         !- Control 4 Object Type
+    ,                         !- Control 4 Name
+    0;                        !- Temperature Difference Between Cutout And Setpoint
+
+ZONECONTROL:THERMOSTAT,
+    Zone2_RearPerimeter CONTROLS,    !- Name
+    Zone2_RearPerimeter,      !- Zone or ZoneList Name
+    ZONE CONTROL TYPE SCHEDULE,    !- Control Type Schedule Name
+    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
+    Zone2_RearPerimeter SETPOINTS,    !- Control 1 Name
+    ,                         !- Control 2 Object Type
+    ,                         !- Control 2 Name
+    ,                         !- Control 3 Object Type
+    ,                         !- Control 3 Name
+    ,                         !- Control 4 Object Type
+    ,                         !- Control 4 Name
+    0;                        !- Temperature Difference Between Cutout And Setpoint
+
+ZONECONTROL:THERMOSTAT,
+    Zone2_LeftPerimeter CONTROLS,    !- Name
+    Zone2_LeftPerimeter,      !- Zone or ZoneList Name
+    ZONE CONTROL TYPE SCHEDULE,    !- Control Type Schedule Name
+    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
+    Zone2_LeftPerimeter SETPOINTS,    !- Control 1 Name
+    ,                         !- Control 2 Object Type
+    ,                         !- Control 2 Name
+    ,                         !- Control 3 Object Type
+    ,                         !- Control 3 Name
+    ,                         !- Control 4 Object Type
+    ,                         !- Control 4 Name
+    0;                        !- Temperature Difference Between Cutout And Setpoint
+
+ZONECONTROL:THERMOSTAT,
+    Zone2_Core CONTROLS,      !- Name
+    Zone2_Core,               !- Zone or ZoneList Name
+    ZONE CONTROL TYPE SCHEDULE,    !- Control Type Schedule Name
+    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
+    Zone2_Core SETPOINTS,     !- Control 1 Name
+    ,                         !- Control 2 Object Type
+    ,                         !- Control 2 Name
+    ,                         !- Control 3 Object Type
+    ,                         !- Control 3 Name
+    ,                         !- Control 4 Object Type
+    ,                         !- Control 4 Name
+    0;                        !- Temperature Difference Between Cutout And Setpoint
+
+THERMOSTATSETPOINT:DUALSETPOINT,
+    Zone1_FrontPerimeter SETPOINTS,    !- Name
+    ZONE HEATING SETPOINTS,    !- Heating Setpoint Temperature Schedule Name
+    ZONE COOLING SETPOINTS;    !- Cooling Setpoint Temperature Schedule Name
+
+THERMOSTATSETPOINT:DUALSETPOINT,
+    Zone1_RightPerimeter SETPOINTS,    !- Name
+    ZONE HEATING SETPOINTS,    !- Heating Setpoint Temperature Schedule Name
+    ZONE COOLING SETPOINTS;    !- Cooling Setpoint Temperature Schedule Name
+
+THERMOSTATSETPOINT:DUALSETPOINT,
+    Zone1_RearPerimeter SETPOINTS,    !- Name
+    ZONE HEATING SETPOINTS,    !- Heating Setpoint Temperature Schedule Name
+    ZONE COOLING SETPOINTS;    !- Cooling Setpoint Temperature Schedule Name
+
+THERMOSTATSETPOINT:DUALSETPOINT,
+    Zone1_LeftPerimeter SETPOINTS,    !- Name
+    ZONE HEATING SETPOINTS,    !- Heating Setpoint Temperature Schedule Name
+    ZONE COOLING SETPOINTS;    !- Cooling Setpoint Temperature Schedule Name
+
+THERMOSTATSETPOINT:DUALSETPOINT,
+    Zone1_Core SETPOINTS,     !- Name
+    ZONE HEATING SETPOINTS,    !- Heating Setpoint Temperature Schedule Name
+    ZONE COOLING SETPOINTS;    !- Cooling Setpoint Temperature Schedule Name
+
+THERMOSTATSETPOINT:DUALSETPOINT,
+    Zone2_FrontPerimeter SETPOINTS,    !- Name
+    ZONE HEATING SETPOINTS,    !- Heating Setpoint Temperature Schedule Name
+    ZONE COOLING SETPOINTS;    !- Cooling Setpoint Temperature Schedule Name
+
+THERMOSTATSETPOINT:DUALSETPOINT,
+    Zone2_RightPerimeter SETPOINTS,    !- Name
+    ZONE HEATING SETPOINTS,    !- Heating Setpoint Temperature Schedule Name
+    ZONE COOLING SETPOINTS;    !- Cooling Setpoint Temperature Schedule Name
+
+THERMOSTATSETPOINT:DUALSETPOINT,
+    Zone2_RearPerimeter SETPOINTS,    !- Name
+    ZONE HEATING SETPOINTS,    !- Heating Setpoint Temperature Schedule Name
+    ZONE COOLING SETPOINTS;    !- Cooling Setpoint Temperature Schedule Name
+
+THERMOSTATSETPOINT:DUALSETPOINT,
+    Zone2_LeftPerimeter SETPOINTS,    !- Name
+    ZONE HEATING SETPOINTS,    !- Heating Setpoint Temperature Schedule Name
+    ZONE COOLING SETPOINTS;    !- Cooling Setpoint Temperature Schedule Name
+
+THERMOSTATSETPOINT:DUALSETPOINT,
+    Zone2_Core SETPOINTS,     !- Name
+    ZONE HEATING SETPOINTS,    !- Heating Setpoint Temperature Schedule Name
+    ZONE COOLING SETPOINTS;    !- Cooling Setpoint Temperature Schedule Name
+
+ZONEHVAC:IDEALLOADSAIRSYSTEM,
+    Zone1_FrontPerimeter Ideal Loads,    !- Name
+    ,                         !- Availability Schedule Name
+    Zone1_FrontPerimeter INLETS,    !- Zone Supply Air Node Name
+    ,                         !- Zone Exhaust Air Node Name
+    ,                         !- System Inlet Air Node Name
+    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    13.353398974845822,       !- Minimum Cooling Supply Air Temperature
+    0.015,                    !- Maximum Heating Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
+    NoLimit,                  !- Heating Limit
+    autosize,                 !- Maximum Heating Air Flow Rate
+    ,                         !- Maximum Sensible Heating Capacity
+    NoLimit,                  !- Cooling Limit
+    autosize,                 !- Maximum Cooling Air Flow Rate
+    ,                         !- Maximum Total Cooling Capacity
+    ,                         !- Heating Availability Schedule Name
+    ,                         !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,    !- Dehumidification Control Type
+    0.7,                      !- Cooling Sensible Heat Ratio
+    ConstantSupplyHumidityRatio,    !- Humidification Control Type
+    ,                         !- Design Specification Outdoor Air Object Name
+    ,                         !- Outdoor Air Inlet Node Name
+    None,                     !- Demand Controlled Ventilation Type
+    NoEconomizer,             !- Outdoor Air Economizer Type
+    None,                     !- Heat Recovery Type
+    0.7736471214164012,       !- Sensible Heat Recovery Effectiveness
+    0;                        !- Latent Heat Recovery Effectiveness
+
+ZONEHVAC:IDEALLOADSAIRSYSTEM,
+    Zone1_RightPerimeter Ideal Loads,    !- Name
+    ,                         !- Availability Schedule Name
+    Zone1_RightPerimeter INLETS,    !- Zone Supply Air Node Name
+    ,                         !- Zone Exhaust Air Node Name
+    ,                         !- System Inlet Air Node Name
+    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    13.353398974845822,       !- Minimum Cooling Supply Air Temperature
+    0.015,                    !- Maximum Heating Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
+    NoLimit,                  !- Heating Limit
+    autosize,                 !- Maximum Heating Air Flow Rate
+    ,                         !- Maximum Sensible Heating Capacity
+    NoLimit,                  !- Cooling Limit
+    autosize,                 !- Maximum Cooling Air Flow Rate
+    ,                         !- Maximum Total Cooling Capacity
+    ,                         !- Heating Availability Schedule Name
+    ,                         !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,    !- Dehumidification Control Type
+    0.7,                      !- Cooling Sensible Heat Ratio
+    ConstantSupplyHumidityRatio,    !- Humidification Control Type
+    ,                         !- Design Specification Outdoor Air Object Name
+    ,                         !- Outdoor Air Inlet Node Name
+    None,                     !- Demand Controlled Ventilation Type
+    NoEconomizer,             !- Outdoor Air Economizer Type
+    None,                     !- Heat Recovery Type
+    0.7736471214164012,       !- Sensible Heat Recovery Effectiveness
+    0;                        !- Latent Heat Recovery Effectiveness
+
+ZONEHVAC:IDEALLOADSAIRSYSTEM,
+    Zone1_RearPerimeter Ideal Loads,    !- Name
+    ,                         !- Availability Schedule Name
+    Zone1_RearPerimeter INLETS,    !- Zone Supply Air Node Name
+    ,                         !- Zone Exhaust Air Node Name
+    ,                         !- System Inlet Air Node Name
+    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    13.353398974845822,       !- Minimum Cooling Supply Air Temperature
+    0.015,                    !- Maximum Heating Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
+    NoLimit,                  !- Heating Limit
+    autosize,                 !- Maximum Heating Air Flow Rate
+    ,                         !- Maximum Sensible Heating Capacity
+    NoLimit,                  !- Cooling Limit
+    autosize,                 !- Maximum Cooling Air Flow Rate
+    ,                         !- Maximum Total Cooling Capacity
+    ,                         !- Heating Availability Schedule Name
+    ,                         !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,    !- Dehumidification Control Type
+    0.7,                      !- Cooling Sensible Heat Ratio
+    ConstantSupplyHumidityRatio,    !- Humidification Control Type
+    ,                         !- Design Specification Outdoor Air Object Name
+    ,                         !- Outdoor Air Inlet Node Name
+    None,                     !- Demand Controlled Ventilation Type
+    NoEconomizer,             !- Outdoor Air Economizer Type
+    None,                     !- Heat Recovery Type
+    0.7736471214164012,       !- Sensible Heat Recovery Effectiveness
+    0;                        !- Latent Heat Recovery Effectiveness
+
+ZONEHVAC:IDEALLOADSAIRSYSTEM,
+    Zone1_LeftPerimeter Ideal Loads,    !- Name
+    ,                         !- Availability Schedule Name
+    Zone1_LeftPerimeter INLETS,    !- Zone Supply Air Node Name
+    ,                         !- Zone Exhaust Air Node Name
+    ,                         !- System Inlet Air Node Name
+    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    13.353398974845822,       !- Minimum Cooling Supply Air Temperature
+    0.015,                    !- Maximum Heating Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
+    NoLimit,                  !- Heating Limit
+    autosize,                 !- Maximum Heating Air Flow Rate
+    ,                         !- Maximum Sensible Heating Capacity
+    NoLimit,                  !- Cooling Limit
+    autosize,                 !- Maximum Cooling Air Flow Rate
+    ,                         !- Maximum Total Cooling Capacity
+    ,                         !- Heating Availability Schedule Name
+    ,                         !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,    !- Dehumidification Control Type
+    0.7,                      !- Cooling Sensible Heat Ratio
+    ConstantSupplyHumidityRatio,    !- Humidification Control Type
+    ,                         !- Design Specification Outdoor Air Object Name
+    ,                         !- Outdoor Air Inlet Node Name
+    None,                     !- Demand Controlled Ventilation Type
+    NoEconomizer,             !- Outdoor Air Economizer Type
+    None,                     !- Heat Recovery Type
+    0.7736471214164012,       !- Sensible Heat Recovery Effectiveness
+    0;                        !- Latent Heat Recovery Effectiveness
+
+ZONEHVAC:IDEALLOADSAIRSYSTEM,
+    Zone1_Core Ideal Loads,    !- Name
+    ,                         !- Availability Schedule Name
+    Zone1_Core INLETS,        !- Zone Supply Air Node Name
+    ,                         !- Zone Exhaust Air Node Name
+    ,                         !- System Inlet Air Node Name
+    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    13.353398974845822,       !- Minimum Cooling Supply Air Temperature
+    0.015,                    !- Maximum Heating Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
+    NoLimit,                  !- Heating Limit
+    autosize,                 !- Maximum Heating Air Flow Rate
+    ,                         !- Maximum Sensible Heating Capacity
+    NoLimit,                  !- Cooling Limit
+    autosize,                 !- Maximum Cooling Air Flow Rate
+    ,                         !- Maximum Total Cooling Capacity
+    ,                         !- Heating Availability Schedule Name
+    ,                         !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,    !- Dehumidification Control Type
+    0.7,                      !- Cooling Sensible Heat Ratio
+    ConstantSupplyHumidityRatio,    !- Humidification Control Type
+    ,                         !- Design Specification Outdoor Air Object Name
+    ,                         !- Outdoor Air Inlet Node Name
+    None,                     !- Demand Controlled Ventilation Type
+    NoEconomizer,             !- Outdoor Air Economizer Type
+    None,                     !- Heat Recovery Type
+    0.7736471214164012,       !- Sensible Heat Recovery Effectiveness
+    0;                        !- Latent Heat Recovery Effectiveness
+
+ZONEHVAC:IDEALLOADSAIRSYSTEM,
+    Zone2_FrontPerimeter Ideal Loads,    !- Name
+    ,                         !- Availability Schedule Name
+    Zone2_FrontPerimeter INLETS,    !- Zone Supply Air Node Name
+    ,                         !- Zone Exhaust Air Node Name
+    ,                         !- System Inlet Air Node Name
+    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    13.353398974845822,       !- Minimum Cooling Supply Air Temperature
+    0.015,                    !- Maximum Heating Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
+    NoLimit,                  !- Heating Limit
+    autosize,                 !- Maximum Heating Air Flow Rate
+    ,                         !- Maximum Sensible Heating Capacity
+    NoLimit,                  !- Cooling Limit
+    autosize,                 !- Maximum Cooling Air Flow Rate
+    ,                         !- Maximum Total Cooling Capacity
+    ,                         !- Heating Availability Schedule Name
+    ,                         !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,    !- Dehumidification Control Type
+    0.7,                      !- Cooling Sensible Heat Ratio
+    ConstantSupplyHumidityRatio,    !- Humidification Control Type
+    ,                         !- Design Specification Outdoor Air Object Name
+    ,                         !- Outdoor Air Inlet Node Name
+    None,                     !- Demand Controlled Ventilation Type
+    NoEconomizer,             !- Outdoor Air Economizer Type
+    None,                     !- Heat Recovery Type
+    0.7736471214164012,       !- Sensible Heat Recovery Effectiveness
+    0;                        !- Latent Heat Recovery Effectiveness
+
+ZONEHVAC:IDEALLOADSAIRSYSTEM,
+    Zone2_RightPerimeter Ideal Loads,    !- Name
+    ,                         !- Availability Schedule Name
+    Zone2_RightPerimeter INLETS,    !- Zone Supply Air Node Name
+    ,                         !- Zone Exhaust Air Node Name
+    ,                         !- System Inlet Air Node Name
+    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    13.353398974845822,       !- Minimum Cooling Supply Air Temperature
+    0.015,                    !- Maximum Heating Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
+    NoLimit,                  !- Heating Limit
+    autosize,                 !- Maximum Heating Air Flow Rate
+    ,                         !- Maximum Sensible Heating Capacity
+    NoLimit,                  !- Cooling Limit
+    autosize,                 !- Maximum Cooling Air Flow Rate
+    ,                         !- Maximum Total Cooling Capacity
+    ,                         !- Heating Availability Schedule Name
+    ,                         !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,    !- Dehumidification Control Type
+    0.7,                      !- Cooling Sensible Heat Ratio
+    ConstantSupplyHumidityRatio,    !- Humidification Control Type
+    ,                         !- Design Specification Outdoor Air Object Name
+    ,                         !- Outdoor Air Inlet Node Name
+    None,                     !- Demand Controlled Ventilation Type
+    NoEconomizer,             !- Outdoor Air Economizer Type
+    None,                     !- Heat Recovery Type
+    0.7736471214164012,       !- Sensible Heat Recovery Effectiveness
+    0;                        !- Latent Heat Recovery Effectiveness
+
+ZONEHVAC:IDEALLOADSAIRSYSTEM,
+    Zone2_RearPerimeter Ideal Loads,    !- Name
+    ,                         !- Availability Schedule Name
+    Zone2_RearPerimeter INLETS,    !- Zone Supply Air Node Name
+    ,                         !- Zone Exhaust Air Node Name
+    ,                         !- System Inlet Air Node Name
+    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    13.353398974845822,       !- Minimum Cooling Supply Air Temperature
+    0.015,                    !- Maximum Heating Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
+    NoLimit,                  !- Heating Limit
+    autosize,                 !- Maximum Heating Air Flow Rate
+    ,                         !- Maximum Sensible Heating Capacity
+    NoLimit,                  !- Cooling Limit
+    autosize,                 !- Maximum Cooling Air Flow Rate
+    ,                         !- Maximum Total Cooling Capacity
+    ,                         !- Heating Availability Schedule Name
+    ,                         !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,    !- Dehumidification Control Type
+    0.7,                      !- Cooling Sensible Heat Ratio
+    ConstantSupplyHumidityRatio,    !- Humidification Control Type
+    ,                         !- Design Specification Outdoor Air Object Name
+    ,                         !- Outdoor Air Inlet Node Name
+    None,                     !- Demand Controlled Ventilation Type
+    NoEconomizer,             !- Outdoor Air Economizer Type
+    None,                     !- Heat Recovery Type
+    0.7736471214164012,       !- Sensible Heat Recovery Effectiveness
+    0;                        !- Latent Heat Recovery Effectiveness
+
+ZONEHVAC:IDEALLOADSAIRSYSTEM,
+    Zone2_LeftPerimeter Ideal Loads,    !- Name
+    ,                         !- Availability Schedule Name
+    Zone2_LeftPerimeter INLETS,    !- Zone Supply Air Node Name
+    ,                         !- Zone Exhaust Air Node Name
+    ,                         !- System Inlet Air Node Name
+    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    13.353398974845822,       !- Minimum Cooling Supply Air Temperature
+    0.015,                    !- Maximum Heating Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
+    NoLimit,                  !- Heating Limit
+    autosize,                 !- Maximum Heating Air Flow Rate
+    ,                         !- Maximum Sensible Heating Capacity
+    NoLimit,                  !- Cooling Limit
+    autosize,                 !- Maximum Cooling Air Flow Rate
+    ,                         !- Maximum Total Cooling Capacity
+    ,                         !- Heating Availability Schedule Name
+    ,                         !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,    !- Dehumidification Control Type
+    0.7,                      !- Cooling Sensible Heat Ratio
+    ConstantSupplyHumidityRatio,    !- Humidification Control Type
+    ,                         !- Design Specification Outdoor Air Object Name
+    ,                         !- Outdoor Air Inlet Node Name
+    None,                     !- Demand Controlled Ventilation Type
+    NoEconomizer,             !- Outdoor Air Economizer Type
+    None,                     !- Heat Recovery Type
+    0.7736471214164012,       !- Sensible Heat Recovery Effectiveness
+    0;                        !- Latent Heat Recovery Effectiveness
+
+ZONEHVAC:IDEALLOADSAIRSYSTEM,
+    Zone2_Core Ideal Loads,    !- Name
+    ,                         !- Availability Schedule Name
+    Zone2_Core INLETS,        !- Zone Supply Air Node Name
+    ,                         !- Zone Exhaust Air Node Name
+    ,                         !- System Inlet Air Node Name
+    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    13.353398974845822,       !- Minimum Cooling Supply Air Temperature
+    0.015,                    !- Maximum Heating Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
+    NoLimit,                  !- Heating Limit
+    autosize,                 !- Maximum Heating Air Flow Rate
+    ,                         !- Maximum Sensible Heating Capacity
+    NoLimit,                  !- Cooling Limit
+    autosize,                 !- Maximum Cooling Air Flow Rate
+    ,                         !- Maximum Total Cooling Capacity
+    ,                         !- Heating Availability Schedule Name
+    ,                         !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,    !- Dehumidification Control Type
+    0.7,                      !- Cooling Sensible Heat Ratio
+    ConstantSupplyHumidityRatio,    !- Humidification Control Type
+    ,                         !- Design Specification Outdoor Air Object Name
+    ,                         !- Outdoor Air Inlet Node Name
+    None,                     !- Demand Controlled Ventilation Type
+    NoEconomizer,             !- Outdoor Air Economizer Type
+    None,                     !- Heat Recovery Type
+    0.7736471214164012,       !- Sensible Heat Recovery Effectiveness
+    0;                        !- Latent Heat Recovery Effectiveness
+
+ZONEHVAC:EQUIPMENTLIST,
+    Zone1_FrontPerimeter EQUIPMENT,    !- Name
+    SequentialLoad,           !- Load Distribution Scheme
+    ZoneHVAC:IdealLoadsAirSystem,    !- Zone Equipment 1 Object Type
+    Zone1_FrontPerimeter Ideal Loads,    !- Zone Equipment 1 Name
+    1,                        !- Zone Equipment 1 Cooling Sequence
+    1;                        !- Zone Equipment 1 Heating or NoLoad Sequence
+
+ZONEHVAC:EQUIPMENTLIST,
+    Zone1_RightPerimeter EQUIPMENT,    !- Name
+    SequentialLoad,           !- Load Distribution Scheme
+    ZoneHVAC:IdealLoadsAirSystem,    !- Zone Equipment 1 Object Type
+    Zone1_RightPerimeter Ideal Loads,    !- Zone Equipment 1 Name
+    1,                        !- Zone Equipment 1 Cooling Sequence
+    1;                        !- Zone Equipment 1 Heating or NoLoad Sequence
+
+ZONEHVAC:EQUIPMENTLIST,
+    Zone1_RearPerimeter EQUIPMENT,    !- Name
+    SequentialLoad,           !- Load Distribution Scheme
+    ZoneHVAC:IdealLoadsAirSystem,    !- Zone Equipment 1 Object Type
+    Zone1_RearPerimeter Ideal Loads,    !- Zone Equipment 1 Name
+    1,                        !- Zone Equipment 1 Cooling Sequence
+    1;                        !- Zone Equipment 1 Heating or NoLoad Sequence
+
+ZONEHVAC:EQUIPMENTLIST,
+    Zone1_LeftPerimeter EQUIPMENT,    !- Name
+    SequentialLoad,           !- Load Distribution Scheme
+    ZoneHVAC:IdealLoadsAirSystem,    !- Zone Equipment 1 Object Type
+    Zone1_LeftPerimeter Ideal Loads,    !- Zone Equipment 1 Name
+    1,                        !- Zone Equipment 1 Cooling Sequence
+    1;                        !- Zone Equipment 1 Heating or NoLoad Sequence
+
+ZONEHVAC:EQUIPMENTLIST,
+    Zone1_Core EQUIPMENT,     !- Name
+    SequentialLoad,           !- Load Distribution Scheme
+    ZoneHVAC:IdealLoadsAirSystem,    !- Zone Equipment 1 Object Type
+    Zone1_Core Ideal Loads,    !- Zone Equipment 1 Name
+    1,                        !- Zone Equipment 1 Cooling Sequence
+    1;                        !- Zone Equipment 1 Heating or NoLoad Sequence
+
+ZONEHVAC:EQUIPMENTLIST,
+    Zone2_FrontPerimeter EQUIPMENT,    !- Name
+    SequentialLoad,           !- Load Distribution Scheme
+    ZoneHVAC:IdealLoadsAirSystem,    !- Zone Equipment 1 Object Type
+    Zone2_FrontPerimeter Ideal Loads,    !- Zone Equipment 1 Name
+    1,                        !- Zone Equipment 1 Cooling Sequence
+    1;                        !- Zone Equipment 1 Heating or NoLoad Sequence
+
+ZONEHVAC:EQUIPMENTLIST,
+    Zone2_RightPerimeter EQUIPMENT,    !- Name
+    SequentialLoad,           !- Load Distribution Scheme
+    ZoneHVAC:IdealLoadsAirSystem,    !- Zone Equipment 1 Object Type
+    Zone2_RightPerimeter Ideal Loads,    !- Zone Equipment 1 Name
+    1,                        !- Zone Equipment 1 Cooling Sequence
+    1;                        !- Zone Equipment 1 Heating or NoLoad Sequence
+
+ZONEHVAC:EQUIPMENTLIST,
+    Zone2_RearPerimeter EQUIPMENT,    !- Name
+    SequentialLoad,           !- Load Distribution Scheme
+    ZoneHVAC:IdealLoadsAirSystem,    !- Zone Equipment 1 Object Type
+    Zone2_RearPerimeter Ideal Loads,    !- Zone Equipment 1 Name
+    1,                        !- Zone Equipment 1 Cooling Sequence
+    1;                        !- Zone Equipment 1 Heating or NoLoad Sequence
+
+ZONEHVAC:EQUIPMENTLIST,
+    Zone2_LeftPerimeter EQUIPMENT,    !- Name
+    SequentialLoad,           !- Load Distribution Scheme
+    ZoneHVAC:IdealLoadsAirSystem,    !- Zone Equipment 1 Object Type
+    Zone2_LeftPerimeter Ideal Loads,    !- Zone Equipment 1 Name
+    1,                        !- Zone Equipment 1 Cooling Sequence
+    1;                        !- Zone Equipment 1 Heating or NoLoad Sequence
+
+ZONEHVAC:EQUIPMENTLIST,
+    Zone2_Core EQUIPMENT,     !- Name
+    SequentialLoad,           !- Load Distribution Scheme
+    ZoneHVAC:IdealLoadsAirSystem,    !- Zone Equipment 1 Object Type
+    Zone2_Core Ideal Loads,    !- Zone Equipment 1 Name
+    1,                        !- Zone Equipment 1 Cooling Sequence
+    1;                        !- Zone Equipment 1 Heating or NoLoad Sequence
+
+ZONEHVAC:EQUIPMENTCONNECTIONS,
+    Zone1_FrontPerimeter,     !- Zone Name
+    Zone1_FrontPerimeter EQUIPMENT,    !- Zone Conditioning Equipment List Name
+    Zone1_FrontPerimeter INLETS,    !- Zone Air Inlet Node or NodeList Name
+    ,                         !- Zone Air Exhaust Node or NodeList Name
+    Zone1_FrontPerimeter NODE,    !- Zone Air Node Name
+    Zone1_FrontPerimeter OUTLET;    !- Zone Return Air Node or NodeList Name
+
+ZONEHVAC:EQUIPMENTCONNECTIONS,
+    Zone1_RightPerimeter,     !- Zone Name
+    Zone1_RightPerimeter EQUIPMENT,    !- Zone Conditioning Equipment List Name
+    Zone1_RightPerimeter INLETS,    !- Zone Air Inlet Node or NodeList Name
+    ,                         !- Zone Air Exhaust Node or NodeList Name
+    Zone1_RightPerimeter NODE,    !- Zone Air Node Name
+    Zone1_RightPerimeter OUTLET;    !- Zone Return Air Node or NodeList Name
+
+ZONEHVAC:EQUIPMENTCONNECTIONS,
+    Zone1_RearPerimeter,      !- Zone Name
+    Zone1_RearPerimeter EQUIPMENT,    !- Zone Conditioning Equipment List Name
+    Zone1_RearPerimeter INLETS,    !- Zone Air Inlet Node or NodeList Name
+    ,                         !- Zone Air Exhaust Node or NodeList Name
+    Zone1_RearPerimeter NODE,    !- Zone Air Node Name
+    Zone1_RearPerimeter OUTLET;    !- Zone Return Air Node or NodeList Name
+
+ZONEHVAC:EQUIPMENTCONNECTIONS,
+    Zone1_LeftPerimeter,      !- Zone Name
+    Zone1_LeftPerimeter EQUIPMENT,    !- Zone Conditioning Equipment List Name
+    Zone1_LeftPerimeter INLETS,    !- Zone Air Inlet Node or NodeList Name
+    ,                         !- Zone Air Exhaust Node or NodeList Name
+    Zone1_LeftPerimeter NODE,    !- Zone Air Node Name
+    Zone1_LeftPerimeter OUTLET;    !- Zone Return Air Node or NodeList Name
+
+ZONEHVAC:EQUIPMENTCONNECTIONS,
+    Zone1_Core,               !- Zone Name
+    Zone1_Core EQUIPMENT,     !- Zone Conditioning Equipment List Name
+    Zone1_Core INLETS,        !- Zone Air Inlet Node or NodeList Name
+    ,                         !- Zone Air Exhaust Node or NodeList Name
+    Zone1_Core NODE,          !- Zone Air Node Name
+    Zone1_Core OUTLET;        !- Zone Return Air Node or NodeList Name
+
+ZONEHVAC:EQUIPMENTCONNECTIONS,
+    Zone2_FrontPerimeter,     !- Zone Name
+    Zone2_FrontPerimeter EQUIPMENT,    !- Zone Conditioning Equipment List Name
+    Zone2_FrontPerimeter INLETS,    !- Zone Air Inlet Node or NodeList Name
+    ,                         !- Zone Air Exhaust Node or NodeList Name
+    Zone2_FrontPerimeter NODE,    !- Zone Air Node Name
+    Zone2_FrontPerimeter OUTLET;    !- Zone Return Air Node or NodeList Name
+
+ZONEHVAC:EQUIPMENTCONNECTIONS,
+    Zone2_RightPerimeter,     !- Zone Name
+    Zone2_RightPerimeter EQUIPMENT,    !- Zone Conditioning Equipment List Name
+    Zone2_RightPerimeter INLETS,    !- Zone Air Inlet Node or NodeList Name
+    ,                         !- Zone Air Exhaust Node or NodeList Name
+    Zone2_RightPerimeter NODE,    !- Zone Air Node Name
+    Zone2_RightPerimeter OUTLET;    !- Zone Return Air Node or NodeList Name
+
+ZONEHVAC:EQUIPMENTCONNECTIONS,
+    Zone2_RearPerimeter,      !- Zone Name
+    Zone2_RearPerimeter EQUIPMENT,    !- Zone Conditioning Equipment List Name
+    Zone2_RearPerimeter INLETS,    !- Zone Air Inlet Node or NodeList Name
+    ,                         !- Zone Air Exhaust Node or NodeList Name
+    Zone2_RearPerimeter NODE,    !- Zone Air Node Name
+    Zone2_RearPerimeter OUTLET;    !- Zone Return Air Node or NodeList Name
+
+ZONEHVAC:EQUIPMENTCONNECTIONS,
+    Zone2_LeftPerimeter,      !- Zone Name
+    Zone2_LeftPerimeter EQUIPMENT,    !- Zone Conditioning Equipment List Name
+    Zone2_LeftPerimeter INLETS,    !- Zone Air Inlet Node or NodeList Name
+    ,                         !- Zone Air Exhaust Node or NodeList Name
+    Zone2_LeftPerimeter NODE,    !- Zone Air Node Name
+    Zone2_LeftPerimeter OUTLET;    !- Zone Return Air Node or NodeList Name
+
+ZONEHVAC:EQUIPMENTCONNECTIONS,
+    Zone2_Core,               !- Zone Name
+    Zone2_Core EQUIPMENT,     !- Zone Conditioning Equipment List Name
+    Zone2_Core INLETS,        !- Zone Air Inlet Node or NodeList Name
+    ,                         !- Zone Air Exhaust Node or NodeList Name
+    Zone2_Core NODE,          !- Zone Air Node Name
+    Zone2_Core OUTLET;        !- Zone Return Air Node or NodeList Name
+
+NODELIST,
+    Zone1_FrontPerimeter INLETS,    !- Name
+    Zone1_FrontPerimeter INLET;    !- Node 1 Name
+
+NODELIST,
+    Zone1_RightPerimeter INLETS,    !- Name
+    Zone1_RightPerimeter INLET;    !- Node 1 Name
+
+NODELIST,
+    Zone1_RearPerimeter INLETS,    !- Name
+    Zone1_RearPerimeter INLET;    !- Node 1 Name
+
+NODELIST,
+    Zone1_LeftPerimeter INLETS,    !- Name
+    Zone1_LeftPerimeter INLET;    !- Node 1 Name
+
+NODELIST,
+    Zone1_Core INLETS,        !- Name
+    Zone1_Core INLET;         !- Node 1 Name
+
+NODELIST,
+    Zone2_FrontPerimeter INLETS,    !- Name
+    Zone2_FrontPerimeter INLET;    !- Node 1 Name
+
+NODELIST,
+    Zone2_RightPerimeter INLETS,    !- Name
+    Zone2_RightPerimeter INLET;    !- Node 1 Name
+
+NODELIST,
+    Zone2_RearPerimeter INLETS,    !- Name
+    Zone2_RearPerimeter INLET;    !- Node 1 Name
+
+NODELIST,
+    Zone2_LeftPerimeter INLETS,    !- Name
+    Zone2_LeftPerimeter INLET;    !- Node 1 Name
+
+NODELIST,
+    Zone2_Core INLETS,        !- Name
+    Zone2_Core INLET;         !- Node 1 Name
+
+WATERHEATER:MIXED,
+    MyDHW_1_WaterHeater,      !- Name
+    0.2775029318369119,       !- Tank Volume
+    MyDHW_1_Setpoint,         !- Setpoint Temperature Schedule Name
+    2,                        !- Deadband Temperature Difference
+    80,                       !- Maximum Temperature Limit
+    CYCLE,                    !- Heater Control Type
+    4223.210738148823,        !- Heater Maximum Capacity
+    ,                         !- Heater Minimum Capacity
+    0,                        !- Heater Ignition Minimum Flow Rate
+    0,                        !- Heater Ignition Delay
+    Electricity,              !- Heater Fuel Type
+    0.9,                      !- Heater Thermal Efficiency
+    ,                         !- Part Load Factor Curve Name
+    0,                        !- Off Cycle Parasitic Fuel Consumption Rate
+    Electricity,              !- Off Cycle Parasitic Fuel Type
+    0,                        !- Off Cycle Parasitic Heat Fraction to Tank
+    0,                        !- On Cycle Parasitic Fuel Consumption Rate
+    Electricity,              !- On Cycle Parasitic Fuel Type
+    0,                        !- On Cycle Parasitic Heat Fraction to Tank
+    SCHEDULE,                 !- Ambient Temperature Indicator
+    Always22C,                !- Ambient Temperature Schedule Name
+    ,                         !- Ambient Temperature Zone Name
+    ,                         !- Ambient Temperature Outdoor Air Node Name
+    5,                        !- Off Cycle Loss Coefficient to Ambient Temperature
+    1,                        !- Off Cycle Loss Fraction to Zone
+    5,                        !- On Cycle Loss Coefficient to Ambient Temperature
+    1,                        !- On Cycle Loss Fraction to Zone
+    5.491878e-06,             !- Peak Use Flow Rate
+    MyDHW_1_UseFraction,      !- Use Flow Rate Fraction Schedule Name
+    ,                         !- Cold Water Supply Temperature Schedule Name
+    ,                         !- Use Side Inlet Node Name
+    ,                         !- Use Side Outlet Node Name
+    1,                        !- Use Side Effectiveness
+    ,                         !- Source Side Inlet Node Name
+    ,                         !- Source Side Outlet Node Name
+    1,                        !- Source Side Effectiveness
+    autosize,                 !- Use Side Design Flow Rate
+    autosize,                 !- Source Side Design Flow Rate
+    1.5,                      !- Indirect Water Heating Recovery Time
+    IndirectHeatPrimarySetpoint,    !- Source Side Flow Control Mode
+    ,                         !- Indirect Alternate Setpoint Temperature Schedule Name
+    General;                  !- EndUse Subcategory
+
+Output:VariableDictionary,
+    Regular;                  !- Key Field
+
+Output:Table:SummaryReports,
+    AllSummary;               !- Report 1 Name
+
+OUTPUT:TABLE:MONTHLY,
+    Building Loads - Heating,    !- Name
+    2,                        !- Digits After Decimal
+    Zone Air System Sensible Heating Energy,    !- Variable or Meter 1 Name
+    SumOrAverage,             !- Aggregation Type for Variable or Meter 1
+    Zone Air System Sensible Heating Rate,    !- Variable or Meter 2 Name
+    Maximum,                  !- Aggregation Type for Variable or Meter 2
+    Site Outdoor Air Drybulb Temperature,    !- Variable or Meter 3 Name
+    ValueWhenMaximumOrMinimum;    !- Aggregation Type for Variable or Meter 3
+
+OUTPUT:TABLE:MONTHLY,
+    Building Loads - Cooling,    !- Name
+    2,                        !- Digits After Decimal
+    Zone Air System Sensible Cooling Energy,    !- Variable or Meter 1 Name
+    SumOrAverage,             !- Aggregation Type for Variable or Meter 1
+    Zone Air System Sensible Cooling Rate,    !- Variable or Meter 2 Name
+    Maximum,                  !- Aggregation Type for Variable or Meter 2
+    Site Outdoor Air Drybulb Temperature,    !- Variable or Meter 3 Name
+    ValueWhenMaximumOrMinimum;    !- Aggregation Type for Variable or Meter 3
+
+OutputControl:Table:Style,
+    HTML;                     !- Column Separator
+
+Output:Variable,
+    *,                        !- Key Value
+    Site Outdoor Air Drybulb Temperature,    !- Variable Name
+    Daily;                    !- Reporting Frequency
+
+Output:Variable,
+    *,                        !- Key Value
+    Site Outdoor Air Wetbulb Temperature,    !- Variable Name
+    Daily;                    !- Reporting Frequency
+
+Output:Variable,
+    *,                        !- Key Value
+    Site Outdoor Air Dewpoint Temperature,    !- Variable Name
+    Daily;                    !- Reporting Frequency
+
+Output:Variable,
+    *,                        !- Key Value
+    Site Solar Azimuth Angle,    !- Variable Name
+    Daily;                    !- Reporting Frequency
+
+Output:Variable,
+    *,                        !- Key Value
+    Site Solar Altitude Angle,    !- Variable Name
+    Daily;                    !- Reporting Frequency
+
+Output:Variable,
+    *,                        !- Key Value
+    Site Direct Solar Radiation Rate per Area,    !- Variable Name
+    Daily;                    !- Reporting Frequency
+
+Output:Variable,
+    *,                        !- Key Value
+    Site Diffuse Solar Radiation Rate per Area,    !- Variable Name
+    Daily;                    !- Reporting Frequency
+
+Output:Variable,
+    *,                        !- Key Value
+    Boiler Heating Energy,    !- Variable Name
+    Daily;                    !- Reporting Frequency
+
+Output:Variable,
+    *,                        !- Key Value
+    Water Heater Heating Energy,    !- Variable Name
+    Daily;                    !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    *,                        !- Key Value
+    Facility Total Electric Demand Power,    !- Variable Name
+    Hourly;                   !- Reporting Frequency
+
+OUTPUT:VARIABLE,
+    *,                        !- Key Value
+    Zone Air Temperature Maximum,    !- Variable Name
+    Hourly;                   !- Reporting Frequency
+
+Output:Meter,
+    Heating:EnergyTransfer,    !- Key Name
+    Hourly;                   !- Reporting Frequency
+
+Output:Meter,
+    Cooling:EnergyTransfer,    !- Key Name
+    Hourly;                   !- Reporting Frequency
+
+OUTPUT:METER,
+    Electricity:Facility,     !- Key Name
+    Hourly;                   !- Reporting Frequency
