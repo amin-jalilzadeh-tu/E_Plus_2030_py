@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.01.12 00:20
+Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.01.12 04:37
 ! <Version>, Version ID
  Version, 23.2
 ! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
@@ -95,16 +95,16 @@ Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.
  Lights Internal Gains Nominal, ZONE2_LEFTPERIMETER LIGHTS_ALL_ZONES,LIGHTSSCHEDULE,ZONE2_LEFTPERIMETER,21.90,0.0,219.037,10.000,N/A,0.000,0.700,0.200,0.100,1.000,General,0.000,109.518
  Lights Internal Gains Nominal, ZONE2_CORE LIGHTS_ALL_ZONES,LIGHTSSCHEDULE,ZONE2_CORE,55.34,0.0,553.373,10.000,N/A,0.000,0.700,0.200,0.100,1.000,General,0.000,276.686
 ! <ElectricEquipment Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Latent,Fraction Radiant,Fraction Lost,Fraction Convected,End-Use SubCategory,Nominal Minimum Equipment Level {W},Nominal Maximum Equipment Level {W}
- ElectricEquipment Internal Gains Nominal, ZONE1_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE1_FRONTPERIMETER,10.43,0.0,2.972,0.285,N/A,0.000,0.000,1.000,0.000,General,2.972,2.972
- ElectricEquipment Internal Gains Nominal, ZONE1_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE1_RIGHTPERIMETER,21.90,0.0,6.243,0.285,N/A,0.000,0.000,1.000,0.000,General,6.243,6.243
- ElectricEquipment Internal Gains Nominal, ZONE1_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE1_REARPERIMETER,10.43,0.0,2.972,0.285,N/A,0.000,0.000,1.000,0.000,General,2.972,2.972
- ElectricEquipment Internal Gains Nominal, ZONE1_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE1_LEFTPERIMETER,21.90,0.0,6.243,0.285,N/A,0.000,0.000,1.000,0.000,General,6.243,6.243
- ElectricEquipment Internal Gains Nominal, ZONE1_CORE LIGHTING_PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE1_CORE,55.34,0.0,15.771,0.285,N/A,0.000,0.000,1.000,0.000,General,15.771,15.771
- ElectricEquipment Internal Gains Nominal, ZONE2_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE2_FRONTPERIMETER,10.43,0.0,2.972,0.285,N/A,0.000,0.000,1.000,0.000,General,2.972,2.972
- ElectricEquipment Internal Gains Nominal, ZONE2_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE2_RIGHTPERIMETER,21.90,0.0,6.243,0.285,N/A,0.000,0.000,1.000,0.000,General,6.243,6.243
- ElectricEquipment Internal Gains Nominal, ZONE2_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE2_REARPERIMETER,10.43,0.0,2.972,0.285,N/A,0.000,0.000,1.000,0.000,General,2.972,2.972
- ElectricEquipment Internal Gains Nominal, ZONE2_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE2_LEFTPERIMETER,21.90,0.0,6.243,0.285,N/A,0.000,0.000,1.000,0.000,General,6.243,6.243
- ElectricEquipment Internal Gains Nominal, ZONE2_CORE LIGHTING_PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE2_CORE,55.34,0.0,15.771,0.285,N/A,0.000,0.000,1.000,0.000,General,15.771,15.771
+ ElectricEquipment Internal Gains Nominal, ZONE1_FRONTPERIMETER PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE1_FRONTPERIMETER,10.43,0.0,2.972,0.285,N/A,0.000,0.000,1.000,0.000,General,2.972,2.972
+ ElectricEquipment Internal Gains Nominal, ZONE1_RIGHTPERIMETER PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE1_RIGHTPERIMETER,21.90,0.0,6.243,0.285,N/A,0.000,0.000,1.000,0.000,General,6.243,6.243
+ ElectricEquipment Internal Gains Nominal, ZONE1_REARPERIMETER PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE1_REARPERIMETER,10.43,0.0,2.972,0.285,N/A,0.000,0.000,1.000,0.000,General,2.972,2.972
+ ElectricEquipment Internal Gains Nominal, ZONE1_LEFTPERIMETER PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE1_LEFTPERIMETER,21.90,0.0,6.243,0.285,N/A,0.000,0.000,1.000,0.000,General,6.243,6.243
+ ElectricEquipment Internal Gains Nominal, ZONE1_CORE PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE1_CORE,55.34,0.0,15.771,0.285,N/A,0.000,0.000,1.000,0.000,General,15.771,15.771
+ ElectricEquipment Internal Gains Nominal, ZONE2_FRONTPERIMETER PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE2_FRONTPERIMETER,10.43,0.0,2.972,0.285,N/A,0.000,0.000,1.000,0.000,General,2.972,2.972
+ ElectricEquipment Internal Gains Nominal, ZONE2_RIGHTPERIMETER PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE2_RIGHTPERIMETER,21.90,0.0,6.243,0.285,N/A,0.000,0.000,1.000,0.000,General,6.243,6.243
+ ElectricEquipment Internal Gains Nominal, ZONE2_REARPERIMETER PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE2_REARPERIMETER,10.43,0.0,2.972,0.285,N/A,0.000,0.000,1.000,0.000,General,2.972,2.972
+ ElectricEquipment Internal Gains Nominal, ZONE2_LEFTPERIMETER PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE2_LEFTPERIMETER,21.90,0.0,6.243,0.285,N/A,0.000,0.000,1.000,0.000,General,6.243,6.243
+ ElectricEquipment Internal Gains Nominal, ZONE2_CORE PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE2_CORE,55.34,0.0,15.771,0.285,N/A,0.000,0.000,1.000,0.000,General,15.771,15.771
 ! <Shadowing/Sun Position Calculations Annual Simulations>, Shading Calculation Method, Shading Calculation Update Frequency Method, Shading Calculation Update Frequency {days}, Maximum Figures in Shadow Overlap Calculations {}, Polygon Clipping Algorithm, Pixel Counting Resolution, Sky Diffuse Modeling Algorithm, Output External Shading Calculation Results, Disable Self-Shading Within Shading Zone Groups, Disable Self-Shading From Shading Zone Groups to Other Zones
 Shadowing/Sun Position Calculations Annual Simulations,PolygonClipping,Periodic,20,15000,SutherlandHodgman,512,SimpleSkyDiffuseModeling,No,No,No
 ! <Water Heater Information>,Type,Name,Volume {m3},Maximum Capacity {W},Standard Rated Recovery Efficiency, Standard Rated Energy Factor
@@ -195,16 +195,16 @@ Environment:WarmupDays,  9
 ! <Tabular Report>,Style,Unit Conversion
 Tabular Report,HTML,None
 ! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
- Warmup Convergence Information,ZONE1_FRONTPERIMETER,RunPeriod: RUN PERIOD 1,1.3963662434E-002,7.0577103570E-002,Pass,Pass,3.7333297125E-002,0.1866984214,Pass,Pass
- Warmup Convergence Information,ZONE1_RIGHTPERIMETER,RunPeriod: RUN PERIOD 1,1.2994857849E-002,6.5552616814E-002,Pass,Pass,3.5173785516E-002,0.1733895641,Pass,Pass
- Warmup Convergence Information,ZONE1_REARPERIMETER,RunPeriod: RUN PERIOD 1,0.1352234796,0.7584690658,Pass,Pass,4.0412092220E-002,0.1156047106,Pass,Pass
- Warmup Convergence Information,ZONE1_LEFTPERIMETER,RunPeriod: RUN PERIOD 1,0.1365510661,0.7530446451,Pass,Pass,4.9095833374E-002,0.1475651352,Pass,Pass
- Warmup Convergence Information,ZONE1_CORE,RunPeriod: RUN PERIOD 1,3.0138184464E-002,0.1616464317,Pass,Pass,1.7265706341E-002,7.3718951564E-002,Pass,Pass
- Warmup Convergence Information,ZONE2_FRONTPERIMETER,RunPeriod: RUN PERIOD 1,1.6605326778E-002,8.3896312847E-002,Pass,Pass,4.0646549167E-002,0.2049254631,Pass,Pass
- Warmup Convergence Information,ZONE2_RIGHTPERIMETER,RunPeriod: RUN PERIOD 1,1.6040872268E-002,8.0638156455E-002,Pass,Pass,4.2784940066E-002,0.2094388980,Pass,Pass
- Warmup Convergence Information,ZONE2_REARPERIMETER,RunPeriod: RUN PERIOD 1,0.1346991743,0.7607793783,Pass,Pass,4.0247615160E-002,0.1328353822,Pass,Pass
- Warmup Convergence Information,ZONE2_LEFTPERIMETER,RunPeriod: RUN PERIOD 1,0.1359717771,0.7553804226,Pass,Pass,4.5411919825E-002,0.1148526429,Pass,Pass
- Warmup Convergence Information,ZONE2_CORE,RunPeriod: RUN PERIOD 1,3.6341687047E-002,0.1908557017,Pass,Pass,1.7990648089E-002,9.1300642452E-002,Pass,Pass
+ Warmup Convergence Information,ZONE1_FRONTPERIMETER,RunPeriod: RUN PERIOD 1,1.3963662605E-002,7.0577104723E-002,Pass,Pass,3.7333297023E-002,0.1866984199,Pass,Pass
+ Warmup Convergence Information,ZONE1_RIGHTPERIMETER,RunPeriod: RUN PERIOD 1,1.2994857859E-002,6.5552617310E-002,Pass,Pass,3.5173785447E-002,0.1733895631,Pass,Pass
+ Warmup Convergence Information,ZONE1_REARPERIMETER,RunPeriod: RUN PERIOD 1,0.1352234796,0.7584690658,Pass,Pass,4.0412092169E-002,0.1156047111,Pass,Pass
+ Warmup Convergence Information,ZONE1_LEFTPERIMETER,RunPeriod: RUN PERIOD 1,0.1365510661,0.7530446451,Pass,Pass,4.9095833631E-002,0.1475651370,Pass,Pass
+ Warmup Convergence Information,ZONE1_CORE,RunPeriod: RUN PERIOD 1,3.0138184972E-002,0.1616464352,Pass,Pass,1.7265706572E-002,7.3718951348E-002,Pass,Pass
+ Warmup Convergence Information,ZONE2_FRONTPERIMETER,RunPeriod: RUN PERIOD 1,1.6605326833E-002,8.3896312872E-002,Pass,Pass,4.0646549134E-002,0.2049254630,Pass,Pass
+ Warmup Convergence Information,ZONE2_RIGHTPERIMETER,RunPeriod: RUN PERIOD 1,1.6040872444E-002,8.0638157075E-002,Pass,Pass,4.2784939864E-002,0.2094388974,Pass,Pass
+ Warmup Convergence Information,ZONE2_REARPERIMETER,RunPeriod: RUN PERIOD 1,0.1346991743,0.7607793783,Pass,Pass,4.0247615139E-002,0.1328353821,Pass,Pass
+ Warmup Convergence Information,ZONE2_LEFTPERIMETER,RunPeriod: RUN PERIOD 1,0.1359717771,0.7553804226,Pass,Pass,4.5411919878E-002,0.1148526430,Pass,Pass
+ Warmup Convergence Information,ZONE2_CORE,RunPeriod: RUN PERIOD 1,3.6341687422E-002,0.1908557039,Pass,Pass,1.7990648167E-002,9.1300642096E-002,Pass,Pass
 ! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
 Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
 End of Data

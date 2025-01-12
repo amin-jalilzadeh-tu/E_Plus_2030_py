@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.01.12 00:20
+Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.01.12 04:37
 ! <Version>, Version ID
  Version, 23.2
 ! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
@@ -74,9 +74,9 @@ Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.
  Lights Internal Gains Nominal, ZONE2 LIGHTS_ALL_ZONES,LIGHTSSCHEDULE,ZONE2,30.00,0.0,300.000,10.000,N/A,0.000,0.700,0.200,0.100,1.000,General,0.000,150.000
  Lights Internal Gains Nominal, ZONE3 LIGHTS_ALL_ZONES,LIGHTSSCHEDULE,ZONE3,30.00,0.0,300.000,10.000,N/A,0.000,0.700,0.200,0.100,1.000,General,0.000,150.000
 ! <ElectricEquipment Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Latent,Fraction Radiant,Fraction Lost,Fraction Convected,End-Use SubCategory,Nominal Minimum Equipment Level {W},Nominal Maximum Equipment Level {W}
- ElectricEquipment Internal Gains Nominal, ZONE1 LIGHTING_PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE1,30.00,0.0,8.550,0.285,N/A,0.000,0.000,1.000,0.000,General,8.550,8.550
- ElectricEquipment Internal Gains Nominal, ZONE2 LIGHTING_PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE2,30.00,0.0,8.550,0.285,N/A,0.000,0.000,1.000,0.000,General,8.550,8.550
- ElectricEquipment Internal Gains Nominal, ZONE3 LIGHTING_PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE3,30.00,0.0,8.550,0.285,N/A,0.000,0.000,1.000,0.000,General,8.550,8.550
+ ElectricEquipment Internal Gains Nominal, ZONE1 PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE1,30.00,0.0,8.550,0.285,N/A,0.000,0.000,1.000,0.000,General,8.550,8.550
+ ElectricEquipment Internal Gains Nominal, ZONE2 PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE2,30.00,0.0,8.550,0.285,N/A,0.000,0.000,1.000,0.000,General,8.550,8.550
+ ElectricEquipment Internal Gains Nominal, ZONE3 PARASITIC_ALL_ZONES,PARASITICSCHEDULE,ZONE3,30.00,0.0,8.550,0.285,N/A,0.000,0.000,1.000,0.000,General,8.550,8.550
 ! <Shadowing/Sun Position Calculations Annual Simulations>, Shading Calculation Method, Shading Calculation Update Frequency Method, Shading Calculation Update Frequency {days}, Maximum Figures in Shadow Overlap Calculations {}, Polygon Clipping Algorithm, Pixel Counting Resolution, Sky Diffuse Modeling Algorithm, Output External Shading Calculation Results, Disable Self-Shading Within Shading Zone Groups, Disable Self-Shading From Shading Zone Groups to Other Zones
 Shadowing/Sun Position Calculations Annual Simulations,PolygonClipping,Periodic,20,15000,SutherlandHodgman,512,SimpleSkyDiffuseModeling,No,No,No
 ! <Water Heater Information>,Type,Name,Volume {m3},Maximum Capacity {W},Standard Rated Recovery Efficiency, Standard Rated Energy Factor

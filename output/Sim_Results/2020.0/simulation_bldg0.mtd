@@ -35,7 +35,7 @@
   OnMeter=General:InteriorLights:Electricity:Zone:ZONE3 [J]
   OnMeter=General:InteriorLights:Electricity:SpaceType:GENERAL [J]
 
- Meters for 209,ZONE1 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
+ Meters for 209,ZONE1 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:Building [J]
   OnMeter=Electricity:Zone:ZONE1 [J]
@@ -47,7 +47,7 @@
   OnMeter=General:InteriorEquipment:Electricity:Zone:ZONE1 [J]
   OnMeter=General:InteriorEquipment:Electricity:SpaceType:GENERAL [J]
 
- Meters for 282,ZONE2 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
+ Meters for 282,ZONE2 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:Building [J]
   OnMeter=Electricity:Zone:ZONE2 [J]
@@ -59,7 +59,7 @@
   OnMeter=General:InteriorEquipment:Electricity:Zone:ZONE2 [J]
   OnMeter=General:InteriorEquipment:Electricity:SpaceType:GENERAL [J]
 
- Meters for 307,ZONE3 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
+ Meters for 307,ZONE3 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:Building [J]
   OnMeter=Electricity:Zone:ZONE3 [J]
@@ -258,9 +258,9 @@
   ZONE1 LIGHTS_ALL_ZONES:Lights Electricity Energy
   ZONE2 LIGHTS_ALL_ZONES:Lights Electricity Energy
   ZONE3 LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE1 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE3 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE3 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
   ZONE1:Zone Ventilation Fan Electricity Energy
   ZONE2:Zone Ventilation Fan Electricity Energy
   ZONE3:Zone Ventilation Fan Electricity Energy
@@ -272,25 +272,25 @@
   ZONE1 LIGHTS_ALL_ZONES:Lights Electricity Energy
   ZONE2 LIGHTS_ALL_ZONES:Lights Electricity Energy
   ZONE3 LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE1 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE3 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE3 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
   ZONE1:Zone Ventilation Fan Electricity Energy
   ZONE2:Zone Ventilation Fan Electricity Energy
   ZONE3:Zone Ventilation Fan Electricity Energy
 
  For Meter=Electricity:Zone:ZONE1 [J], ResourceType=Electricity, Group=Zone, contents are:
   ZONE1 LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE1 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
   ZONE1:Zone Ventilation Fan Electricity Energy
 
  For Meter=Electricity:SpaceType:GENERAL [J], ResourceType=Electricity, Group=SpaceType, contents are:
   ZONE1 LIGHTS_ALL_ZONES:Lights Electricity Energy
   ZONE2 LIGHTS_ALL_ZONES:Lights Electricity Energy
   ZONE3 LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE1 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE3 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE3 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorLights:Electricity [J], ResourceType=Electricity, EndUse=InteriorLights, contents are:
   ZONE1 LIGHTS_ALL_ZONES:Lights Electricity Energy
@@ -320,7 +320,7 @@
 
  For Meter=Electricity:Zone:ZONE2 [J], ResourceType=Electricity, Group=Zone, contents are:
   ZONE2 LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE2 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
   ZONE2:Zone Ventilation Fan Electricity Energy
 
  For Meter=InteriorLights:Electricity:Zone:ZONE2 [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
@@ -331,7 +331,7 @@
 
  For Meter=Electricity:Zone:ZONE3 [J], ResourceType=Electricity, Group=Zone, contents are:
   ZONE3 LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE3 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE3 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
   ZONE3:Zone Ventilation Fan Electricity Energy
 
  For Meter=InteriorLights:Electricity:Zone:ZONE3 [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
@@ -341,42 +341,42 @@
   ZONE3 LIGHTS_ALL_ZONES:Lights Electricity Energy
 
  For Meter=InteriorEquipment:Electricity [J], ResourceType=Electricity, EndUse=InteriorEquipment, contents are:
-  ZONE1 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE3 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE3 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorEquipment:Electricity:Zone:ZONE1 [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE1 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorEquipment:Electricity:SpaceType:GENERAL [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=SpaceType, contents are:
-  ZONE1 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE3 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE3 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity [J], ResourceType=Electricity, EndUse=InteriorEquipment, contents are:
-  ZONE1 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE3 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE3 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity:Zone:ZONE1 [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE1 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity:SpaceType:GENERAL [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=SpaceType, contents are:
-  ZONE1 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE3 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE3 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorEquipment:Electricity:Zone:ZONE2 [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE2 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity:Zone:ZONE2 [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE2 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorEquipment:Electricity:Zone:ZONE3 [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE3 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE3 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity:Zone:ZONE3 [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE3 LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE3 PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=Fans:Electricity [J], ResourceType=Electricity, EndUse=Fans, contents are:
   ZONE1:Zone Ventilation Fan Electricity Energy

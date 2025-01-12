@@ -1,16 +1,16 @@
  ReadVarsESO
- processing:d:\Documents\E_Plus_2030_py\output\output_IDFs\building_1_a246a8.rvi
+ processing:d:\Documents\E_Plus_2030_py\output\output_IDFs\building_1_1a8b80.rvi
  input file:d:\Documents\E_Plus_2030_py\output\Sim_Results\2020.0\simulation_bldg1.eso
  output file:d:\Documents\E_Plus_2030_py\output\Sim_Results\2020.0\simulation_bldg1.csv
  getting all vars from:d:\Documents\E_Plus_2030_py\output\Sim_Results\2020.0\simulation_bldg1.eso
   number variables requested for output=          11
- ReadVars Run Time=00hr 00min  0.17sec
+ ReadVars Run Time=00hr 00min  0.14sec
  ReadVarsESO program completed successfully.
  ReadVarsESO
- processing:d:\Documents\E_Plus_2030_py\output\output_IDFs\building_1_a246a8.mvi
+ processing:d:\Documents\E_Plus_2030_py\output\output_IDFs\building_1_1a8b80.mvi
  input file:d:\Documents\E_Plus_2030_py\output\Sim_Results\2020.0\simulation_bldg1.mtr
  output file:d:\Documents\E_Plus_2030_py\output\Sim_Results\2020.0\simulation_bldg1Meter.csv
  getting all vars from:d:\Documents\E_Plus_2030_py\output\Sim_Results\2020.0\simulation_bldg1.mtr
   number variables requested for output=           3
- ReadVars Run Time=00hr 00min  0.16sec
+ ReadVars Run Time=00hr 00min  0.11sec
  ReadVarsESO program completed successfully.

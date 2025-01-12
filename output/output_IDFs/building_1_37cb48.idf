@@ -144,82 +144,107 @@ SCHEDULE:COMPACT,
     Fraction,                 !- Schedule Type Limits Name
     Through: 12/31,           !- Field 1
     For: WeekDays,            !- Field 2
-    Until: 24:00,0.50,        !- Field 3
-    For: Saturday,            !- Field 4
-    Until: 24:00,0.50,        !- Field 5
-    For: Sunday,              !- Field 6
-    Until: 24:00,0.50;        !- Field 7
+    Until: 24:00,             !- Field 3
+    0.50,                     !- Field 4
+    For: Saturday,            !- Field 5
+    Until: 24:00,             !- Field 6
+    0.50,                     !- Field 7
+    For: Sunday,              !- Field 8
+    Until: 24:00,             !- Field 9
+    0.50;                     !- Field 10
 
 SCHEDULE:COMPACT,
     ParasiticSchedule,        !- Name
     Fraction,                 !- Schedule Type Limits Name
     Through: 12/31,           !- Field 1
     For: AllDays,             !- Field 2
-    Until: 24:00,1.0;         !- Field 3
+    Until: 24:00,             !- Field 3
+    1.0;                      !- Field 4
 
 SCHEDULE:COMPACT,
     MyDHW_1_UseFraction,      !- Name
     Fraction,                 !- Schedule Type Limits Name
     Through: 12/31,           !- Field 1
     For: AllDays,             !- Field 2
-    Until: 06:00, 0.0,        !- Field 3
-    Until: 08:00, 0.62,       !- Field 4
-    Until: 10:00, 0.98,       !- Field 5
-    Until: 17:00, 0.20,       !- Field 6
-    Until: 21:00, 0.69,       !- Field 7
-    Until: 24:00, 0.62;       !- Field 8
+    Until: 06:00,             !- Field 3
+    0.0,                      !- Field 4
+    Until: 08:00,             !- Field 5
+    0.62,                     !- Field 6
+    Until: 10:00,             !- Field 7
+    0.98,                     !- Field 8
+    Until: 17:00,             !- Field 9
+    0.20,                     !- Field 10
+    Until: 21:00,             !- Field 11
+    0.69,                     !- Field 12
+    Until: 24:00,             !- Field 13
+    0.62;                     !- Field 14
 
 SCHEDULE:COMPACT,
     MyDHW_1_Setpoint,         !- Name
     Temperature,              !- Schedule Type Limits Name
     Through: 12/31,           !- Field 1
     For: AllDays,             !- Field 2
-    Until: 24:00, 59.472942428328025;    !- Field 3
+    Until: 24:00,             !- Field 3
+    59.472942428328025;       !- Field 4
 
 SCHEDULE:COMPACT,
     ZONE CONTROL TYPE SCHEDULE,    !- Name
     ControlType,              !- Schedule Type Limits Name
     Through: 12/31,           !- Field 1
     For: AllDays,             !- Field 2
-    Until: 24:00,4;           !- Field 3
+    Until: 24:00,             !- Field 3
+    4;                        !- Field 4
 
 SCHEDULE:COMPACT,
     ZONE HEATING SETPOINTS,    !- Name
     Temperature,              !- Schedule Type Limits Name
     Through: 12/31,           !- Field 1
     For: AllDays,             !- Field 2
-    Until: 07:00,15.05,       !- Field 3
-    Until: 19:00,21.28,       !- Field 4
-    Until: 24:00,15.05;       !- Field 5
+    Until: 07:00,             !- Field 3
+    15.05,                    !- Field 4
+    Until: 19:00,             !- Field 5
+    21.28,                    !- Field 6
+    Until: 24:00,             !- Field 7
+    15.05;                    !- Field 8
 
 SCHEDULE:COMPACT,
     ZONE COOLING SETPOINTS,    !- Name
     Temperature,              !- Schedule Type Limits Name
     Through: 12/31,           !- Field 1
     For: AllDays,             !- Field 2
-    Until: 07:00,25.45,       !- Field 3
-    Until: 19:00,23.55,       !- Field 4
-    Until: 24:00,25.45;       !- Field 5
+    Until: 07:00,             !- Field 3
+    25.45,                    !- Field 4
+    Until: 19:00,             !- Field 5
+    23.55,                    !- Field 6
+    Until: 24:00,             !- Field 7
+    25.45;                    !- Field 8
 
 SCHEDULE:COMPACT,
     VentSched_DayNight,       !- Name
     Fraction,                 !- Schedule Type Limits Name
     Through: 12/31,           !- Field 1
     For: AllDays,             !- Field 2
-    Until: 06:00,0.5,         !- Field 3
-    Until: 22:00,1.0,         !- Field 4
-    Until: 24:00,0.5;         !- Field 5
+    Until: 06:00,             !- Field 3
+    0.5,                      !- Field 4
+    Until: 22:00,             !- Field 5
+    1.0,                      !- Field 6
+    Until: 24:00,             !- Field 7
+    0.5;                      !- Field 8
 
 SCHEDULE:COMPACT,
     WorkHoursSched,           !- Name
     Fraction,                 !- Schedule Type Limits Name
     Through: 12/31,           !- Field 1
     For: Weekdays,            !- Field 2
-    Until: 09:00,0.2,         !- Field 3
-    Until: 17:00,1.0,         !- Field 4
-    Until: 24:00,0.2,         !- Field 5
-    For: Saturday Sunday Holiday,    !- Field 6
-    Until: 24:00,0.2;         !- Field 7
+    Until: 09:00,             !- Field 3
+    0.2,                      !- Field 4
+    Until: 17:00,             !- Field 5
+    1.0,                      !- Field 6
+    Until: 24:00,             !- Field 7
+    0.2,                      !- Field 8
+    For: Saturday Sunday Holiday,    !- Field 9
+    Until: 24:00,             !- Field 10
+    0.2;                      !- Field 11
 
 SCHEDULE:CONSTANT,
     AlwaysOnSched,            !- Name
@@ -240,8 +265,8 @@ MATERIAL,
 MATERIAL,
     ground_floor_OpaqueMat,    !- Name
     MediumRough,              !- Roughness
-    1.005307e-01,             !- Thickness
-    2.872306e-02,             !- Conductivity
+    0.1005307,                !- Thickness
+    0.02872306,               !- Conductivity
     2229.976887555905,        !- Density
     877.2470740301609,        !- Specific Heat
     0.9,                      !- Thermal Absorptance
@@ -251,8 +276,8 @@ MATERIAL,
 MATERIAL,
     exterior_wall_OpaqueMat,    !- Name
     MediumRough,              !- Roughness
-    1.965548e-01,             !- Thickness
-    5.615851e-02,             !- Conductivity
+    0.1965548,                !- Thickness
+    0.05615851,               !- Conductivity
     2283.6594545112625,       !- Density
     859.2745843380148,        !- Specific Heat
     0.9,                      !- Thermal Absorptance
@@ -274,7 +299,7 @@ MATERIAL,
     interior_wall_OpaqueMat,    !- Name
     MediumSmooth,             !- Roughness
     0.1468327293856247,       !- Thickness
-    9.788849e-02,             !- Conductivity
+    0.09788849,               !- Conductivity
     821.8262011333976,        !- Density
     834.2277296396194,        !- Specific Heat
     0.9,                      !- Thermal Absorptance
@@ -284,7 +309,7 @@ MATERIAL,
 MATERIAL,
     windows_OpaqueMat,        !- Name
     MediumRough,              !- Roughness
-    2.327137e-01,             !- Thickness
+    0.2327137,                !- Thickness
     0.8144979892730767,       !- Conductivity
     622.9048071964104,        !- Density
     2206.4200487808075,       !- Specific Heat
@@ -295,7 +320,7 @@ MATERIAL,
 MATERIAL,
     doors_OpaqueMat,          !- Name
     MediumRough,              !- Roughness
-    1.835195e-01,             !- Thickness
+    0.1835195,                !- Thickness
     0.6423182819083558,       !- Conductivity
     645.8851852587399,        !- Density
     2252.9760332996107,       !- Specific Heat
@@ -317,11 +342,11 @@ WINDOWMATERIAL:GLAZING,
     ,                         !- Window Glass Spectral Data Set Name
     0.003,                    !- Thickness
     0.7735339897484582,       !- Solar Transmittance at Normal Incidence
-    7.892180e-02,             !- Front Side Solar Reflectance at Normal Incidence
-    7.086939e-02,             !- Back Side Solar Reflectance at Normal Incidence
+    0.0789218,                !- Front Side Solar Reflectance at Normal Incidence
+    0.07086939,               !- Back Side Solar Reflectance at Normal Incidence
     0.8684384363937054,       !- Visible Transmittance at Normal Incidence
-    6.029797e-02,             !- Front Side Visible Reflectance at Normal Incidence
-    6.218638e-02,             !- Back Side Visible Reflectance at Normal Incidence
+    0.06029797,               !- Front Side Visible Reflectance at Normal Incidence
+    0.06218638,               !- Back Side Visible Reflectance at Normal Incidence
     0,                        !- Infrared Transmittance at Normal Incidence
     0.84,                     !- Front Side Infrared Hemispherical Emissivity
     0.84,                     !- Back Side Infrared Hemispherical Emissivity
@@ -337,15 +362,15 @@ WINDOWMATERIAL:GLAZING,
     ,                         !- Window Glass Spectral Data Set Name
     0.003,                    !- Thickness
     0.7644088124408139,       !- Solar Transmittance at Normal Incidence
-    7.589266e-02,             !- Front Side Solar Reflectance at Normal Incidence
-    7.809430e-02,             !- Back Side Solar Reflectance at Normal Incidence
+    0.07589266,               !- Front Side Solar Reflectance at Normal Incidence
+    0.0780943,                !- Back Side Solar Reflectance at Normal Incidence
     0.8601299751935612,       !- Visible Transmittance at Normal Incidence
-    6.805819e-02,             !- Front Side Visible Reflectance at Normal Incidence
-    6.698139e-02,             !- Back Side Visible Reflectance at Normal Incidence
+    0.06805819,               !- Front Side Visible Reflectance at Normal Incidence
+    0.06698139,               !- Back Side Visible Reflectance at Normal Incidence
     0,                        !- Infrared Transmittance at Normal Incidence
     0.84,                     !- Front Side Infrared Hemispherical Emissivity
     0.84,                     !- Back Side Infrared Hemispherical Emissivity
-    8.400000e-04,             !- Conductivity
+    0.00084,                  !- Conductivity
     1,                        !- Dirt Correction Factor for Solar and Visible Transmittance
     No,                       !- Solar Diffusing
     72000000000,              !- Youngs modulus
@@ -358,10 +383,10 @@ WINDOWMATERIAL:GLAZING,
     0.003,                    !- Thickness
     0.7619343275366693,       !- Solar Transmittance at Normal Incidence
     0.0784749436634746,       !- Front Side Solar Reflectance at Normal Incidence
-    7.603726e-02,             !- Back Side Solar Reflectance at Normal Incidence
+    0.07603726,               !- Back Side Solar Reflectance at Normal Incidence
     0.8761425654654876,       !- Visible Transmittance at Normal Incidence
-    6.729732e-02,             !- Front Side Visible Reflectance at Normal Incidence
-    6.536228e-02,             !- Back Side Visible Reflectance at Normal Incidence
+    0.06729732,               !- Front Side Visible Reflectance at Normal Incidence
+    0.06536228,               !- Back Side Visible Reflectance at Normal Incidence
     0,                        !- Infrared Transmittance at Normal Incidence
     0.84,                     !- Front Side Infrared Hemispherical Emissivity
     0.84,                     !- Back Side Infrared Hemispherical Emissivity
@@ -377,11 +402,11 @@ WINDOWMATERIAL:GLAZING,
     ,                         !- Window Glass Spectral Data Set Name
     0.003,                    !- Thickness
     0.7710408126254645,       !- Solar Transmittance at Normal Incidence
-    7.829405e-02,             !- Front Side Solar Reflectance at Normal Incidence
-    7.618520e-02,             !- Back Side Solar Reflectance at Normal Incidence
+    0.07829405,               !- Front Side Solar Reflectance at Normal Incidence
+    0.0761852,                !- Back Side Solar Reflectance at Normal Incidence
     0.8772341380062155,       !- Visible Transmittance at Normal Incidence
-    6.577352e-02,             !- Front Side Visible Reflectance at Normal Incidence
-    6.704572e-02,             !- Back Side Visible Reflectance at Normal Incidence
+    0.06577352,               !- Front Side Visible Reflectance at Normal Incidence
+    0.06704572,               !- Back Side Visible Reflectance at Normal Incidence
     0,                        !- Infrared Transmittance at Normal Incidence
     0.84,                     !- Front Side Infrared Hemispherical Emissivity
     0.84,                     !- Back Side Infrared Hemispherical Emissivity
@@ -397,11 +422,11 @@ WINDOWMATERIAL:GLAZING,
     ,                         !- Window Glass Spectral Data Set Name
     0.003,                    !- Thickness
     0.7620200285881946,       !- Solar Transmittance at Normal Incidence
-    7.277974e-02,             !- Front Side Solar Reflectance at Normal Incidence
-    7.635684e-02,             !- Back Side Solar Reflectance at Normal Incidence
+    0.07277974,               !- Front Side Solar Reflectance at Normal Incidence
+    0.07635684,               !- Back Side Solar Reflectance at Normal Incidence
     0.8672966435794017,       !- Visible Transmittance at Normal Incidence
-    6.370181e-02,             !- Front Side Visible Reflectance at Normal Incidence
-    6.209507e-02,             !- Back Side Visible Reflectance at Normal Incidence
+    0.06370181,               !- Front Side Visible Reflectance at Normal Incidence
+    0.06209507,               !- Back Side Visible Reflectance at Normal Incidence
     0,                        !- Infrared Transmittance at Normal Incidence
     0.84,                     !- Front Side Infrared Hemispherical Emissivity
     0.84,                     !- Back Side Infrared Hemispherical Emissivity
@@ -417,11 +442,11 @@ WINDOWMATERIAL:GLAZING,
     ,                         !- Window Glass Spectral Data Set Name
     0.003,                    !- Thickness
     0.7745825359590071,       !- Solar Transmittance at Normal Incidence
-    7.163402e-02,             !- Front Side Solar Reflectance at Normal Incidence
-    7.379455e-02,             !- Back Side Solar Reflectance at Normal Incidence
+    0.07163402,               !- Front Side Solar Reflectance at Normal Incidence
+    0.07379455,               !- Back Side Solar Reflectance at Normal Incidence
     0.8797904670127319,       !- Visible Transmittance at Normal Incidence
-    6.640000e-02,             !- Front Side Visible Reflectance at Normal Incidence
-    6.556950e-02,             !- Back Side Visible Reflectance at Normal Incidence
+    0.0664,                   !- Front Side Visible Reflectance at Normal Incidence
+    0.0655695,                !- Back Side Visible Reflectance at Normal Incidence
     0,                        !- Infrared Transmittance at Normal Incidence
     0.84,                     !- Front Side Infrared Hemispherical Emissivity
     0.84,                     !- Back Side Infrared Hemispherical Emissivity
@@ -437,11 +462,11 @@ WINDOWMATERIAL:GLAZING,
     ,                         !- Window Glass Spectral Data Set Name
     0.003,                    !- Thickness
     0.7663090609611817,       !- Solar Transmittance at Normal Incidence
-    7.267741e-02,             !- Front Side Solar Reflectance at Normal Incidence
-    7.210983e-02,             !- Back Side Solar Reflectance at Normal Incidence
+    0.07267741,               !- Front Side Solar Reflectance at Normal Incidence
+    0.07210983,               !- Back Side Solar Reflectance at Normal Incidence
     0.8788581942867011,       !- Visible Transmittance at Normal Incidence
     0.0687636762647267,       !- Front Side Visible Reflectance at Normal Incidence
-    6.314678e-02,             !- Back Side Visible Reflectance at Normal Incidence
+    0.06314678,               !- Back Side Visible Reflectance at Normal Incidence
     0,                        !- Infrared Transmittance at Normal Incidence
     0.84,                     !- Front Side Infrared Hemispherical Emissivity
     0.84,                     !- Back Side Infrared Hemispherical Emissivity
@@ -457,11 +482,11 @@ WINDOWMATERIAL:GLAZING,
     ,                         !- Window Glass Spectral Data Set Name
     0.003,                    !- Thickness
     0.7649325501538797,       !- Solar Transmittance at Normal Incidence
-    7.561368e-02,             !- Front Side Solar Reflectance at Normal Incidence
-    7.262742e-02,             !- Back Side Solar Reflectance at Normal Incidence
+    0.07561368,               !- Front Side Solar Reflectance at Normal Incidence
+    0.07262742,               !- Back Side Solar Reflectance at Normal Incidence
     0.8716917198044708,       !- Visible Transmittance at Normal Incidence
-    6.897823e-02,             !- Front Side Visible Reflectance at Normal Incidence
-    6.399401e-02,             !- Back Side Visible Reflectance at Normal Incidence
+    0.06897823,               !- Front Side Visible Reflectance at Normal Incidence
+    0.06399401,               !- Back Side Visible Reflectance at Normal Incidence
     0,                        !- Infrared Transmittance at Normal Incidence
     0.84,                     !- Front Side Infrared Hemispherical Emissivity
     0.84,                     !- Back Side Infrared Hemispherical Emissivity
@@ -741,7 +766,7 @@ BUILDINGSURFACE:DETAILED,
     0,                        !- Vertex 2 Xcoordinate
     0,                        !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
-    -2.318500e+00,            !- Vertex 3 Xcoordinate
+    -2.3185,                  !- Vertex 3 Xcoordinate
     2.220446e-16,             !- Vertex 3 Ycoordinate
     0,                        !- Vertex 3 Zcoordinate
     -5.656854249492379,       !- Vertex 4 Xcoordinate
@@ -816,10 +841,10 @@ BUILDINGSURFACE:DETAILED,
     -5.656854249492379,       !- Vertex 2 Xcoordinate
     3.3383546365953385,       !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
-    -2.318500e+00,            !- Vertex 3 Xcoordinate
+    -2.3185,                  !- Vertex 3 Xcoordinate
     2.220446e-16,             !- Vertex 3 Ycoordinate
     0,                        !- Vertex 3 Zcoordinate
-    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    -2.3185,                  !- Vertex 4 Xcoordinate
     2.220446e-16,             !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
@@ -835,10 +860,10 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -2.318500e+00,            !- Vertex 1 Xcoordinate
+    -2.3185,                  !- Vertex 1 Xcoordinate
     2.220446e-16,             !- Vertex 1 Ycoordinate
     4,                        !- Vertex 1 Zcoordinate
-    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    -2.3185,                  !- Vertex 2 Xcoordinate
     2.220446e-16,             !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
     0,                        !- Vertex 3 Xcoordinate
@@ -869,7 +894,7 @@ BUILDINGSURFACE:DETAILED,
     -5.656854249492379,       !- Vertex 3 Xcoordinate
     3.3383546365953385,       !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    -2.3185,                  !- Vertex 4 Xcoordinate
     2.220446e-16,             !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
@@ -894,7 +919,7 @@ BUILDINGSURFACE:DETAILED,
     -13.94495635439355,       !- Vertex 3 Xcoordinate
     -4.949747468305831,       !- Vertex 3 Ycoordinate
     0,                        !- Vertex 3 Zcoordinate
-    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -16.26346,                !- Vertex 4 Xcoordinate
     -4.949747468305831,       !- Vertex 4 Ycoordinate
     0;                        !- Vertex 4 Zcoordinate
 
@@ -916,10 +941,10 @@ BUILDINGSURFACE:DETAILED,
     -5.65685424949238,        !- Vertex 2 Xcoordinate
     5.656854249492381,        !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
-    -1.626346e+01,            !- Vertex 3 Xcoordinate
+    -16.26346,                !- Vertex 3 Xcoordinate
     -4.949747468305831,       !- Vertex 3 Ycoordinate
     0,                        !- Vertex 3 Zcoordinate
-    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -16.26346,                !- Vertex 4 Xcoordinate
     -4.949747468305831,       !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
@@ -935,10 +960,10 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -1.626346e+01,            !- Vertex 1 Xcoordinate
+    -16.26346,                !- Vertex 1 Xcoordinate
     -4.949747468305831,       !- Vertex 1 Ycoordinate
     4,                        !- Vertex 1 Zcoordinate
-    -1.626346e+01,            !- Vertex 2 Xcoordinate
+    -16.26346,                !- Vertex 2 Xcoordinate
     -4.949747468305831,       !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
     -13.94495635439355,       !- Vertex 3 Xcoordinate
@@ -1016,7 +1041,7 @@ BUILDINGSURFACE:DETAILED,
     -5.65685424949238,        !- Vertex 2 Xcoordinate
     5.656854249492381,        !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
-    -1.626346e+01,            !- Vertex 3 Xcoordinate
+    -16.26346,                !- Vertex 3 Xcoordinate
     -4.949747468305831,       !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
     -13.94495635439355,       !- Vertex 4 Xcoordinate
@@ -1038,13 +1063,13 @@ BUILDINGSURFACE:DETAILED,
     -13.94495635439355,       !- Vertex 1 Xcoordinate
     -4.949747468305831,       !- Vertex 1 Ycoordinate
     0,                        !- Vertex 1 Zcoordinate
-    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -10.6066,                 !- Vertex 2 Xcoordinate
     -8.288102104901169,       !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
-    -1.060660e+01,            !- Vertex 3 Ycoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Ycoordinate
     0,                        !- Vertex 3 Zcoordinate
-    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -16.26346,                !- Vertex 4 Xcoordinate
     -4.949747468305831,       !- Vertex 4 Ycoordinate
     0;                        !- Vertex 4 Zcoordinate
 
@@ -1060,17 +1085,17 @@ BUILDINGSURFACE:DETAILED,
     WindExposed,              !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -1.626346e+01,            !- Vertex 1 Xcoordinate
+    -16.26346,                !- Vertex 1 Xcoordinate
     -4.949747468305831,       !- Vertex 1 Ycoordinate
     4,                        !- Vertex 1 Zcoordinate
-    -1.626346e+01,            !- Vertex 2 Xcoordinate
+    -16.26346,                !- Vertex 2 Xcoordinate
     -4.949747468305831,       !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
-    -1.060660e+01,            !- Vertex 3 Ycoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Ycoordinate
     0,                        !- Vertex 3 Zcoordinate
-    -1.060660e+01,            !- Vertex 4 Xcoordinate
-    -1.060660e+01,            !- Vertex 4 Ycoordinate
+    -10.6066,                 !- Vertex 4 Xcoordinate
+    -10.6066,                 !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
 BUILDINGSURFACE:DETAILED,
@@ -1085,16 +1110,16 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -1.060660e+01,            !- Vertex 1 Xcoordinate
-    -1.060660e+01,            !- Vertex 1 Ycoordinate
+    -10.6066,                 !- Vertex 1 Xcoordinate
+    -10.6066,                 !- Vertex 1 Ycoordinate
     4,                        !- Vertex 1 Zcoordinate
-    -1.060660e+01,            !- Vertex 2 Xcoordinate
-    -1.060660e+01,            !- Vertex 2 Ycoordinate
+    -10.6066,                 !- Vertex 2 Xcoordinate
+    -10.6066,                 !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
     -8.288102104901169,       !- Vertex 3 Ycoordinate
     0,                        !- Vertex 3 Zcoordinate
-    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -10.6066,                 !- Vertex 4 Xcoordinate
     -8.288102104901169,       !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
@@ -1110,10 +1135,10 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -10.6066,                 !- Vertex 1 Xcoordinate
     -8.288102104901169,       !- Vertex 1 Ycoordinate
     4,                        !- Vertex 1 Zcoordinate
-    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -10.6066,                 !- Vertex 2 Xcoordinate
     -8.288102104901169,       !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
     -13.94495635439355,       !- Vertex 3 Xcoordinate
@@ -1141,10 +1166,10 @@ BUILDINGSURFACE:DETAILED,
     -13.94495635439355,       !- Vertex 2 Xcoordinate
     -4.949747468305831,       !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
-    -1.626346e+01,            !- Vertex 3 Xcoordinate
+    -16.26346,                !- Vertex 3 Xcoordinate
     -4.949747468305831,       !- Vertex 3 Ycoordinate
     0,                        !- Vertex 3 Zcoordinate
-    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -16.26346,                !- Vertex 4 Xcoordinate
     -4.949747468305831,       !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
@@ -1160,16 +1185,16 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -1.060660e+01,            !- Vertex 1 Xcoordinate
-    -1.060660e+01,            !- Vertex 1 Ycoordinate
+    -10.6066,                 !- Vertex 1 Xcoordinate
+    -10.6066,                 !- Vertex 1 Ycoordinate
     4,                        !- Vertex 1 Zcoordinate
-    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -10.6066,                 !- Vertex 2 Xcoordinate
     -8.288102104901169,       !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
     -13.94495635439355,       !- Vertex 3 Xcoordinate
     -4.949747468305831,       !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -16.26346,                !- Vertex 4 Xcoordinate
     -4.949747468305831,       !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
@@ -1188,13 +1213,13 @@ BUILDINGSURFACE:DETAILED,
     0,                        !- Vertex 1 Xcoordinate
     0,                        !- Vertex 1 Ycoordinate
     0,                        !- Vertex 1 Zcoordinate
-    -1.060660e+01,            !- Vertex 2 Xcoordinate
-    -1.060660e+01,            !- Vertex 2 Ycoordinate
+    -10.6066,                 !- Vertex 2 Xcoordinate
+    -10.6066,                 !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
     -8.288102104901169,       !- Vertex 3 Ycoordinate
     0,                        !- Vertex 3 Zcoordinate
-    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    -2.3185,                  !- Vertex 4 Xcoordinate
     2.220446e-16,             !- Vertex 4 Ycoordinate
     0;                        !- Vertex 4 Zcoordinate
 
@@ -1210,11 +1235,11 @@ BUILDINGSURFACE:DETAILED,
     WindExposed,              !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -1.060660e+01,            !- Vertex 1 Xcoordinate
-    -1.060660e+01,            !- Vertex 1 Ycoordinate
+    -10.6066,                 !- Vertex 1 Xcoordinate
+    -10.6066,                 !- Vertex 1 Ycoordinate
     4,                        !- Vertex 1 Zcoordinate
-    -1.060660e+01,            !- Vertex 2 Xcoordinate
-    -1.060660e+01,            !- Vertex 2 Ycoordinate
+    -10.6066,                 !- Vertex 2 Xcoordinate
+    -10.6066,                 !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
     0,                        !- Vertex 3 Xcoordinate
     0,                        !- Vertex 3 Ycoordinate
@@ -1241,10 +1266,10 @@ BUILDINGSURFACE:DETAILED,
     0,                        !- Vertex 2 Xcoordinate
     0,                        !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
-    -2.318500e+00,            !- Vertex 3 Xcoordinate
+    -2.3185,                  !- Vertex 3 Xcoordinate
     2.220446e-16,             !- Vertex 3 Ycoordinate
     0,                        !- Vertex 3 Zcoordinate
-    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    -2.3185,                  !- Vertex 4 Xcoordinate
     2.220446e-16,             !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
@@ -1260,16 +1285,16 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -2.318500e+00,            !- Vertex 1 Xcoordinate
+    -2.3185,                  !- Vertex 1 Xcoordinate
     2.220446e-16,             !- Vertex 1 Ycoordinate
     4,                        !- Vertex 1 Zcoordinate
-    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    -2.3185,                  !- Vertex 2 Xcoordinate
     2.220446e-16,             !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
     -8.288102104901169,       !- Vertex 3 Ycoordinate
     0,                        !- Vertex 3 Zcoordinate
-    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -10.6066,                 !- Vertex 4 Xcoordinate
     -8.288102104901169,       !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
@@ -1285,17 +1310,17 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -10.6066,                 !- Vertex 1 Xcoordinate
     -8.288102104901169,       !- Vertex 1 Ycoordinate
     4,                        !- Vertex 1 Zcoordinate
-    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -10.6066,                 !- Vertex 2 Xcoordinate
     -8.288102104901169,       !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
-    -1.060660e+01,            !- Vertex 3 Ycoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Ycoordinate
     0,                        !- Vertex 3 Zcoordinate
-    -1.060660e+01,            !- Vertex 4 Xcoordinate
-    -1.060660e+01,            !- Vertex 4 Ycoordinate
+    -10.6066,                 !- Vertex 4 Xcoordinate
+    -10.6066,                 !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
 BUILDINGSURFACE:DETAILED,
@@ -1313,14 +1338,14 @@ BUILDINGSURFACE:DETAILED,
     0,                        !- Vertex 1 Xcoordinate
     0,                        !- Vertex 1 Ycoordinate
     4,                        !- Vertex 1 Zcoordinate
-    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    -2.3185,                  !- Vertex 2 Xcoordinate
     2.220446e-16,             !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
     -8.288102104901169,       !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -1.060660e+01,            !- Vertex 4 Xcoordinate
-    -1.060660e+01,            !- Vertex 4 Ycoordinate
+    -10.6066,                 !- Vertex 4 Xcoordinate
+    -10.6066,                 !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
 BUILDINGSURFACE:DETAILED,
@@ -1335,7 +1360,7 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -2.318500e+00,            !- Vertex 1 Xcoordinate
+    -2.3185,                  !- Vertex 1 Xcoordinate
     2.220446e-16,             !- Vertex 1 Ycoordinate
     0,                        !- Vertex 1 Zcoordinate
     -5.656854249492379,       !- Vertex 2 Xcoordinate
@@ -1344,7 +1369,7 @@ BUILDINGSURFACE:DETAILED,
     -13.94495635439355,       !- Vertex 3 Xcoordinate
     -4.949747468305831,       !- Vertex 3 Ycoordinate
     0,                        !- Vertex 3 Zcoordinate
-    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -10.6066,                 !- Vertex 4 Xcoordinate
     -8.288102104901169,       !- Vertex 4 Ycoordinate
     0;                        !- Vertex 4 Zcoordinate
 
@@ -1360,16 +1385,16 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -2.318500e+00,            !- Vertex 1 Xcoordinate
+    -2.3185,                  !- Vertex 1 Xcoordinate
     2.220446e-16,             !- Vertex 1 Ycoordinate
     4,                        !- Vertex 1 Zcoordinate
-    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    -2.3185,                  !- Vertex 2 Xcoordinate
     2.220446e-16,             !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
     -8.288102104901169,       !- Vertex 3 Ycoordinate
     0,                        !- Vertex 3 Zcoordinate
-    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -10.6066,                 !- Vertex 4 Xcoordinate
     -8.288102104901169,       !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
@@ -1385,10 +1410,10 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -10.6066,                 !- Vertex 1 Xcoordinate
     -8.288102104901169,       !- Vertex 1 Ycoordinate
     4,                        !- Vertex 1 Zcoordinate
-    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -10.6066,                 !- Vertex 2 Xcoordinate
     -8.288102104901169,       !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
     -13.94495635439355,       !- Vertex 3 Xcoordinate
@@ -1441,10 +1466,10 @@ BUILDINGSURFACE:DETAILED,
     -5.656854249492379,       !- Vertex 2 Xcoordinate
     3.3383546365953385,       !- Vertex 2 Ycoordinate
     0,                        !- Vertex 2 Zcoordinate
-    -2.318500e+00,            !- Vertex 3 Xcoordinate
+    -2.3185,                  !- Vertex 3 Xcoordinate
     2.220446e-16,             !- Vertex 3 Ycoordinate
     0,                        !- Vertex 3 Zcoordinate
-    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    -2.3185,                  !- Vertex 4 Xcoordinate
     2.220446e-16,             !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
@@ -1463,10 +1488,10 @@ BUILDINGSURFACE:DETAILED,
     -5.656854249492379,       !- Vertex 1 Xcoordinate
     3.3383546365953385,       !- Vertex 1 Ycoordinate
     4,                        !- Vertex 1 Zcoordinate
-    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    -2.3185,                  !- Vertex 2 Xcoordinate
     2.220446e-16,             !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
     -8.288102104901169,       !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
     -13.94495635439355,       !- Vertex 4 Xcoordinate
@@ -1491,7 +1516,7 @@ BUILDINGSURFACE:DETAILED,
     0,                        !- Vertex 2 Xcoordinate
     0,                        !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
-    -2.318500e+00,            !- Vertex 3 Xcoordinate
+    -2.3185,                  !- Vertex 3 Xcoordinate
     2.220446e-16,             !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
     -5.656854249492379,       !- Vertex 4 Xcoordinate
@@ -1566,10 +1591,10 @@ BUILDINGSURFACE:DETAILED,
     -5.656854249492379,       !- Vertex 2 Xcoordinate
     3.3383546365953385,       !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
-    -2.318500e+00,            !- Vertex 3 Xcoordinate
+    -2.3185,                  !- Vertex 3 Xcoordinate
     2.220446e-16,             !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    -2.3185,                  !- Vertex 4 Xcoordinate
     2.220446e-16,             !- Vertex 4 Ycoordinate
     8;                        !- Vertex 4 Zcoordinate
 
@@ -1585,10 +1610,10 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -2.318500e+00,            !- Vertex 1 Xcoordinate
+    -2.3185,                  !- Vertex 1 Xcoordinate
     2.220446e-16,             !- Vertex 1 Ycoordinate
     8,                        !- Vertex 1 Zcoordinate
-    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    -2.3185,                  !- Vertex 2 Xcoordinate
     2.220446e-16,             !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
     0,                        !- Vertex 3 Xcoordinate
@@ -1619,7 +1644,7 @@ BUILDINGSURFACE:DETAILED,
     -5.656854249492379,       !- Vertex 3 Xcoordinate
     3.3383546365953385,       !- Vertex 3 Ycoordinate
     8,                        !- Vertex 3 Zcoordinate
-    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    -2.3185,                  !- Vertex 4 Xcoordinate
     2.220446e-16,             !- Vertex 4 Ycoordinate
     8;                        !- Vertex 4 Zcoordinate
 
@@ -1644,7 +1669,7 @@ BUILDINGSURFACE:DETAILED,
     -13.94495635439355,       !- Vertex 3 Xcoordinate
     -4.949747468305831,       !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -16.26346,                !- Vertex 4 Xcoordinate
     -4.949747468305831,       !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
@@ -1666,10 +1691,10 @@ BUILDINGSURFACE:DETAILED,
     -5.65685424949238,        !- Vertex 2 Xcoordinate
     5.656854249492381,        !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
-    -1.626346e+01,            !- Vertex 3 Xcoordinate
+    -16.26346,                !- Vertex 3 Xcoordinate
     -4.949747468305831,       !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -16.26346,                !- Vertex 4 Xcoordinate
     -4.949747468305831,       !- Vertex 4 Ycoordinate
     8;                        !- Vertex 4 Zcoordinate
 
@@ -1685,10 +1710,10 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -1.626346e+01,            !- Vertex 1 Xcoordinate
+    -16.26346,                !- Vertex 1 Xcoordinate
     -4.949747468305831,       !- Vertex 1 Ycoordinate
     8,                        !- Vertex 1 Zcoordinate
-    -1.626346e+01,            !- Vertex 2 Xcoordinate
+    -16.26346,                !- Vertex 2 Xcoordinate
     -4.949747468305831,       !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
     -13.94495635439355,       !- Vertex 3 Xcoordinate
@@ -1766,7 +1791,7 @@ BUILDINGSURFACE:DETAILED,
     -5.65685424949238,        !- Vertex 2 Xcoordinate
     5.656854249492381,        !- Vertex 2 Ycoordinate
     8,                        !- Vertex 2 Zcoordinate
-    -1.626346e+01,            !- Vertex 3 Xcoordinate
+    -16.26346,                !- Vertex 3 Xcoordinate
     -4.949747468305831,       !- Vertex 3 Ycoordinate
     8,                        !- Vertex 3 Zcoordinate
     -13.94495635439355,       !- Vertex 4 Xcoordinate
@@ -1788,13 +1813,13 @@ BUILDINGSURFACE:DETAILED,
     -13.94495635439355,       !- Vertex 1 Xcoordinate
     -4.949747468305831,       !- Vertex 1 Ycoordinate
     4,                        !- Vertex 1 Zcoordinate
-    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -10.6066,                 !- Vertex 2 Xcoordinate
     -8.288102104901169,       !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
-    -1.060660e+01,            !- Vertex 3 Ycoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -16.26346,                !- Vertex 4 Xcoordinate
     -4.949747468305831,       !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
@@ -1810,17 +1835,17 @@ BUILDINGSURFACE:DETAILED,
     WindExposed,              !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -1.626346e+01,            !- Vertex 1 Xcoordinate
+    -16.26346,                !- Vertex 1 Xcoordinate
     -4.949747468305831,       !- Vertex 1 Ycoordinate
     8,                        !- Vertex 1 Zcoordinate
-    -1.626346e+01,            !- Vertex 2 Xcoordinate
+    -16.26346,                !- Vertex 2 Xcoordinate
     -4.949747468305831,       !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
-    -1.060660e+01,            !- Vertex 3 Ycoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -1.060660e+01,            !- Vertex 4 Xcoordinate
-    -1.060660e+01,            !- Vertex 4 Ycoordinate
+    -10.6066,                 !- Vertex 4 Xcoordinate
+    -10.6066,                 !- Vertex 4 Ycoordinate
     8;                        !- Vertex 4 Zcoordinate
 
 BUILDINGSURFACE:DETAILED,
@@ -1835,16 +1860,16 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -1.060660e+01,            !- Vertex 1 Xcoordinate
-    -1.060660e+01,            !- Vertex 1 Ycoordinate
+    -10.6066,                 !- Vertex 1 Xcoordinate
+    -10.6066,                 !- Vertex 1 Ycoordinate
     8,                        !- Vertex 1 Zcoordinate
-    -1.060660e+01,            !- Vertex 2 Xcoordinate
-    -1.060660e+01,            !- Vertex 2 Ycoordinate
+    -10.6066,                 !- Vertex 2 Xcoordinate
+    -10.6066,                 !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
     -8.288102104901169,       !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -10.6066,                 !- Vertex 4 Xcoordinate
     -8.288102104901169,       !- Vertex 4 Ycoordinate
     8;                        !- Vertex 4 Zcoordinate
 
@@ -1860,10 +1885,10 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -10.6066,                 !- Vertex 1 Xcoordinate
     -8.288102104901169,       !- Vertex 1 Ycoordinate
     8,                        !- Vertex 1 Zcoordinate
-    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -10.6066,                 !- Vertex 2 Xcoordinate
     -8.288102104901169,       !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
     -13.94495635439355,       !- Vertex 3 Xcoordinate
@@ -1891,10 +1916,10 @@ BUILDINGSURFACE:DETAILED,
     -13.94495635439355,       !- Vertex 2 Xcoordinate
     -4.949747468305831,       !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
-    -1.626346e+01,            !- Vertex 3 Xcoordinate
+    -16.26346,                !- Vertex 3 Xcoordinate
     -4.949747468305831,       !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -16.26346,                !- Vertex 4 Xcoordinate
     -4.949747468305831,       !- Vertex 4 Ycoordinate
     8;                        !- Vertex 4 Zcoordinate
 
@@ -1910,16 +1935,16 @@ BUILDINGSURFACE:DETAILED,
     WindExposed,              !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -1.060660e+01,            !- Vertex 1 Xcoordinate
-    -1.060660e+01,            !- Vertex 1 Ycoordinate
+    -10.6066,                 !- Vertex 1 Xcoordinate
+    -10.6066,                 !- Vertex 1 Ycoordinate
     8,                        !- Vertex 1 Zcoordinate
-    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -10.6066,                 !- Vertex 2 Xcoordinate
     -8.288102104901169,       !- Vertex 2 Ycoordinate
     8,                        !- Vertex 2 Zcoordinate
     -13.94495635439355,       !- Vertex 3 Xcoordinate
     -4.949747468305831,       !- Vertex 3 Ycoordinate
     8,                        !- Vertex 3 Zcoordinate
-    -1.626346e+01,            !- Vertex 4 Xcoordinate
+    -16.26346,                !- Vertex 4 Xcoordinate
     -4.949747468305831,       !- Vertex 4 Ycoordinate
     8;                        !- Vertex 4 Zcoordinate
 
@@ -1938,13 +1963,13 @@ BUILDINGSURFACE:DETAILED,
     0,                        !- Vertex 1 Xcoordinate
     0,                        !- Vertex 1 Ycoordinate
     4,                        !- Vertex 1 Zcoordinate
-    -1.060660e+01,            !- Vertex 2 Xcoordinate
-    -1.060660e+01,            !- Vertex 2 Ycoordinate
+    -10.6066,                 !- Vertex 2 Xcoordinate
+    -10.6066,                 !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
     -8.288102104901169,       !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    -2.3185,                  !- Vertex 4 Xcoordinate
     2.220446e-16,             !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
@@ -1960,11 +1985,11 @@ BUILDINGSURFACE:DETAILED,
     WindExposed,              !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -1.060660e+01,            !- Vertex 1 Xcoordinate
-    -1.060660e+01,            !- Vertex 1 Ycoordinate
+    -10.6066,                 !- Vertex 1 Xcoordinate
+    -10.6066,                 !- Vertex 1 Ycoordinate
     8,                        !- Vertex 1 Zcoordinate
-    -1.060660e+01,            !- Vertex 2 Xcoordinate
-    -1.060660e+01,            !- Vertex 2 Ycoordinate
+    -10.6066,                 !- Vertex 2 Xcoordinate
+    -10.6066,                 !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
     0,                        !- Vertex 3 Xcoordinate
     0,                        !- Vertex 3 Ycoordinate
@@ -1991,10 +2016,10 @@ BUILDINGSURFACE:DETAILED,
     0,                        !- Vertex 2 Xcoordinate
     0,                        !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
-    -2.318500e+00,            !- Vertex 3 Xcoordinate
+    -2.3185,                  !- Vertex 3 Xcoordinate
     2.220446e-16,             !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    -2.3185,                  !- Vertex 4 Xcoordinate
     2.220446e-16,             !- Vertex 4 Ycoordinate
     8;                        !- Vertex 4 Zcoordinate
 
@@ -2010,16 +2035,16 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -2.318500e+00,            !- Vertex 1 Xcoordinate
+    -2.3185,                  !- Vertex 1 Xcoordinate
     2.220446e-16,             !- Vertex 1 Ycoordinate
     8,                        !- Vertex 1 Zcoordinate
-    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    -2.3185,                  !- Vertex 2 Xcoordinate
     2.220446e-16,             !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
     -8.288102104901169,       !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -10.6066,                 !- Vertex 4 Xcoordinate
     -8.288102104901169,       !- Vertex 4 Ycoordinate
     8;                        !- Vertex 4 Zcoordinate
 
@@ -2035,17 +2060,17 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -10.6066,                 !- Vertex 1 Xcoordinate
     -8.288102104901169,       !- Vertex 1 Ycoordinate
     8,                        !- Vertex 1 Zcoordinate
-    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -10.6066,                 !- Vertex 2 Xcoordinate
     -8.288102104901169,       !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
-    -1.060660e+01,            !- Vertex 3 Ycoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -1.060660e+01,            !- Vertex 4 Xcoordinate
-    -1.060660e+01,            !- Vertex 4 Ycoordinate
+    -10.6066,                 !- Vertex 4 Xcoordinate
+    -10.6066,                 !- Vertex 4 Ycoordinate
     8;                        !- Vertex 4 Zcoordinate
 
 BUILDINGSURFACE:DETAILED,
@@ -2063,14 +2088,14 @@ BUILDINGSURFACE:DETAILED,
     0,                        !- Vertex 1 Xcoordinate
     0,                        !- Vertex 1 Ycoordinate
     8,                        !- Vertex 1 Zcoordinate
-    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    -2.3185,                  !- Vertex 2 Xcoordinate
     2.220446e-16,             !- Vertex 2 Ycoordinate
     8,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
     -8.288102104901169,       !- Vertex 3 Ycoordinate
     8,                        !- Vertex 3 Zcoordinate
-    -1.060660e+01,            !- Vertex 4 Xcoordinate
-    -1.060660e+01,            !- Vertex 4 Ycoordinate
+    -10.6066,                 !- Vertex 4 Xcoordinate
+    -10.6066,                 !- Vertex 4 Ycoordinate
     8;                        !- Vertex 4 Zcoordinate
 
 BUILDINGSURFACE:DETAILED,
@@ -2085,7 +2110,7 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -2.318500e+00,            !- Vertex 1 Xcoordinate
+    -2.3185,                  !- Vertex 1 Xcoordinate
     2.220446e-16,             !- Vertex 1 Ycoordinate
     4,                        !- Vertex 1 Zcoordinate
     -5.656854249492379,       !- Vertex 2 Xcoordinate
@@ -2094,7 +2119,7 @@ BUILDINGSURFACE:DETAILED,
     -13.94495635439355,       !- Vertex 3 Xcoordinate
     -4.949747468305831,       !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -10.6066,                 !- Vertex 4 Xcoordinate
     -8.288102104901169,       !- Vertex 4 Ycoordinate
     4;                        !- Vertex 4 Zcoordinate
 
@@ -2110,16 +2135,16 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -2.318500e+00,            !- Vertex 1 Xcoordinate
+    -2.3185,                  !- Vertex 1 Xcoordinate
     2.220446e-16,             !- Vertex 1 Ycoordinate
     8,                        !- Vertex 1 Zcoordinate
-    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    -2.3185,                  !- Vertex 2 Xcoordinate
     2.220446e-16,             !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
     -8.288102104901169,       !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -1.060660e+01,            !- Vertex 4 Xcoordinate
+    -10.6066,                 !- Vertex 4 Xcoordinate
     -8.288102104901169,       !- Vertex 4 Ycoordinate
     8;                        !- Vertex 4 Zcoordinate
 
@@ -2135,10 +2160,10 @@ BUILDINGSURFACE:DETAILED,
     NoWind,                   !- Wind Exposure
     autocalculate,            !- View Factor to Ground
     autocalculate,            !- Number of Vertices
-    -1.060660e+01,            !- Vertex 1 Xcoordinate
+    -10.6066,                 !- Vertex 1 Xcoordinate
     -8.288102104901169,       !- Vertex 1 Ycoordinate
     8,                        !- Vertex 1 Zcoordinate
-    -1.060660e+01,            !- Vertex 2 Xcoordinate
+    -10.6066,                 !- Vertex 2 Xcoordinate
     -8.288102104901169,       !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
     -13.94495635439355,       !- Vertex 3 Xcoordinate
@@ -2191,10 +2216,10 @@ BUILDINGSURFACE:DETAILED,
     -5.656854249492379,       !- Vertex 2 Xcoordinate
     3.3383546365953385,       !- Vertex 2 Ycoordinate
     4,                        !- Vertex 2 Zcoordinate
-    -2.318500e+00,            !- Vertex 3 Xcoordinate
+    -2.3185,                  !- Vertex 3 Xcoordinate
     2.220446e-16,             !- Vertex 3 Ycoordinate
     4,                        !- Vertex 3 Zcoordinate
-    -2.318500e+00,            !- Vertex 4 Xcoordinate
+    -2.3185,                  !- Vertex 4 Xcoordinate
     2.220446e-16,             !- Vertex 4 Ycoordinate
     8;                        !- Vertex 4 Zcoordinate
 
@@ -2213,10 +2238,10 @@ BUILDINGSURFACE:DETAILED,
     -5.656854249492379,       !- Vertex 1 Xcoordinate
     3.3383546365953385,       !- Vertex 1 Ycoordinate
     8,                        !- Vertex 1 Zcoordinate
-    -2.318500e+00,            !- Vertex 2 Xcoordinate
+    -2.3185,                  !- Vertex 2 Xcoordinate
     2.220446e-16,             !- Vertex 2 Ycoordinate
     8,                        !- Vertex 2 Zcoordinate
-    -1.060660e+01,            !- Vertex 3 Xcoordinate
+    -10.6066,                 !- Vertex 3 Xcoordinate
     -8.288102104901169,       !- Vertex 3 Ycoordinate
     8,                        !- Vertex 3 Zcoordinate
     -13.94495635439355,       !- Vertex 4 Xcoordinate
@@ -2231,19 +2256,19 @@ FENESTRATIONSURFACE:DETAILED,
     ,                         !- Outside Boundary Condition Object
     autocalculate,            !- View Factor to Ground
     ,                         !- Frame and Divider Name
-    1.0,                      !- Multiplier
+    1,                        !- Multiplier
     autocalculate,            !- Number of Vertices
-    -1.626063e+01,            !- Vertex 1 Xcoordinate
+    -16.26063,                !- Vertex 1 Xcoordinate
     -4.952575895430577,       !- Vertex 1 Ycoordinate
     2.4639426798457884,       !- Vertex 1 Zcoordinate
-    -1.626063e+01,            !- Vertex 2 Xcoordinate
+    -16.26063,                !- Vertex 2 Xcoordinate
     -4.952575895430577,       !- Vertex 2 Ycoordinate
     1.5360573201542116,       !- Vertex 2 Zcoordinate
     -10.60943014492296,       !- Vertex 3 Xcoordinate
-    -1.060377e+01,            !- Vertex 3 Ycoordinate
+    -10.60377,                !- Vertex 3 Ycoordinate
     1.5360573201542116,       !- Vertex 3 Zcoordinate
     -10.60943014492296,       !- Vertex 4 Xcoordinate
-    -1.060377e+01,            !- Vertex 4 Ycoordinate
+    -10.60377,                !- Vertex 4 Ycoordinate
     2.4639426798457884;       !- Vertex 4 Zcoordinate
 
 FENESTRATIONSURFACE:DETAILED,
@@ -2254,19 +2279,19 @@ FENESTRATIONSURFACE:DETAILED,
     ,                         !- Outside Boundary Condition Object
     autocalculate,            !- View Factor to Ground
     ,                         !- Frame and Divider Name
-    1.0,                      !- Multiplier
+    1,                        !- Multiplier
     autocalculate,            !- Number of Vertices
-    -1.060130e+01,            !- Vertex 1 Xcoordinate
-    -1.060130e+01,            !- Vertex 1 Ycoordinate
+    -10.6013,                 !- Vertex 1 Xcoordinate
+    -10.6013,                 !- Vertex 1 Ycoordinate
     2.4639426798457884,       !- Vertex 1 Zcoordinate
-    -1.060130e+01,            !- Vertex 2 Xcoordinate
-    -1.060130e+01,            !- Vertex 2 Ycoordinate
+    -10.6013,                 !- Vertex 2 Xcoordinate
+    -10.6013,                 !- Vertex 2 Ycoordinate
     1.5360573201542116,       !- Vertex 2 Zcoordinate
-    -5.303301e-03,            !- Vertex 3 Xcoordinate
-    -5.303301e-03,            !- Vertex 3 Ycoordinate
+    -0.005303301,             !- Vertex 3 Xcoordinate
+    -0.005303301,             !- Vertex 3 Ycoordinate
     1.5360573201542116,       !- Vertex 3 Zcoordinate
-    -5.303301e-03,            !- Vertex 4 Xcoordinate
-    -5.303301e-03,            !- Vertex 4 Ycoordinate
+    -0.005303301,             !- Vertex 4 Xcoordinate
+    -0.005303301,             !- Vertex 4 Ycoordinate
     2.4639426798457884;       !- Vertex 4 Zcoordinate
 
 FENESTRATIONSURFACE:DETAILED,
@@ -2277,19 +2302,19 @@ FENESTRATIONSURFACE:DETAILED,
     ,                         !- Outside Boundary Condition Object
     autocalculate,            !- View Factor to Ground
     ,                         !- Frame and Divider Name
-    1.0,                      !- Multiplier
+    1,                        !- Multiplier
     autocalculate,            !- Number of Vertices
-    -1.626063e+01,            !- Vertex 1 Xcoordinate
+    -16.26063,                !- Vertex 1 Xcoordinate
     -4.952575895430577,       !- Vertex 1 Ycoordinate
     6.463942679845788,        !- Vertex 1 Zcoordinate
-    -1.626063e+01,            !- Vertex 2 Xcoordinate
+    -16.26063,                !- Vertex 2 Xcoordinate
     -4.952575895430577,       !- Vertex 2 Ycoordinate
     5.536057320154212,        !- Vertex 2 Zcoordinate
     -10.60943014492296,       !- Vertex 3 Xcoordinate
-    -1.060377e+01,            !- Vertex 3 Ycoordinate
+    -10.60377,                !- Vertex 3 Ycoordinate
     5.536057320154212,        !- Vertex 3 Zcoordinate
     -10.60943014492296,       !- Vertex 4 Xcoordinate
-    -1.060377e+01,            !- Vertex 4 Ycoordinate
+    -10.60377,                !- Vertex 4 Ycoordinate
     6.463942679845788;        !- Vertex 4 Zcoordinate
 
 FENESTRATIONSURFACE:DETAILED,
@@ -2300,19 +2325,19 @@ FENESTRATIONSURFACE:DETAILED,
     ,                         !- Outside Boundary Condition Object
     autocalculate,            !- View Factor to Ground
     ,                         !- Frame and Divider Name
-    1.0,                      !- Multiplier
+    1,                        !- Multiplier
     autocalculate,            !- Number of Vertices
-    -1.060130e+01,            !- Vertex 1 Xcoordinate
-    -1.060130e+01,            !- Vertex 1 Ycoordinate
+    -10.6013,                 !- Vertex 1 Xcoordinate
+    -10.6013,                 !- Vertex 1 Ycoordinate
     6.463942679845788,        !- Vertex 1 Zcoordinate
-    -1.060130e+01,            !- Vertex 2 Xcoordinate
-    -1.060130e+01,            !- Vertex 2 Ycoordinate
+    -10.6013,                 !- Vertex 2 Xcoordinate
+    -10.6013,                 !- Vertex 2 Ycoordinate
     5.536057320154212,        !- Vertex 2 Zcoordinate
-    -5.303301e-03,            !- Vertex 3 Xcoordinate
-    -5.303301e-03,            !- Vertex 3 Ycoordinate
+    -0.005303301,             !- Vertex 3 Xcoordinate
+    -0.005303301,             !- Vertex 3 Ycoordinate
     5.536057320154212,        !- Vertex 3 Zcoordinate
-    -5.303301e-03,            !- Vertex 4 Xcoordinate
-    -5.303301e-03,            !- Vertex 4 Ycoordinate
+    -0.005303301,             !- Vertex 4 Xcoordinate
+    -0.005303301,             !- Vertex 4 Ycoordinate
     6.463942679845788;        !- Vertex 4 Zcoordinate
 
 LIGHTS,
@@ -2350,7 +2375,7 @@ ZONEINFILTRATION:DESIGNFLOWRATE,
     Zone1_FrontPerimeter,     !- Zone or ZoneList or Space or SpaceList Name
     AlwaysOnSched,            !- Schedule Name
     Flow/Zone,                !- Design Flow Rate Calculation Method
-    4.049568e-04,             !- Design Flow Rate
+    0.0004049568,             !- Design Flow Rate
     ,                         !- Flow Rate per Floor Area
     ,                         !- Flow Rate per Exterior Surface Area
     ,                         !- Air Changes per Hour
@@ -2364,7 +2389,7 @@ ZONEINFILTRATION:DESIGNFLOWRATE,
     Zone1_RightPerimeter,     !- Zone or ZoneList or Space or SpaceList Name
     AlwaysOnSched,            !- Schedule Name
     Flow/Zone,                !- Design Flow Rate Calculation Method
-    4.049568e-04,             !- Design Flow Rate
+    0.0004049568,             !- Design Flow Rate
     ,                         !- Flow Rate per Floor Area
     ,                         !- Flow Rate per Exterior Surface Area
     ,                         !- Air Changes per Hour
@@ -2378,7 +2403,7 @@ ZONEINFILTRATION:DESIGNFLOWRATE,
     Zone1_RearPerimeter,      !- Zone or ZoneList or Space or SpaceList Name
     AlwaysOnSched,            !- Schedule Name
     Flow/Zone,                !- Design Flow Rate Calculation Method
-    4.049568e-04,             !- Design Flow Rate
+    0.0004049568,             !- Design Flow Rate
     ,                         !- Flow Rate per Floor Area
     ,                         !- Flow Rate per Exterior Surface Area
     ,                         !- Air Changes per Hour
@@ -2392,7 +2417,7 @@ ZONEINFILTRATION:DESIGNFLOWRATE,
     Zone1_LeftPerimeter,      !- Zone or ZoneList or Space or SpaceList Name
     AlwaysOnSched,            !- Schedule Name
     Flow/Zone,                !- Design Flow Rate Calculation Method
-    4.049568e-04,             !- Design Flow Rate
+    0.0004049568,             !- Design Flow Rate
     ,                         !- Flow Rate per Floor Area
     ,                         !- Flow Rate per Exterior Surface Area
     ,                         !- Air Changes per Hour
@@ -2406,7 +2431,7 @@ ZONEINFILTRATION:DESIGNFLOWRATE,
     Zone1_Core,               !- Zone or ZoneList or Space or SpaceList Name
     AlwaysOnSched,            !- Schedule Name
     Flow/Zone,                !- Design Flow Rate Calculation Method
-    4.049568e-04,             !- Design Flow Rate
+    0.0004049568,             !- Design Flow Rate
     ,                         !- Flow Rate per Floor Area
     ,                         !- Flow Rate per Exterior Surface Area
     ,                         !- Air Changes per Hour
@@ -2420,7 +2445,7 @@ ZONEINFILTRATION:DESIGNFLOWRATE,
     Zone2_FrontPerimeter,     !- Zone or ZoneList or Space or SpaceList Name
     AlwaysOnSched,            !- Schedule Name
     Flow/Zone,                !- Design Flow Rate Calculation Method
-    4.049568e-04,             !- Design Flow Rate
+    0.0004049568,             !- Design Flow Rate
     ,                         !- Flow Rate per Floor Area
     ,                         !- Flow Rate per Exterior Surface Area
     ,                         !- Air Changes per Hour
@@ -2434,7 +2459,7 @@ ZONEINFILTRATION:DESIGNFLOWRATE,
     Zone2_RightPerimeter,     !- Zone or ZoneList or Space or SpaceList Name
     AlwaysOnSched,            !- Schedule Name
     Flow/Zone,                !- Design Flow Rate Calculation Method
-    4.049568e-04,             !- Design Flow Rate
+    0.0004049568,             !- Design Flow Rate
     ,                         !- Flow Rate per Floor Area
     ,                         !- Flow Rate per Exterior Surface Area
     ,                         !- Air Changes per Hour
@@ -2448,7 +2473,7 @@ ZONEINFILTRATION:DESIGNFLOWRATE,
     Zone2_RearPerimeter,      !- Zone or ZoneList or Space or SpaceList Name
     AlwaysOnSched,            !- Schedule Name
     Flow/Zone,                !- Design Flow Rate Calculation Method
-    4.049568e-04,             !- Design Flow Rate
+    0.0004049568,             !- Design Flow Rate
     ,                         !- Flow Rate per Floor Area
     ,                         !- Flow Rate per Exterior Surface Area
     ,                         !- Air Changes per Hour
@@ -2462,7 +2487,7 @@ ZONEINFILTRATION:DESIGNFLOWRATE,
     Zone2_LeftPerimeter,      !- Zone or ZoneList or Space or SpaceList Name
     AlwaysOnSched,            !- Schedule Name
     Flow/Zone,                !- Design Flow Rate Calculation Method
-    4.049568e-04,             !- Design Flow Rate
+    0.0004049568,             !- Design Flow Rate
     ,                         !- Flow Rate per Floor Area
     ,                         !- Flow Rate per Exterior Surface Area
     ,                         !- Air Changes per Hour
@@ -2476,7 +2501,7 @@ ZONEINFILTRATION:DESIGNFLOWRATE,
     Zone2_Core,               !- Zone or ZoneList or Space or SpaceList Name
     AlwaysOnSched,            !- Schedule Name
     Flow/Zone,                !- Design Flow Rate Calculation Method
-    4.049568e-04,             !- Design Flow Rate
+    0.0004049568,             !- Design Flow Rate
     ,                         !- Flow Rate per Floor Area
     ,                         !- Flow Rate per Exterior Surface Area
     ,                         !- Air Changes per Hour
@@ -2509,8 +2534,8 @@ SIZING:ZONE,
     SupplyAirTemperature,     !- Zone Heating Design Supply Air Temperature Input Method
     40.12505377611333,        !- Zone Heating Design Supply Air Temperature
     ,                         !- Zone Heating Design Supply Air Temperature Difference
-    9.275029e-03,             !- Zone Cooling Design Supply Air Humidity Ratio
-    4.223211e-03,             !- Zone Heating Design Supply Air Humidity Ratio
+    0.009275029,              !- Zone Cooling Design Supply Air Humidity Ratio
+    0.004223211,              !- Zone Heating Design Supply Air Humidity Ratio
     DSOA_Global,              !- Design Specification Outdoor Air Object Name
     1,                        !- Zone Heating Sizing Factor
     1,                        !- Zone Cooling Sizing Factor
@@ -2736,12 +2761,12 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     67.36471214164013,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
-    0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
     NoLimit,                  !- Heating Limit
-    Autosize,                 !- Maximum Heating Air Flow Rate
+    autosize,                 !- Maximum Heating Air Flow Rate
     ,                         !- Maximum Sensible Heating Capacity
     NoLimit,                  !- Cooling Limit
-    Autosize,                 !- Maximum Cooling Air Flow Rate
+    autosize,                 !- Maximum Cooling Air Flow Rate
     ,                         !- Maximum Total Cooling Capacity
     ,                         !- Heating Availability Schedule Name
     ,                         !- Cooling Availability Schedule Name
@@ -2765,12 +2790,12 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     67.36471214164013,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
-    0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
     NoLimit,                  !- Heating Limit
-    Autosize,                 !- Maximum Heating Air Flow Rate
+    autosize,                 !- Maximum Heating Air Flow Rate
     ,                         !- Maximum Sensible Heating Capacity
     NoLimit,                  !- Cooling Limit
-    Autosize,                 !- Maximum Cooling Air Flow Rate
+    autosize,                 !- Maximum Cooling Air Flow Rate
     ,                         !- Maximum Total Cooling Capacity
     ,                         !- Heating Availability Schedule Name
     ,                         !- Cooling Availability Schedule Name
@@ -2794,12 +2819,12 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     67.36471214164013,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
-    0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
     NoLimit,                  !- Heating Limit
-    Autosize,                 !- Maximum Heating Air Flow Rate
+    autosize,                 !- Maximum Heating Air Flow Rate
     ,                         !- Maximum Sensible Heating Capacity
     NoLimit,                  !- Cooling Limit
-    Autosize,                 !- Maximum Cooling Air Flow Rate
+    autosize,                 !- Maximum Cooling Air Flow Rate
     ,                         !- Maximum Total Cooling Capacity
     ,                         !- Heating Availability Schedule Name
     ,                         !- Cooling Availability Schedule Name
@@ -2823,12 +2848,12 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     67.36471214164013,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
-    0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
     NoLimit,                  !- Heating Limit
-    Autosize,                 !- Maximum Heating Air Flow Rate
+    autosize,                 !- Maximum Heating Air Flow Rate
     ,                         !- Maximum Sensible Heating Capacity
     NoLimit,                  !- Cooling Limit
-    Autosize,                 !- Maximum Cooling Air Flow Rate
+    autosize,                 !- Maximum Cooling Air Flow Rate
     ,                         !- Maximum Total Cooling Capacity
     ,                         !- Heating Availability Schedule Name
     ,                         !- Cooling Availability Schedule Name
@@ -2852,12 +2877,12 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     67.36471214164013,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
-    0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
     NoLimit,                  !- Heating Limit
-    Autosize,                 !- Maximum Heating Air Flow Rate
+    autosize,                 !- Maximum Heating Air Flow Rate
     ,                         !- Maximum Sensible Heating Capacity
     NoLimit,                  !- Cooling Limit
-    Autosize,                 !- Maximum Cooling Air Flow Rate
+    autosize,                 !- Maximum Cooling Air Flow Rate
     ,                         !- Maximum Total Cooling Capacity
     ,                         !- Heating Availability Schedule Name
     ,                         !- Cooling Availability Schedule Name
@@ -2881,12 +2906,12 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     67.36471214164013,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
-    0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
     NoLimit,                  !- Heating Limit
-    Autosize,                 !- Maximum Heating Air Flow Rate
+    autosize,                 !- Maximum Heating Air Flow Rate
     ,                         !- Maximum Sensible Heating Capacity
     NoLimit,                  !- Cooling Limit
-    Autosize,                 !- Maximum Cooling Air Flow Rate
+    autosize,                 !- Maximum Cooling Air Flow Rate
     ,                         !- Maximum Total Cooling Capacity
     ,                         !- Heating Availability Schedule Name
     ,                         !- Cooling Availability Schedule Name
@@ -2910,12 +2935,12 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     67.36471214164013,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
-    0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
     NoLimit,                  !- Heating Limit
-    Autosize,                 !- Maximum Heating Air Flow Rate
+    autosize,                 !- Maximum Heating Air Flow Rate
     ,                         !- Maximum Sensible Heating Capacity
     NoLimit,                  !- Cooling Limit
-    Autosize,                 !- Maximum Cooling Air Flow Rate
+    autosize,                 !- Maximum Cooling Air Flow Rate
     ,                         !- Maximum Total Cooling Capacity
     ,                         !- Heating Availability Schedule Name
     ,                         !- Cooling Availability Schedule Name
@@ -2939,12 +2964,12 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     67.36471214164013,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
-    0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
     NoLimit,                  !- Heating Limit
-    Autosize,                 !- Maximum Heating Air Flow Rate
+    autosize,                 !- Maximum Heating Air Flow Rate
     ,                         !- Maximum Sensible Heating Capacity
     NoLimit,                  !- Cooling Limit
-    Autosize,                 !- Maximum Cooling Air Flow Rate
+    autosize,                 !- Maximum Cooling Air Flow Rate
     ,                         !- Maximum Total Cooling Capacity
     ,                         !- Heating Availability Schedule Name
     ,                         !- Cooling Availability Schedule Name
@@ -2968,12 +2993,12 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     67.36471214164013,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
-    0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
     NoLimit,                  !- Heating Limit
-    Autosize,                 !- Maximum Heating Air Flow Rate
+    autosize,                 !- Maximum Heating Air Flow Rate
     ,                         !- Maximum Sensible Heating Capacity
     NoLimit,                  !- Cooling Limit
-    Autosize,                 !- Maximum Cooling Air Flow Rate
+    autosize,                 !- Maximum Cooling Air Flow Rate
     ,                         !- Maximum Total Cooling Capacity
     ,                         !- Heating Availability Schedule Name
     ,                         !- Cooling Availability Schedule Name
@@ -2997,12 +3022,12 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     67.36471214164013,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
-    0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
+    0.009,                    !- Minimum Cooling Supply Air Humidity Ratio
     NoLimit,                  !- Heating Limit
-    Autosize,                 !- Maximum Heating Air Flow Rate
+    autosize,                 !- Maximum Heating Air Flow Rate
     ,                         !- Maximum Sensible Heating Capacity
     NoLimit,                  !- Cooling Limit
-    Autosize,                 !- Maximum Cooling Air Flow Rate
+    autosize,                 !- Maximum Cooling Air Flow Rate
     ,                         !- Maximum Total Cooling Capacity
     ,                         !- Heating Availability Schedule Name
     ,                         !- Cooling Availability Schedule Name

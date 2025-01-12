@@ -119,7 +119,7 @@
   OnMeter=General:InteriorLights:Electricity:Zone:ZONE2_CORE [J]
   OnMeter=General:InteriorLights:Electricity:SpaceType:GENERAL [J]
 
- Meters for 468,ZONE1_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
+ Meters for 468,ZONE1_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:Building [J]
   OnMeter=Electricity:Zone:ZONE1_FRONTPERIMETER [J]
@@ -131,7 +131,7 @@
   OnMeter=General:InteriorEquipment:Electricity:Zone:ZONE1_FRONTPERIMETER [J]
   OnMeter=General:InteriorEquipment:Electricity:SpaceType:GENERAL [J]
 
- Meters for 541,ZONE1_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
+ Meters for 541,ZONE1_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:Building [J]
   OnMeter=Electricity:Zone:ZONE1_RIGHTPERIMETER [J]
@@ -143,7 +143,7 @@
   OnMeter=General:InteriorEquipment:Electricity:Zone:ZONE1_RIGHTPERIMETER [J]
   OnMeter=General:InteriorEquipment:Electricity:SpaceType:GENERAL [J]
 
- Meters for 566,ZONE1_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
+ Meters for 566,ZONE1_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:Building [J]
   OnMeter=Electricity:Zone:ZONE1_REARPERIMETER [J]
@@ -155,7 +155,7 @@
   OnMeter=General:InteriorEquipment:Electricity:Zone:ZONE1_REARPERIMETER [J]
   OnMeter=General:InteriorEquipment:Electricity:SpaceType:GENERAL [J]
 
- Meters for 591,ZONE1_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
+ Meters for 591,ZONE1_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:Building [J]
   OnMeter=Electricity:Zone:ZONE1_LEFTPERIMETER [J]
@@ -167,7 +167,7 @@
   OnMeter=General:InteriorEquipment:Electricity:Zone:ZONE1_LEFTPERIMETER [J]
   OnMeter=General:InteriorEquipment:Electricity:SpaceType:GENERAL [J]
 
- Meters for 616,ZONE1_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
+ Meters for 616,ZONE1_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:Building [J]
   OnMeter=Electricity:Zone:ZONE1_CORE [J]
@@ -179,7 +179,7 @@
   OnMeter=General:InteriorEquipment:Electricity:Zone:ZONE1_CORE [J]
   OnMeter=General:InteriorEquipment:Electricity:SpaceType:GENERAL [J]
 
- Meters for 641,ZONE2_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
+ Meters for 641,ZONE2_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:Building [J]
   OnMeter=Electricity:Zone:ZONE2_FRONTPERIMETER [J]
@@ -191,7 +191,7 @@
   OnMeter=General:InteriorEquipment:Electricity:Zone:ZONE2_FRONTPERIMETER [J]
   OnMeter=General:InteriorEquipment:Electricity:SpaceType:GENERAL [J]
 
- Meters for 666,ZONE2_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
+ Meters for 666,ZONE2_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:Building [J]
   OnMeter=Electricity:Zone:ZONE2_RIGHTPERIMETER [J]
@@ -203,7 +203,7 @@
   OnMeter=General:InteriorEquipment:Electricity:Zone:ZONE2_RIGHTPERIMETER [J]
   OnMeter=General:InteriorEquipment:Electricity:SpaceType:GENERAL [J]
 
- Meters for 691,ZONE2_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
+ Meters for 691,ZONE2_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:Building [J]
   OnMeter=Electricity:Zone:ZONE2_REARPERIMETER [J]
@@ -215,7 +215,7 @@
   OnMeter=General:InteriorEquipment:Electricity:Zone:ZONE2_REARPERIMETER [J]
   OnMeter=General:InteriorEquipment:Electricity:SpaceType:GENERAL [J]
 
- Meters for 716,ZONE2_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
+ Meters for 716,ZONE2_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:Building [J]
   OnMeter=Electricity:Zone:ZONE2_LEFTPERIMETER [J]
@@ -227,7 +227,7 @@
   OnMeter=General:InteriorEquipment:Electricity:Zone:ZONE2_LEFTPERIMETER [J]
   OnMeter=General:InteriorEquipment:Electricity:SpaceType:GENERAL [J]
 
- Meters for 741,ZONE2_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
+ Meters for 741,ZONE2_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:Building [J]
   OnMeter=Electricity:Zone:ZONE2_CORE [J]
@@ -616,16 +616,16 @@
   ZONE2_REARPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
   ZONE2_LEFTPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
   ZONE2_CORE LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE1_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
   MYDHW_1_WATERHEATER:Water Heater Electricity Energy
   MYDHW_1_WATERHEATER:Water Heater Off Cycle Parasitic Electricity Energy
   MYDHW_1_WATERHEATER:Water Heater On Cycle Parasitic Electricity Energy
@@ -641,20 +641,20 @@
   ZONE2_REARPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
   ZONE2_LEFTPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
   ZONE2_CORE LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE1_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=Electricity:Zone:ZONE1_FRONTPERIMETER [J], ResourceType=Electricity, Group=Zone, contents are:
   ZONE1_FRONTPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE1_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=Electricity:SpaceType:GENERAL [J], ResourceType=Electricity, Group=SpaceType, contents are:
   ZONE1_FRONTPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
@@ -667,16 +667,16 @@
   ZONE2_REARPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
   ZONE2_LEFTPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
   ZONE2_CORE LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE1_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorLights:Electricity [J], ResourceType=Electricity, EndUse=InteriorLights, contents are:
   ZONE1_FRONTPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
@@ -734,7 +734,7 @@
 
  For Meter=Electricity:Zone:ZONE1_RIGHTPERIMETER [J], ResourceType=Electricity, Group=Zone, contents are:
   ZONE1_RIGHTPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE1_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorLights:Electricity:Zone:ZONE1_RIGHTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
   ZONE1_RIGHTPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
@@ -744,7 +744,7 @@
 
  For Meter=Electricity:Zone:ZONE1_REARPERIMETER [J], ResourceType=Electricity, Group=Zone, contents are:
   ZONE1_REARPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE1_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorLights:Electricity:Zone:ZONE1_REARPERIMETER [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
   ZONE1_REARPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
@@ -754,7 +754,7 @@
 
  For Meter=Electricity:Zone:ZONE1_LEFTPERIMETER [J], ResourceType=Electricity, Group=Zone, contents are:
   ZONE1_LEFTPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE1_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorLights:Electricity:Zone:ZONE1_LEFTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
   ZONE1_LEFTPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
@@ -764,7 +764,7 @@
 
  For Meter=Electricity:Zone:ZONE1_CORE [J], ResourceType=Electricity, Group=Zone, contents are:
   ZONE1_CORE LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE1_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorLights:Electricity:Zone:ZONE1_CORE [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
   ZONE1_CORE LIGHTS_ALL_ZONES:Lights Electricity Energy
@@ -774,7 +774,7 @@
 
  For Meter=Electricity:Zone:ZONE2_FRONTPERIMETER [J], ResourceType=Electricity, Group=Zone, contents are:
   ZONE2_FRONTPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE2_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorLights:Electricity:Zone:ZONE2_FRONTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
   ZONE2_FRONTPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
@@ -784,7 +784,7 @@
 
  For Meter=Electricity:Zone:ZONE2_RIGHTPERIMETER [J], ResourceType=Electricity, Group=Zone, contents are:
   ZONE2_RIGHTPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE2_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorLights:Electricity:Zone:ZONE2_RIGHTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
   ZONE2_RIGHTPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
@@ -794,7 +794,7 @@
 
  For Meter=Electricity:Zone:ZONE2_REARPERIMETER [J], ResourceType=Electricity, Group=Zone, contents are:
   ZONE2_REARPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE2_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorLights:Electricity:Zone:ZONE2_REARPERIMETER [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
   ZONE2_REARPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
@@ -804,7 +804,7 @@
 
  For Meter=Electricity:Zone:ZONE2_LEFTPERIMETER [J], ResourceType=Electricity, Group=Zone, contents are:
   ZONE2_LEFTPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE2_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorLights:Electricity:Zone:ZONE2_LEFTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
   ZONE2_LEFTPERIMETER LIGHTS_ALL_ZONES:Lights Electricity Energy
@@ -814,7 +814,7 @@
 
  For Meter=Electricity:Zone:ZONE2_CORE [J], ResourceType=Electricity, Group=Zone, contents are:
   ZONE2_CORE LIGHTS_ALL_ZONES:Lights Electricity Energy
-  ZONE2_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorLights:Electricity:Zone:ZONE2_CORE [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
   ZONE2_CORE LIGHTS_ALL_ZONES:Lights Electricity Energy
@@ -823,112 +823,112 @@
   ZONE2_CORE LIGHTS_ALL_ZONES:Lights Electricity Energy
 
  For Meter=InteriorEquipment:Electricity [J], ResourceType=Electricity, EndUse=InteriorEquipment, contents are:
-  ZONE1_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorEquipment:Electricity:Zone:ZONE1_FRONTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE1_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorEquipment:Electricity:SpaceType:GENERAL [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=SpaceType, contents are:
-  ZONE1_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity [J], ResourceType=Electricity, EndUse=InteriorEquipment, contents are:
-  ZONE1_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity:Zone:ZONE1_FRONTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE1_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity:SpaceType:GENERAL [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=SpaceType, contents are:
-  ZONE1_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE1_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
-  ZONE2_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorEquipment:Electricity:Zone:ZONE1_RIGHTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE1_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity:Zone:ZONE1_RIGHTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE1_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorEquipment:Electricity:Zone:ZONE1_REARPERIMETER [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE1_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity:Zone:ZONE1_REARPERIMETER [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE1_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorEquipment:Electricity:Zone:ZONE1_LEFTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE1_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity:Zone:ZONE1_LEFTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE1_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorEquipment:Electricity:Zone:ZONE1_CORE [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE1_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity:Zone:ZONE1_CORE [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE1_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE1_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorEquipment:Electricity:Zone:ZONE2_FRONTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE2_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity:Zone:ZONE2_FRONTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE2_FRONTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_FRONTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorEquipment:Electricity:Zone:ZONE2_RIGHTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE2_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity:Zone:ZONE2_RIGHTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE2_RIGHTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_RIGHTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorEquipment:Electricity:Zone:ZONE2_REARPERIMETER [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE2_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity:Zone:ZONE2_REARPERIMETER [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE2_REARPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_REARPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorEquipment:Electricity:Zone:ZONE2_LEFTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE2_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity:Zone:ZONE2_LEFTPERIMETER [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE2_LEFTPERIMETER LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_LEFTPERIMETER PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=InteriorEquipment:Electricity:Zone:ZONE2_CORE [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE2_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=General:InteriorEquipment:Electricity:Zone:ZONE2_CORE [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
-  ZONE2_CORE LIGHTING_PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
+  ZONE2_CORE PARASITIC_ALL_ZONES:Electric Equipment Electricity Energy
 
  For Meter=EnergyTransfer:Facility [J], ResourceType=EnergyTransfer, contents are:
   ZONE1_FRONTPERIMETER:Zone Air System Sensible Heating Energy
