@@ -200,9 +200,9 @@ SCHEDULE:COMPACT,
     Temperature,              !- Schedule Type Limits Name
     Through: 12/31,           !- Field 1
     For: AllDays,             !- Field 2
-    Until: 07:00,15.08,       !- Field 3
-    Until: 19:00,19.50,       !- Field 4
-    Until: 24:00,15.08,       !- Field 5
+    Until: 07:00,15.62,       !- Field 3
+    Until: 19:00,20.66,       !- Field 4
+    Until: 24:00,15.62,       !- Field 5
     20.28,                    !- Field 6
     Until: 24:00,             !- Field 7
     15.03;                    !- Field 8
@@ -212,9 +212,9 @@ SCHEDULE:COMPACT,
     Temperature,              !- Schedule Type Limits Name
     Through: 12/31,           !- Field 1
     For: AllDays,             !- Field 2
-    Until: 07:00,26.45,       !- Field 3
-    Until: 19:00,25.83,       !- Field 4
-    Until: 24:00,26.45,       !- Field 5
+    Until: 07:00,27.15,       !- Field 3
+    Until: 19:00,25.72,       !- Field 4
+    Until: 24:00,27.15,       !- Field 5
     24.55,                    !- Field 6
     Until: 24:00,             !- Field 7
     26.45;                    !- Field 8
@@ -247,23 +247,23 @@ SCHEDULE:COMPACT,
     0.2;                      !- Field 11
 
 SCHEDULE:COMPACT,
-    MyDHW_4_UseFraction,      !- Name
+    Scenario_4_UseFraction,    !- Name
     Fraction,                 !- Schedule Type Limits Name
     Through: 12/31,           !- Field 1
     For: AllDays,             !- Field 2
     Until: 06:00, 0.0,        !- Field 3
-    Until: 08:00,0.77,        !- Field 4
-    Until: 10:00,0.99,        !- Field 5
-    Until: 17:00,0.26,        !- Field 6
-    Until: 21:00,0.97,        !- Field 7
-    Until: 24:00,0.77;        !- Field 8
+    Until: 08:00,0.00,        !- Field 4
+    Until: 10:00,0.00,        !- Field 5
+    Until: 17:00,0.00,        !- Field 6
+    Until: 21:00,0.00,        !- Field 7
+    Until: 24:00,0.00;        !- Field 8
 
 SCHEDULE:COMPACT,
-    MyDHW_4_Setpoint,         !- Name
+    Scenario_4_Setpoint,      !- Name
     Temperature,              !- Schedule Type Limits Name
     Through: 12/31,           !- Field 1
     For: AllDays,             !- Field 2
-    Until: 24:00,59.78;       !- Field 3
+    Until: 24:00,0.00;        !- Field 3
 
 SCHEDULE:CONSTANT,
     AlwaysOnSched,            !- Name
@@ -1166,16 +1166,16 @@ FENESTRATIONSURFACE:DETAILED,
     autocalculate,            !- Number of Vertices
     0.002024084,              !- Vertex 1 Xcoordinate
     0.002214291,              !- Vertex 1 Ycoordinate
-    1.22,                     !- Vertex 1 Zcoordinate
+    1.32,                     !- Vertex 1 Zcoordinate
     0.002024084,              !- Vertex 2 Xcoordinate
     0.002214291,              !- Vertex 2 Ycoordinate
-    0.78,                     !- Vertex 2 Zcoordinate
+    0.6799999999999999,       !- Vertex 2 Zcoordinate
     4.046143103633475,        !- Vertex 3 Xcoordinate
     4.426368148371672,        !- Vertex 3 Ycoordinate
-    0.78,                     !- Vertex 3 Zcoordinate
+    0.6799999999999999,       !- Vertex 3 Zcoordinate
     4.046143103633475,        !- Vertex 4 Xcoordinate
     4.426368148371672,        !- Vertex 4 Ycoordinate
-    1.22;                     !- Vertex 4 Zcoordinate
+    1.32;                     !- Vertex 4 Zcoordinate
 
 FENESTRATIONSURFACE:DETAILED,
     Zone1_Wall_2 window,      !- Name
@@ -1189,16 +1189,16 @@ FENESTRATIONSURFACE:DETAILED,
     autocalculate,            !- Number of Vertices
     0.3556577373072516,       !- Vertex 1 Xcoordinate
     7.799840804394245,        !- Vertex 1 Ycoordinate
-    1.22,                     !- Vertex 1 Zcoordinate
+    1.32,                     !- Vertex 1 Zcoordinate
     0.3556577373072516,       !- Vertex 2 Xcoordinate
     7.799840804394245,        !- Vertex 2 Ycoordinate
-    0.78,                     !- Vertex 2 Zcoordinate
+    0.6799999999999999,       !- Vertex 2 Zcoordinate
     -3.68846128273261,        !- Vertex 3 Xcoordinate
     3.3756869472423694,       !- Vertex 3 Ycoordinate
-    0.78,                     !- Vertex 3 Zcoordinate
+    0.6799999999999999,       !- Vertex 3 Zcoordinate
     -3.68846128273261,        !- Vertex 4 Xcoordinate
     3.3756869472423694,       !- Vertex 4 Ycoordinate
-    1.22;                     !- Vertex 4 Zcoordinate
+    1.32;                     !- Vertex 4 Zcoordinate
 
 FENESTRATIONSURFACE:DETAILED,
     Zone1_Wall_3 window,      !- Name
@@ -1212,16 +1212,16 @@ FENESTRATIONSURFACE:DETAILED,
     autocalculate,            !- Number of Vertices
     -3.68864012364306,        !- Vertex 1 Xcoordinate
     3.3717859196945623,       !- Vertex 1 Ycoordinate
-    1.22,                     !- Vertex 1 Zcoordinate
+    1.32,                     !- Vertex 1 Zcoordinate
     -3.68864012364306,        !- Vertex 2 Xcoordinate
     3.3717859196945623,       !- Vertex 2 Ycoordinate
-    0.78,                     !- Vertex 2 Zcoordinate
+    0.6799999999999999,       !- Vertex 2 Zcoordinate
     -0.001845243,             !- Vertex 3 Xcoordinate
     0.001686736,              !- Vertex 3 Ycoordinate
-    0.78,                     !- Vertex 3 Zcoordinate
+    0.6799999999999999,       !- Vertex 3 Zcoordinate
     -0.001845243,             !- Vertex 4 Xcoordinate
     0.001686736,              !- Vertex 4 Ycoordinate
-    1.22;                     !- Vertex 4 Zcoordinate
+    1.32;                     !- Vertex 4 Zcoordinate
 
 FENESTRATIONSURFACE:DETAILED,
     Zone2_Wall_0 window,      !- Name
@@ -1235,16 +1235,16 @@ FENESTRATIONSURFACE:DETAILED,
     autocalculate,            !- Number of Vertices
     0.002024084,              !- Vertex 1 Xcoordinate
     0.002214291,              !- Vertex 1 Ycoordinate
-    3.22,                     !- Vertex 1 Zcoordinate
+    3.32,                     !- Vertex 1 Zcoordinate
     0.002024084,              !- Vertex 2 Xcoordinate
     0.002214291,              !- Vertex 2 Ycoordinate
-    2.78,                     !- Vertex 2 Zcoordinate
+    2.68,                     !- Vertex 2 Zcoordinate
     4.046143103633475,        !- Vertex 3 Xcoordinate
     4.426368148371672,        !- Vertex 3 Ycoordinate
-    2.78,                     !- Vertex 3 Zcoordinate
+    2.68,                     !- Vertex 3 Zcoordinate
     4.046143103633475,        !- Vertex 4 Xcoordinate
     4.426368148371672,        !- Vertex 4 Ycoordinate
-    3.22;                     !- Vertex 4 Zcoordinate
+    3.32;                     !- Vertex 4 Zcoordinate
 
 FENESTRATIONSURFACE:DETAILED,
     Zone2_Wall_2 window,      !- Name
@@ -1258,16 +1258,16 @@ FENESTRATIONSURFACE:DETAILED,
     autocalculate,            !- Number of Vertices
     0.3556577373072516,       !- Vertex 1 Xcoordinate
     7.799840804394245,        !- Vertex 1 Ycoordinate
-    3.22,                     !- Vertex 1 Zcoordinate
+    3.32,                     !- Vertex 1 Zcoordinate
     0.3556577373072516,       !- Vertex 2 Xcoordinate
     7.799840804394245,        !- Vertex 2 Ycoordinate
-    2.78,                     !- Vertex 2 Zcoordinate
+    2.68,                     !- Vertex 2 Zcoordinate
     -3.68846128273261,        !- Vertex 3 Xcoordinate
     3.3756869472423694,       !- Vertex 3 Ycoordinate
-    2.78,                     !- Vertex 3 Zcoordinate
+    2.68,                     !- Vertex 3 Zcoordinate
     -3.68846128273261,        !- Vertex 4 Xcoordinate
     3.3756869472423694,       !- Vertex 4 Ycoordinate
-    3.22;                     !- Vertex 4 Zcoordinate
+    3.32;                     !- Vertex 4 Zcoordinate
 
 FENESTRATIONSURFACE:DETAILED,
     Zone2_Wall_3 window,      !- Name
@@ -1281,16 +1281,16 @@ FENESTRATIONSURFACE:DETAILED,
     autocalculate,            !- Number of Vertices
     -3.68864012364306,        !- Vertex 1 Xcoordinate
     3.3717859196945623,       !- Vertex 1 Ycoordinate
-    3.22,                     !- Vertex 1 Zcoordinate
+    3.32,                     !- Vertex 1 Zcoordinate
     -3.68864012364306,        !- Vertex 2 Xcoordinate
     3.3717859196945623,       !- Vertex 2 Ycoordinate
-    2.78,                     !- Vertex 2 Zcoordinate
+    2.68,                     !- Vertex 2 Zcoordinate
     -0.001845243,             !- Vertex 3 Xcoordinate
     0.001686736,              !- Vertex 3 Ycoordinate
-    2.78,                     !- Vertex 3 Zcoordinate
+    2.68,                     !- Vertex 3 Zcoordinate
     -0.001845243,             !- Vertex 4 Xcoordinate
     0.001686736,              !- Vertex 4 Ycoordinate
-    3.22;                     !- Vertex 4 Zcoordinate
+    3.32;                     !- Vertex 4 Zcoordinate
 
 FENESTRATIONSURFACE:DETAILED,
     Zone3_Wall_0 window,      !- Name
@@ -1304,16 +1304,16 @@ FENESTRATIONSURFACE:DETAILED,
     autocalculate,            !- Number of Vertices
     0.002024084,              !- Vertex 1 Xcoordinate
     0.002214291,              !- Vertex 1 Ycoordinate
-    5.22,                     !- Vertex 1 Zcoordinate
+    5.32,                     !- Vertex 1 Zcoordinate
     0.002024084,              !- Vertex 2 Xcoordinate
     0.002214291,              !- Vertex 2 Ycoordinate
-    4.78,                     !- Vertex 2 Zcoordinate
+    4.68,                     !- Vertex 2 Zcoordinate
     4.046143103633475,        !- Vertex 3 Xcoordinate
     4.426368148371672,        !- Vertex 3 Ycoordinate
-    4.78,                     !- Vertex 3 Zcoordinate
+    4.68,                     !- Vertex 3 Zcoordinate
     4.046143103633475,        !- Vertex 4 Xcoordinate
     4.426368148371672,        !- Vertex 4 Ycoordinate
-    5.22;                     !- Vertex 4 Zcoordinate
+    5.32;                     !- Vertex 4 Zcoordinate
 
 FENESTRATIONSURFACE:DETAILED,
     Zone3_Wall_2 window,      !- Name
@@ -1327,16 +1327,16 @@ FENESTRATIONSURFACE:DETAILED,
     autocalculate,            !- Number of Vertices
     0.3556577373072516,       !- Vertex 1 Xcoordinate
     7.799840804394245,        !- Vertex 1 Ycoordinate
-    5.22,                     !- Vertex 1 Zcoordinate
+    5.32,                     !- Vertex 1 Zcoordinate
     0.3556577373072516,       !- Vertex 2 Xcoordinate
     7.799840804394245,        !- Vertex 2 Ycoordinate
-    4.78,                     !- Vertex 2 Zcoordinate
+    4.68,                     !- Vertex 2 Zcoordinate
     -3.68846128273261,        !- Vertex 3 Xcoordinate
     3.3756869472423694,       !- Vertex 3 Ycoordinate
-    4.78,                     !- Vertex 3 Zcoordinate
+    4.68,                     !- Vertex 3 Zcoordinate
     -3.68846128273261,        !- Vertex 4 Xcoordinate
     3.3756869472423694,       !- Vertex 4 Ycoordinate
-    5.22;                     !- Vertex 4 Zcoordinate
+    5.32;                     !- Vertex 4 Zcoordinate
 
 FENESTRATIONSURFACE:DETAILED,
     Zone3_Wall_3 window,      !- Name
@@ -1350,16 +1350,16 @@ FENESTRATIONSURFACE:DETAILED,
     autocalculate,            !- Number of Vertices
     -3.68864012364306,        !- Vertex 1 Xcoordinate
     3.3717859196945623,       !- Vertex 1 Ycoordinate
-    5.22,                     !- Vertex 1 Zcoordinate
+    5.32,                     !- Vertex 1 Zcoordinate
     -3.68864012364306,        !- Vertex 2 Xcoordinate
     3.3717859196945623,       !- Vertex 2 Ycoordinate
-    4.78,                     !- Vertex 2 Zcoordinate
+    4.68,                     !- Vertex 2 Zcoordinate
     -0.001845243,             !- Vertex 3 Xcoordinate
     0.001686736,              !- Vertex 3 Ycoordinate
-    4.78,                     !- Vertex 3 Zcoordinate
+    4.68,                     !- Vertex 3 Zcoordinate
     -0.001845243,             !- Vertex 4 Xcoordinate
     0.001686736,              !- Vertex 4 Ycoordinate
-    5.22;                     !- Vertex 4 Zcoordinate
+    5.32;                     !- Vertex 4 Zcoordinate
 
 LIGHTS,
     Lights_ALL_ZONES,         !- Name
@@ -1434,9 +1434,9 @@ ZONEINFILTRATION:DESIGNFLOWRATE,
     0;                        !- Velocity Squared Term Coefficient
 
 ZONEINFILTRATION:DESIGNFLOWRATE,
-    Infil_0.0_Zone1,          !- Name
+    Infil_A_Zone1,            !- Name
     Zone1,                    !- Zone or ZoneList or Space or SpaceList Name
-    0.0,                      !- Schedule Name
+    AlwaysOnSched,            !- Schedule Name
     Flow/Zone,                !- Design Flow Rate Calculation Method
     6.599407e-04,             !- Design Flow Rate
     ,                         !- Flow Rate per Floor Area
@@ -1448,9 +1448,9 @@ ZONEINFILTRATION:DESIGNFLOWRATE,
     0;                        !- Velocity Squared Term Coefficient
 
 ZONEINFILTRATION:DESIGNFLOWRATE,
-    Infil_0.0_Zone2,          !- Name
+    Infil_A_Zone2,            !- Name
     Zone2,                    !- Zone or ZoneList or Space or SpaceList Name
-    0.0,                      !- Schedule Name
+    AlwaysOnSched,            !- Schedule Name
     Flow/Zone,                !- Design Flow Rate Calculation Method
     6.599407e-04,             !- Design Flow Rate
     ,                         !- Flow Rate per Floor Area
@@ -1462,9 +1462,9 @@ ZONEINFILTRATION:DESIGNFLOWRATE,
     0;                        !- Velocity Squared Term Coefficient
 
 ZONEINFILTRATION:DESIGNFLOWRATE,
-    Infil_0.0_Zone3,          !- Name
+    Infil_A_Zone3,            !- Name
     Zone3,                    !- Zone or ZoneList or Space or SpaceList Name
-    0.0,                      !- Schedule Name
+    AlwaysOnSched,            !- Schedule Name
     Flow/Zone,                !- Design Flow Rate Calculation Method
     6.599407e-04,             !- Design Flow Rate
     ,                         !- Flow Rate per Floor Area
@@ -1560,9 +1560,9 @@ ZONEVENTILATION:DESIGNFLOWRATE,
     40;                       !- Maximum Wind Speed
 
 ZONEVENTILATION:DESIGNFLOWRATE,
-    Vent_0.0_Zone1,           !- Name
+    Vent_A_Zone1,             !- Name
     Zone1,                    !- Zone or ZoneList or Space or SpaceList Name
-    0.0,                      !- Schedule Name
+    VentSched_DayNight,       !- Schedule Name
     Flow/Zone,                !- Design Flow Rate Calculation Method
     1.166667e-02,             !- Design Flow Rate
     ,                         !- Flow Rate per Floor Area
@@ -1588,9 +1588,9 @@ ZONEVENTILATION:DESIGNFLOWRATE,
     40;                       !- Maximum Wind Speed
 
 ZONEVENTILATION:DESIGNFLOWRATE,
-    Vent_0.0_Zone2,           !- Name
+    Vent_A_Zone2,             !- Name
     Zone2,                    !- Zone or ZoneList or Space or SpaceList Name
-    0.0,                      !- Schedule Name
+    VentSched_DayNight,       !- Schedule Name
     Flow/Zone,                !- Design Flow Rate Calculation Method
     1.166667e-02,             !- Design Flow Rate
     ,                         !- Flow Rate per Floor Area
@@ -1616,9 +1616,9 @@ ZONEVENTILATION:DESIGNFLOWRATE,
     40;                       !- Maximum Wind Speed
 
 ZONEVENTILATION:DESIGNFLOWRATE,
-    Vent_0.0_Zone3,           !- Name
+    Vent_A_Zone3,             !- Name
     Zone3,                    !- Zone or ZoneList or Space or SpaceList Name
-    0.0,                      !- Schedule Name
+    VentSched_DayNight,       !- Schedule Name
     Flow/Zone,                !- Design Flow Rate Calculation Method
     1.166667e-02,             !- Design Flow Rate
     ,                         !- Flow Rate per Floor Area
@@ -1758,8 +1758,8 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     Zone1 INLETS,             !- Zone Supply Air Node Name
     ,                         !- Zone Exhaust Air Node Name
     ,                         !- System Inlet Air Node Name
-    53.42476368322312,        !- Maximum Heating Supply Air Temperature
-    12.80332014493938,        !- Minimum Cooling Supply Air Temperature
+    52.04571836214924,        !- Maximum Heating Supply Air Temperature
+    12.091648767311325,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
     0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
     NoLimit,                  !- Heating Limit
@@ -1787,8 +1787,8 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     Zone2 INLETS,             !- Zone Supply Air Node Name
     ,                         !- Zone Exhaust Air Node Name
     ,                         !- System Inlet Air Node Name
-    53.42476368322312,        !- Maximum Heating Supply Air Temperature
-    12.80332014493938,        !- Minimum Cooling Supply Air Temperature
+    52.04571836214924,        !- Maximum Heating Supply Air Temperature
+    12.091648767311325,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
     0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
     NoLimit,                  !- Heating Limit
@@ -1816,8 +1816,8 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     Zone3 INLETS,             !- Zone Supply Air Node Name
     ,                         !- Zone Exhaust Air Node Name
     ,                         !- System Inlet Air Node Name
-    53.42476368322312,        !- Maximum Heating Supply Air Temperature
-    12.80332014493938,        !- Minimum Cooling Supply Air Temperature
+    52.04571836214924,        !- Maximum Heating Supply Air Temperature
+    12.091648767311325,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
     0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
     NoLimit,                  !- Heating Limit
@@ -1944,13 +1944,13 @@ WATERHEATER:MIXED,
     General;                  !- EndUse Subcategory
 
 WATERHEATER:MIXED,
-    MyDHW_4_WaterHeater,      !- Name
-    3.078768e-01,             !- Tank Volume
-    MyDHW_4_Setpoint,         !- Setpoint Temperature Schedule Name
+    Scenario_4_WaterHeater,    !- Name
+    0,                        !- Tank Volume
+    Scenario_4_Setpoint,      !- Setpoint Temperature Schedule Name
     0,                        !- Deadband Temperature Difference
     ,                         !- Maximum Temperature Limit
     Cycle,                    !- Heater Control Type
-    4333.4355899583625,       !- Heater Maximum Capacity
+    0,                        !- Heater Maximum Capacity
     ,                         !- Heater Minimum Capacity
     0,                        !- Heater Ignition Minimum Flow Rate
     0,                        !- Heater Ignition Delay
@@ -1972,7 +1972,7 @@ WATERHEATER:MIXED,
     ,                         !- On Cycle Loss Coefficient to Ambient Temperature
     1,                        !- On Cycle Loss Fraction to Zone
     ,                         !- Peak Use Flow Rate
-    MyDHW_4_UseFraction,      !- Use Flow Rate Fraction Schedule Name
+    Scenario_4_UseFraction,    !- Use Flow Rate Fraction Schedule Name
     ,                         !- Cold Water Supply Temperature Schedule Name
     ,                         !- Use Side Inlet Node Name
     ,                         !- Use Side Outlet Node Name
