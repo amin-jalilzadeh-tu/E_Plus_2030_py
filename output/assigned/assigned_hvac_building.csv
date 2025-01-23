@@ -1,15 +1,27 @@
-ogc_fid,param_name,param_value,param_min,param_max
-4136730,heating_day_setpoint,20.278853596915766,19.0,21.0
-4136730,heating_night_setpoint,15.025010755222667,15.0,16.0
-4136730,cooling_day_setpoint,24.55005863673824,24.0,26.0
-4136730,cooling_night_setpoint,26.446421476297644,26.0,28.0
-4136730,max_heating_supply_air_temp,52.364712141640126,45.0,55.0
-4136730,min_cooling_supply_air_temp,13.353398974845822,12.0,14.0
-4136730,schedule_details,"{'day_start': '07:00', 'day_end': '23:00', 'occupancy_schedule': {'weekday': 'FullOccupancy', 'weekend': 'FullOccupancy'}}",,
-4136732,heating_day_setpoint,21.278853596915766,20.0,22.0
-4136732,heating_night_setpoint,15.050021510445333,15.0,17.0
-4136732,cooling_day_setpoint,23.55005863673824,23.0,25.0
-4136732,cooling_night_setpoint,25.446421476297644,25.0,27.0
-4136732,max_heating_supply_air_temp,67.36471214164013,60.0,70.0
-4136732,min_cooling_supply_air_temp,13.353398974845822,12.0,14.0
-4136732,schedule_details,"{'weekday_day_start': '08:00', 'weekday_day_end': '22:00', 'weekend_day_start': '08:00', 'weekend_day_end': '18:00', 'occupancy_schedule': {'weekday': 'MeetingFunction_Weekday', 'weekend': 'MeetingFunction_Weekend'}}",,
+ogc_fid,param_name,param_value
+4136730,heating_day_setpoint,10.639426798457883
+4136730,heating_day_setpoint_range,"(10.0, 11.0)"
+4136730,heating_night_setpoint,15.025010755222667
+4136730,heating_night_setpoint_range,"(15.0, 16.0)"
+4136730,cooling_day_setpoint,25.6
+4136730,cooling_day_setpoint_range,"(25.6, 25.6)"
+4136730,cooling_night_setpoint,26.446421476297644
+4136730,cooling_night_setpoint_range,"(26.0, 28.0)"
+4136730,max_heating_supply_air_temp,52.364712141640126
+4136730,max_heating_supply_air_temp_range,"(45.0, 55.0)"
+4136730,min_cooling_supply_air_temp,13.353398974845822
+4136730,min_cooling_supply_air_temp_range,"(12.0, 14.0)"
+4136730,schedule_details,"{'day_start': '07:00', 'day_end': '23:00', 'occupancy_schedule': {'weekday': 'FullOccupancy', 'weekend': 'FullOccupancy'}}"
+4136732,heating_day_setpoint,21.278853596915766
+4136732,heating_day_setpoint_range,"(20.0, 22.0)"
+4136732,heating_night_setpoint,15.050021510445333
+4136732,heating_night_setpoint_range,"(15.0, 17.0)"
+4136732,cooling_day_setpoint,23.55005863673824
+4136732,cooling_day_setpoint_range,"(23.0, 25.0)"
+4136732,cooling_night_setpoint,25.446421476297644
+4136732,cooling_night_setpoint_range,"(25.0, 27.0)"
+4136732,max_heating_supply_air_temp,67.36471214164013
+4136732,max_heating_supply_air_temp_range,"(60.0, 70.0)"
+4136732,min_cooling_supply_air_temp,13.353398974845822
+4136732,min_cooling_supply_air_temp_range,"(12.0, 14.0)"
+4136732,schedule_details,"{'weekday_day_start': '08:00', 'weekday_day_end': '22:00', 'weekend_day_start': '08:00', 'weekend_day_end': '18:00', 'occupancy_schedule': {'weekday': 'MeetingFunction_Weekday', 'weekend': 'MeetingFunction_Weekend'}}"

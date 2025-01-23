@@ -1,8 +1,8 @@
 ogc_fid,object_name,param_name,assigned_value,min_val,max_val
-4136730,LIGHTS,lights_wm2,10.0,10.0,10.0
+4136730,LIGHTS,lights_wm2,19.278853596915766,18.0,20.0
 4136730,ELECTRICEQUIPMENT,parasitic_wm2,0.285,0.285,0.285
 4136730,LIGHTS_SCHEDULE,tD,2000.0,2000.0,2000.0
-4136730,LIGHTS_SCHEDULE,tN,300.0,300.0,300.0
+4136730,LIGHTS_SCHEDULE,tN,11222.210738148822,10999.0,11999.0
 4136730,LIGHTS.Fraction_Radiant,lights_fraction_radiant,0.7,0.7,0.7
 4136730,LIGHTS.Fraction_Visible,lights_fraction_visible,0.2,0.2,0.2
 4136730,LIGHTS.Fraction_Replaceable,lights_fraction_replaceable,1.0,1.0,1.0

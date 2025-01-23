@@ -1,7 +1,7 @@
 ogc_fid,param_name,assigned_value
 4136730,fenez_roughness,MediumRough
-4136730,fenez_wwr_range_used,"(0.22, 0.22)"
-4136730,fenez_wwr,0.32
+4136730,fenez_wwr_range_used,"(0.025, 0.03)"
+4136730,fenez_wwr,0.22
 4136730,fenez_top_opq.obj_type,MATERIAL:NOMASS
 4136730,fenez_top_opq.Name,Insulated_Roof_R5
 4136730,fenez_top_opq.Roughness,MediumRough
@@ -402,11 +402,11 @@ ogc_fid,param_name,assigned_value
 4136730,fenez_doors_win_material_name,doors_WindowMat
 4136730,fenez_doors_construction_name,doors_Construction
 4136730,fenez_doors_window_construction_name,doors_WindowConst
-4136730,fenez_final_wwr,0.32
-4136730,fenez_fenestration_objects,"['Zone1_Wall_0 window', 'Zone1_Wall_2 window', 'Zone1_Wall_3 window', 'Zone2_Wall_0 window', 'Zone2_Wall_2 window', 'Zone2_Wall_3 window', 'Zone3_Wall_0 window', 'Zone3_Wall_2 window', 'Zone3_Wall_3 window']"
+4136730,fenez_final_wwr,0.02819713399228942
+4136730,fenez_fenestration_objects,"['Zone1_FrontPerimeter_Wall_0 window', 'Zone1_RearPerimeter_Wall_0 window', 'Zone1_LeftPerimeter_Wall_0 window', 'Zone2_FrontPerimeter_Wall_0 window', 'Zone2_RearPerimeter_Wall_0 window', 'Zone2_LeftPerimeter_Wall_0 window', 'Zone3_FrontPerimeter_Wall_0 window', 'Zone3_RearPerimeter_Wall_0 window', 'Zone3_LeftPerimeter_Wall_0 window']"
 4136732,fenez_roughness,MediumRough
-4136732,fenez_wwr_range_used,"(0.2, 0.25)"
-4136732,fenez_wwr,0.32
+4136732,fenez_wwr_range_used,"(0.3, 0.3)"
+4136732,fenez_wwr,0.2319713399228942
 4136732,fenez_top_opq.obj_type,MATERIAL
 4136732,fenez_top_opq.Name,DoorPanel_Range
 4136732,fenez_top_opq.Roughness,MediumRough
@@ -692,7 +692,7 @@ ogc_fid,param_name,assigned_value
 4136732,fenez_interior_wall_win.Dirt_Correction_Factor,1.0
 4136732,fenez_windows_R_value,
 4136732,fenez_windows_R_value_range_used,"(None, None)"
-4136732,fenez_windows_U_value,2.9
+4136732,fenez_windows_U_value,3.5
 4136732,fenez_windows_U_value_range_used,"(3.5, 3.5)"
 4136732,fenez_windows_area_m2,35.0
 4136732,fenez_windows_opq.obj_type,MATERIAL
@@ -706,7 +706,7 @@ ogc_fid,param_name,assigned_value
 4136732,fenez_windows_opq.Solar_Absorptance_range,"(0.7, 0.7)"
 4136732,fenez_windows_opq.Visible_Absorptance_range,"(0.7, 0.7)"
 4136732,fenez_windows_opq.Thickness,0.23271371122087905
-4136732,fenez_windows_opq.Conductivity,0.6748697625405492
+4136732,fenez_windows_opq.Conductivity,0.8144979892730767
 4136732,fenez_windows_opq.Density,622.9048071964104
 4136732,fenez_windows_opq.Specific_Heat,2206.4200487808075
 4136732,fenez_windows_opq.Thermal_Absorptance,0.9
@@ -737,7 +737,7 @@ ogc_fid,param_name,assigned_value
 4136732,fenez_windows_win.Back_Visible_Reflectance,0.06314677880798478
 4136732,fenez_windows_win.Front_IR_Emissivity,0.84
 4136732,fenez_windows_win.Back_IR_Emissivity,0.84
-4136732,fenez_windows_win.Conductivity,0.0087
+4136732,fenez_windows_win.Conductivity,0.0105
 4136732,fenez_windows_win.Dirt_Correction_Factor,1.0
 4136732,fenez_doors_R_value,
 4136732,fenez_doors_R_value_range_used,"(None, None)"
@@ -819,5 +819,5 @@ ogc_fid,param_name,assigned_value
 4136732,fenez_doors_win_material_name,doors_WindowMat
 4136732,fenez_doors_construction_name,doors_Construction
 4136732,fenez_doors_window_construction_name,doors_WindowConst
-4136732,fenez_final_wwr,0.32
+4136732,fenez_final_wwr,0.3
 4136732,fenez_fenestration_objects,"['Zone1_RearPerimeter_Wall_0 window', 'Zone1_LeftPerimeter_Wall_0 window', 'Zone2_RearPerimeter_Wall_0 window', 'Zone2_LeftPerimeter_Wall_0 window']"

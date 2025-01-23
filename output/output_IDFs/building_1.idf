@@ -285,7 +285,7 @@ MATERIAL,
     windows_OpaqueMat,        !- Name
     MediumRough,              !- Roughness
     2.327137e-01,             !- Thickness
-    0.6748697625405492,       !- Conductivity
+    0.8144979892730767,       !- Conductivity
     622.9048071964104,        !- Density
     2206.4200487808075,       !- Specific Heat
     0.9,                      !- Thermal Absorptance
@@ -445,7 +445,7 @@ WINDOWMATERIAL:GLAZING,
     0,                        !- Infrared Transmittance at Normal Incidence
     0.84,                     !- Front Side Infrared Hemispherical Emissivity
     0.84,                     !- Back Side Infrared Hemispherical Emissivity
-    0.0087,                   !- Conductivity
+    0.0105,                   !- Conductivity
     1,                        !- Dirt Correction Factor for Solar and Visible Transmittance
     No,                       !- Solar Diffusing
     72000000000,              !- Youngs modulus
@@ -709,19 +709,6 @@ ZONE,
     ,                         !- Zone Inside Convection Algorithm
     ,                         !- Zone Outside Convection Algorithm
     Yes;                      !- Part of Total Floor Area
-
-ZONELIST,
-    ALL_ZONES,                !- Name
-    Zone1_FrontPerimeter,     !- Zone 1 Name
-    Zone1_RightPerimeter,     !- Zone 2 Name
-    Zone1_RearPerimeter,      !- Zone 3 Name
-    Zone1_LeftPerimeter,      !- Zone 4 Name
-    Zone1_Core,               !- Zone 5 Name
-    Zone2_FrontPerimeter,     !- Zone 6 Name
-    Zone2_RightPerimeter,     !- Zone 7 Name
-    Zone2_RearPerimeter,      !- Zone 8 Name
-    Zone2_LeftPerimeter,      !- Zone 9 Name
-    Zone2_Core;               !- Zone 10 Name
 
 BUILDINGSURFACE:DETAILED,
     Zone1_FrontPerimeter_Floor,    !- Name
@@ -2235,16 +2222,16 @@ FENESTRATIONSURFACE:DETAILED,
     autocalculate,            !- Number of Vertices
     -1.626063e+01,            !- Vertex 1 Xcoordinate
     -4.952575895430577,       !- Vertex 1 Ycoordinate
-    2.64,                     !- Vertex 1 Zcoordinate
+    2.6,                      !- Vertex 1 Zcoordinate
     -1.626063e+01,            !- Vertex 2 Xcoordinate
     -4.952575895430577,       !- Vertex 2 Ycoordinate
-    1.3599999999999999,       !- Vertex 2 Zcoordinate
+    1.4,                      !- Vertex 2 Zcoordinate
     -10.60943014492296,       !- Vertex 3 Xcoordinate
     -1.060377e+01,            !- Vertex 3 Ycoordinate
-    1.3599999999999999,       !- Vertex 3 Zcoordinate
+    1.4,                      !- Vertex 3 Zcoordinate
     -10.60943014492296,       !- Vertex 4 Xcoordinate
     -1.060377e+01,            !- Vertex 4 Ycoordinate
-    2.64;                     !- Vertex 4 Zcoordinate
+    2.6;                      !- Vertex 4 Zcoordinate
 
 FENESTRATIONSURFACE:DETAILED,
     Zone1_LeftPerimeter_Wall_0 window,    !- Name
@@ -2258,16 +2245,16 @@ FENESTRATIONSURFACE:DETAILED,
     autocalculate,            !- Number of Vertices
     -1.060130e+01,            !- Vertex 1 Xcoordinate
     -1.060130e+01,            !- Vertex 1 Ycoordinate
-    2.64,                     !- Vertex 1 Zcoordinate
+    2.6,                      !- Vertex 1 Zcoordinate
     -1.060130e+01,            !- Vertex 2 Xcoordinate
     -1.060130e+01,            !- Vertex 2 Ycoordinate
-    1.3599999999999999,       !- Vertex 2 Zcoordinate
+    1.4,                      !- Vertex 2 Zcoordinate
     -5.303301e-03,            !- Vertex 3 Xcoordinate
     -5.303301e-03,            !- Vertex 3 Ycoordinate
-    1.3599999999999999,       !- Vertex 3 Zcoordinate
+    1.4,                      !- Vertex 3 Zcoordinate
     -5.303301e-03,            !- Vertex 4 Xcoordinate
     -5.303301e-03,            !- Vertex 4 Ycoordinate
-    2.64;                     !- Vertex 4 Zcoordinate
+    2.6;                      !- Vertex 4 Zcoordinate
 
 FENESTRATIONSURFACE:DETAILED,
     Zone2_RearPerimeter_Wall_0 window,    !- Name
@@ -2281,16 +2268,16 @@ FENESTRATIONSURFACE:DETAILED,
     autocalculate,            !- Number of Vertices
     -1.626063e+01,            !- Vertex 1 Xcoordinate
     -4.952575895430577,       !- Vertex 1 Ycoordinate
-    6.64,                     !- Vertex 1 Zcoordinate
+    6.6,                      !- Vertex 1 Zcoordinate
     -1.626063e+01,            !- Vertex 2 Xcoordinate
     -4.952575895430577,       !- Vertex 2 Ycoordinate
-    5.36,                     !- Vertex 2 Zcoordinate
+    5.4,                      !- Vertex 2 Zcoordinate
     -10.60943014492296,       !- Vertex 3 Xcoordinate
     -1.060377e+01,            !- Vertex 3 Ycoordinate
-    5.36,                     !- Vertex 3 Zcoordinate
+    5.4,                      !- Vertex 3 Zcoordinate
     -10.60943014492296,       !- Vertex 4 Xcoordinate
     -1.060377e+01,            !- Vertex 4 Ycoordinate
-    6.64;                     !- Vertex 4 Zcoordinate
+    6.6;                      !- Vertex 4 Zcoordinate
 
 FENESTRATIONSURFACE:DETAILED,
     Zone2_LeftPerimeter_Wall_0 window,    !- Name
@@ -2304,16 +2291,16 @@ FENESTRATIONSURFACE:DETAILED,
     autocalculate,            !- Number of Vertices
     -1.060130e+01,            !- Vertex 1 Xcoordinate
     -1.060130e+01,            !- Vertex 1 Ycoordinate
-    6.64,                     !- Vertex 1 Zcoordinate
+    6.6,                      !- Vertex 1 Zcoordinate
     -1.060130e+01,            !- Vertex 2 Xcoordinate
     -1.060130e+01,            !- Vertex 2 Ycoordinate
-    5.36,                     !- Vertex 2 Zcoordinate
+    5.4,                      !- Vertex 2 Zcoordinate
     -5.303301e-03,            !- Vertex 3 Xcoordinate
     -5.303301e-03,            !- Vertex 3 Ycoordinate
-    5.36,                     !- Vertex 3 Zcoordinate
+    5.4,                      !- Vertex 3 Zcoordinate
     -5.303301e-03,            !- Vertex 4 Xcoordinate
     -5.303301e-03,            !- Vertex 4 Ycoordinate
-    6.64;                     !- Vertex 4 Zcoordinate
+    6.6;                      !- Vertex 4 Zcoordinate
 
 LIGHTS,
     Lights_ALL_ZONES,         !- Name
@@ -3338,11 +3325,6 @@ Output:Variable,
 OUTPUT:VARIABLE,
     *,                        !- Key Value
     Facility Total Electric Demand Power,    !- Variable Name
-    Hourly;                   !- Reporting Frequency
-
-OUTPUT:VARIABLE,
-    *,                        !- Key Value
-    Zone Air Temperature Maximum,    !- Variable Name
     Hourly;                   !- Reporting Frequency
 
 Output:Meter,
