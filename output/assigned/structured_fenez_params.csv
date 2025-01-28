@@ -1,6 +1,6 @@
 ogc_fid,sub_key,eplus_object_type,eplus_object_name,param_name,param_value,param_min,param_max
 4136730,roughness,,,roughness,MediumRough,,
-4136730,wwr_range_used,,,wwr_range_used,"(0.22, 0.22)",,
+4136730,wwr_range_used,,,wwr_range_used,"(0.025, 0.03)",,
 4136730,wwr,,,wwr,0.22,,
 4136730,top_opq,MATERIAL:NOMASS,Insulated_Roof_R5,Roughness,MediumRough,,
 4136730,top_opq,MATERIAL:NOMASS,Insulated_Roof_R5,Thermal_Resistance,4.639426798457884,4.0,5.0
@@ -235,10 +235,10 @@ ogc_fid,sub_key,eplus_object_type,eplus_object_name,param_name,param_value,param
 4136730,doors_win_material_name,,,doors_win_material_name,doors_WindowMat,,
 4136730,doors_construction_name,,,doors_construction_name,doors_Construction,,
 4136730,doors_window_construction_name,,,doors_window_construction_name,doors_WindowConst,,
-4136730,final_wwr,,,final_wwr,0.22,,
-4136730,fenestration_objects,,,fenestration_objects,"['Zone1_Wall_0 window', 'Zone1_Wall_2 window', 'Zone1_Wall_3 window', 'Zone2_Wall_0 window', 'Zone2_Wall_2 window', 'Zone2_Wall_3 window', 'Zone3_Wall_0 window', 'Zone3_Wall_2 window', 'Zone3_Wall_3 window']",,
+4136730,final_wwr,,,final_wwr,0.02819713399228942,,
+4136730,fenestration_objects,,,fenestration_objects,"['Zone1_FrontPerimeter_Wall_0 window', 'Zone1_RearPerimeter_Wall_0 window', 'Zone1_LeftPerimeter_Wall_0 window', 'Zone2_FrontPerimeter_Wall_0 window', 'Zone2_RearPerimeter_Wall_0 window', 'Zone2_LeftPerimeter_Wall_0 window', 'Zone3_FrontPerimeter_Wall_0 window', 'Zone3_RearPerimeter_Wall_0 window', 'Zone3_LeftPerimeter_Wall_0 window']",,
 4136732,roughness,,,roughness,MediumRough,,
-4136732,wwr_range_used,,,wwr_range_used,"(0.2, 0.25)",,
+4136732,wwr_range_used,,,wwr_range_used,"(0.3, 0.3)",,
 4136732,wwr,,,wwr,0.2319713399228942,,
 4136732,top_opq,MATERIAL,DoorPanel_Range,Roughness,MediumRough,,
 4136732,top_opq,MATERIAL,DoorPanel_Range,Thickness,0.1427511830744934,0.14,0.25
@@ -479,5 +479,5 @@ ogc_fid,sub_key,eplus_object_type,eplus_object_name,param_name,param_value,param
 4136732,doors_win_material_name,,,doors_win_material_name,doors_WindowMat,,
 4136732,doors_construction_name,,,doors_construction_name,doors_Construction,,
 4136732,doors_window_construction_name,,,doors_window_construction_name,doors_WindowConst,,
-4136732,final_wwr,,,final_wwr,0.2319713399228942,,
+4136732,final_wwr,,,final_wwr,0.3,,
 4136732,fenestration_objects,,,fenestration_objects,"['Zone1_RearPerimeter_Wall_0 window', 'Zone1_LeftPerimeter_Wall_0 window', 'Zone2_RearPerimeter_Wall_0 window', 'Zone2_LeftPerimeter_Wall_0 window']",,

@@ -1,0 +1,30 @@
+Reversing Surface Name=ZONE1_CORE_FLOOR
+side=    1 abs coord vertex=    2.5000000191728    3.4999999790254    0.0000000000000
+side=    2 abs coord vertex=    3.4999999981193    3.5000000020574    0.0000000000000
+side=    3 abs coord vertex=    3.5000000000000    1.5000000000000    0.0000000000000
+side=    4 abs coord vertex=    2.5000000000000    1.5000000000000    0.0000000000000
+Reversing Surface Name=ZONE1_CORE_CEILING
+side=    1 abs coord vertex=    3.4999999981193    3.5000000020574    2.0000000000000
+side=    2 abs coord vertex=    2.5000000191728    3.4999999790254    2.0000000000000
+side=    3 abs coord vertex=    2.5000000000000    1.5000000000000    2.0000000000000
+side=    4 abs coord vertex=    3.5000000000000    1.5000000000000    2.0000000000000
+Reversing Surface Name=ZONE2_CORE_FLOOR
+side=    1 abs coord vertex=    2.5000000191728    3.4999999790254    2.0000000000000
+side=    2 abs coord vertex=    3.4999999981193    3.5000000020574    2.0000000000000
+side=    3 abs coord vertex=    3.5000000000000    1.5000000000000    2.0000000000000
+side=    4 abs coord vertex=    2.5000000000000    1.5000000000000    2.0000000000000
+Reversing Surface Name=ZONE2_CORE_CEILING
+side=    1 abs coord vertex=    3.4999999981193    3.5000000020574    4.0000000000000
+side=    2 abs coord vertex=    2.5000000191728    3.4999999790254    4.0000000000000
+side=    3 abs coord vertex=    2.5000000000000    1.5000000000000    4.0000000000000
+side=    4 abs coord vertex=    3.5000000000000    1.5000000000000    4.0000000000000
+Reversing Surface Name=ZONE3_CORE_FLOOR
+side=    1 abs coord vertex=    2.5000000191728    3.4999999790254    4.0000000000000
+side=    2 abs coord vertex=    3.4999999981193    3.5000000020574    4.0000000000000
+side=    3 abs coord vertex=    3.5000000000000    1.5000000000000    4.0000000000000
+side=    4 abs coord vertex=    2.5000000000000    1.5000000000000    4.0000000000000
+Reversing Surface Name=ZONE3_CORE_ROOF
+side=    1 abs coord vertex=    3.4999999981193    3.5000000020574    6.0000000000000
+side=    2 abs coord vertex=    2.5000000191728    3.4999999790254    6.0000000000000
+side=    3 abs coord vertex=    2.5000000000000    1.5000000000000    6.0000000000000
+side=    4 abs coord vertex=    3.5000000000000    1.5000000000000    6.0000000000000

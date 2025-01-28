@@ -1,0 +1,142 @@
+Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.01.28 12:57,
+   ************* Beginning Zone Sizing Calculations
+   ** Warning ** Site:GroundTemperature:BuildingSurface: Some values fall outside the range of 15-25C.
+   **   ~~~   ** These values may be inappropriate.  Please consult the Input Output Reference for more details.
+   ** Warning ** Weather file location will be used rather than entered (IDF) Location object.
+   **   ~~~   ** ..Location object=AMSTERDAM_NETHERLANDS
+   **   ~~~   ** ..Weather File Location=Lelystad.AP FL NLD SRC-TMYx WMO#=062690
+   **   ~~~   ** ..due to location differences, Latitude difference=[8.72E-002] degrees, Longitude difference=[0.63] degrees.
+   **   ~~~   ** ..Time Zone difference=[0.0] hour(s), Elevation difference=[190.00] percent, [1.90] meters.
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="LIGHTSSCHEDULE", Schedule Type Limits Name="FRACTION" not found -- will not be validated
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="LIGHTSSCHEDULE" has missing day types in Through=12/31
+   **   ~~~   ** Last "For" field=FOR: SUNDAY
+   **   ~~~   ** Missing day types="Holiday","SummerDesignDay","WinterDesignDay","CustomDay1","CustomDay2"
+   **   ~~~   ** Missing day types will have 0.0 as Schedule Values
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="PARASITICSCHEDULE", Schedule Type Limits Name="FRACTION" not found -- will not be validated
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="MYDHW_0_USEFRACTION", Schedule Type Limits Name="FRACTION" not found -- will not be validated
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="VENTSCHED_DAYNIGHT", Schedule Type Limits Name="FRACTION" not found -- will not be validated
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="WORKHOURSSCHED", Schedule Type Limits Name="FRACTION" not found -- will not be validated
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="WORKHOURSSCHED" has missing day types in Through=12/31
+   **   ~~~   ** Last "For" field=FOR: SATURDAY SUNDAY HOLIDAY
+   **   ~~~   ** Missing day types="SummerDesignDay","WinterDesignDay","CustomDay1","CustomDay2"
+   **   ~~~   ** Missing day types will have 0.0 as Schedule Values
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="SCENARIO_4_USEFRACTION", Schedule Type Limits Name="FRACTION" not found -- will not be validated
+   ** Warning ** ProcessScheduleInput: Schedule:Constant="ALWAYSONSCHED", Schedule Type Limits Name="FRACTION" not found -- will not be validated
+   ** Warning ** GetVertices: Floor is upside down! Tilt angle=[0.0], should be near 180, Surface="ZONE1_CORE_FLOOR", in Zone="ZONE1_CORE".
+   **   ~~~   ** Automatic fix is attempted.
+   ** Warning ** GetVertices: Roof/Ceiling is upside down! Tilt angle=[180.0], should be near 0, Surface="ZONE1_CORE_CEILING", in Zone="ZONE1_CORE".
+   **   ~~~   ** Automatic fix is attempted.
+   ** Warning ** GetVertices: Floor is upside down! Tilt angle=[0.0], should be near 180, Surface="ZONE2_CORE_FLOOR", in Zone="ZONE2_CORE".
+   **   ~~~   ** Automatic fix is attempted.
+   ** Warning ** GetVertices: Roof/Ceiling is upside down! Tilt angle=[180.0], should be near 0, Surface="ZONE2_CORE_CEILING", in Zone="ZONE2_CORE".
+   **   ~~~   ** Automatic fix is attempted.
+   ** Warning ** GetVertices: Floor is upside down! Tilt angle=[0.0], should be near 180, Surface="ZONE3_CORE_FLOOR", in Zone="ZONE3_CORE".
+   **   ~~~   ** Automatic fix is attempted.
+   ** Warning ** GetVertices: Roof/Ceiling is upside down! Tilt angle=[180.0], should be near 0, Surface="ZONE3_CORE_ROOF", in Zone="ZONE3_CORE".
+   **   ~~~   ** Automatic fix is attempted.
+   ** Warning ** GetSurfaceData: InterZone Surface Azimuths do not match as expected.
+   **   ~~~   **   Azimuth=180.0, Tilt=90.0, in Surface=ZONE1_FRONTPERIMETER_WALL_2, Zone=ZONE1_FRONTPERIMETER
+   **   ~~~   **   Azimuth=180.0, Tilt=90.0, in Surface=ZONE1_CORE_WALL_3, Zone=ZONE1_CORE
+   **   ~~~   ** ..surface class of first surface=Wall
+   **   ~~~   ** ..surface class of second surface=Wall
+   ** Warning ** GetSurfaceData: InterZone Surface Azimuths do not match as expected.
+   **   ~~~   **   Azimuth=90.0, Tilt=90.0, in Surface=ZONE1_RIGHTPERIMETER_WALL_2, Zone=ZONE1_RIGHTPERIMETER
+   **   ~~~   **   Azimuth=90.0, Tilt=90.0, in Surface=ZONE1_CORE_WALL_2, Zone=ZONE1_CORE
+   **   ~~~   ** ..surface class of first surface=Wall
+   **   ~~~   ** ..surface class of second surface=Wall
+   ** Warning ** GetSurfaceData: InterZone Surface Azimuths do not match as expected.
+   **   ~~~   **   Azimuth=0.0, Tilt=90.0, in Surface=ZONE1_REARPERIMETER_WALL_2, Zone=ZONE1_REARPERIMETER
+   **   ~~~   **   Azimuth=0.0, Tilt=90.0, in Surface=ZONE1_CORE_WALL_1, Zone=ZONE1_CORE
+   **   ~~~   ** ..surface class of first surface=Wall
+   **   ~~~   ** ..surface class of second surface=Wall
+   ** Warning ** GetSurfaceData: InterZone Surface Azimuths do not match as expected.
+   **   ~~~   **   Azimuth=270.0, Tilt=90.0, in Surface=ZONE1_LEFTPERIMETER_WALL_2, Zone=ZONE1_LEFTPERIMETER
+   **   ~~~   **   Azimuth=270.0, Tilt=90.0, in Surface=ZONE1_CORE_WALL_0, Zone=ZONE1_CORE
+   **   ~~~   ** ..surface class of first surface=Wall
+   **   ~~~   ** ..surface class of second surface=Wall
+   ** Warning ** GetSurfaceData: InterZone Surface Azimuths do not match as expected.
+   **   ~~~   **   Azimuth=180.0, Tilt=90.0, in Surface=ZONE2_FRONTPERIMETER_WALL_2, Zone=ZONE2_FRONTPERIMETER
+   **   ~~~   **   Azimuth=180.0, Tilt=90.0, in Surface=ZONE2_CORE_WALL_3, Zone=ZONE2_CORE
+   **   ~~~   ** ..surface class of first surface=Wall
+   **   ~~~   ** ..surface class of second surface=Wall
+   ** Warning ** GetSurfaceData: InterZone Surface Azimuths do not match as expected.
+   **   ~~~   **   Azimuth=90.0, Tilt=90.0, in Surface=ZONE2_RIGHTPERIMETER_WALL_2, Zone=ZONE2_RIGHTPERIMETER
+   **   ~~~   **   Azimuth=90.0, Tilt=90.0, in Surface=ZONE2_CORE_WALL_2, Zone=ZONE2_CORE
+   **   ~~~   ** ..surface class of first surface=Wall
+   **   ~~~   ** ..surface class of second surface=Wall
+   ** Warning ** GetSurfaceData: InterZone Surface Azimuths do not match as expected.
+   **   ~~~   **   Azimuth=0.0, Tilt=90.0, in Surface=ZONE2_REARPERIMETER_WALL_2, Zone=ZONE2_REARPERIMETER
+   **   ~~~   **   Azimuth=0.0, Tilt=90.0, in Surface=ZONE2_CORE_WALL_1, Zone=ZONE2_CORE
+   **   ~~~   ** ..surface class of first surface=Wall
+   **   ~~~   ** ..surface class of second surface=Wall
+   ** Warning ** GetSurfaceData: InterZone Surface Azimuths do not match as expected.
+   **   ~~~   **   Azimuth=270.0, Tilt=90.0, in Surface=ZONE2_LEFTPERIMETER_WALL_2, Zone=ZONE2_LEFTPERIMETER
+   **   ~~~   **   Azimuth=270.0, Tilt=90.0, in Surface=ZONE2_CORE_WALL_0, Zone=ZONE2_CORE
+   **   ~~~   ** ..surface class of first surface=Wall
+   **   ~~~   ** ..surface class of second surface=Wall
+   ** Warning ** GetSurfaceData: InterZone Surface Azimuths do not match as expected.
+   **   ~~~   **   Azimuth=180.0, Tilt=90.0, in Surface=ZONE3_FRONTPERIMETER_WALL_2, Zone=ZONE3_FRONTPERIMETER
+   **   ~~~   **   Azimuth=180.0, Tilt=90.0, in Surface=ZONE3_CORE_WALL_3, Zone=ZONE3_CORE
+   **   ~~~   ** ..surface class of first surface=Wall
+   **   ~~~   ** ..surface class of second surface=Wall
+   ** Warning ** GetSurfaceData: InterZone Surface Azimuths do not match as expected.
+   **   ~~~   **   Azimuth=90.0, Tilt=90.0, in Surface=ZONE3_RIGHTPERIMETER_WALL_2, Zone=ZONE3_RIGHTPERIMETER
+   **   ~~~   **   Azimuth=90.0, Tilt=90.0, in Surface=ZONE3_CORE_WALL_2, Zone=ZONE3_CORE
+   **   ~~~   ** ..surface class of first surface=Wall
+   **   ~~~   ** ..surface class of second surface=Wall
+   ** Warning ** GetSurfaceData: InterZone Surface Azimuths do not match as expected.
+   **   ~~~   **   Azimuth=0.0, Tilt=90.0, in Surface=ZONE3_REARPERIMETER_WALL_2, Zone=ZONE3_REARPERIMETER
+   **   ~~~   **   Azimuth=0.0, Tilt=90.0, in Surface=ZONE3_CORE_WALL_1, Zone=ZONE3_CORE
+   **   ~~~   ** ..surface class of first surface=Wall
+   **   ~~~   ** ..surface class of second surface=Wall
+   ** Warning ** GetSurfaceData: InterZone Surface Azimuths do not match as expected.
+   **   ~~~   **   Azimuth=270.0, Tilt=90.0, in Surface=ZONE3_LEFTPERIMETER_WALL_2, Zone=ZONE3_LEFTPERIMETER
+   **   ~~~   **   Azimuth=270.0, Tilt=90.0, in Surface=ZONE3_CORE_WALL_0, Zone=ZONE3_CORE
+   **   ~~~   ** ..surface class of first surface=Wall
+   **   ~~~   ** ..surface class of second surface=Wall
+   ** Warning ** Indicated Zone Volume <= 0.0 for Zone=ZONE1_CORE
+   **   ~~~   ** The calculated Zone Volume was=-1.33
+   **   ~~~   ** The simulation will continue with the Zone Volume set to 10.0 m3. 
+   **   ~~~   ** ...use Output:Diagnostics,DisplayExtraWarnings; to show more details on individual zones.
+   ** Warning ** Indicated Zone Volume <= 0.0 for Zone=ZONE2_CORE
+   **   ~~~   ** The calculated Zone Volume was=-1.33
+   **   ~~~   ** The simulation will continue with the Zone Volume set to 10.0 m3. 
+   **   ~~~   ** ...use Output:Diagnostics,DisplayExtraWarnings; to show more details on individual zones.
+   ** Warning ** Indicated Zone Volume <= 0.0 for Zone=ZONE3_CORE
+   **   ~~~   ** The calculated Zone Volume was=-1.33
+   **   ~~~   ** The simulation will continue with the Zone Volume set to 10.0 m3. 
+   **   ~~~   ** ...use Output:Diagnostics,DisplayExtraWarnings; to show more details on individual zones.
+   ** Warning ** CheckUsedConstructions: There are 15 nominally unused constructions in input.
+   **   ~~~   ** For explicit details on each unused construction, use Output:Diagnostics,DisplayExtraWarnings;
+   ** Warning ** ManageSizing: For a plant sizing run, there must be at least 1 Sizing:Plant object input. SimulationControl Plant Sizing option ignored.
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ************* No node connection errors were found.
+   ************* Beginning Simulation
+   ************* Simulation Error Summary *************
+   ** Warning ** The following Report Variables were requested but not generated -- check.rdd file
+   **   ~~~   ** Either the IDF did not contain these elements, the variable name is misspelled,
+   **   ~~~   ** or the requested variable is an advanced output which requires Output : Diagnostics, DisplayAdvancedReportVariables;
+   ************* Key=*, VarName=BOILER HEATING ENERGY, Frequency=Daily
+   ************* Key=*, VarName=FACILITY TOTAL ELECTRIC DEMAND POWER, Frequency=Hourly
+   ************* There are 1 unused schedules in input.
+   ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.
+   *************
+   ************* ===== Final Error Summary =====
+   ************* The following error categories occurred.  Consider correcting or noting.
+   ************* InterZone Surface Azimuths -- mismatch
+   ************* ..The azimuths (outward facing angle) of two interzone surfaces should not be the same.
+   ************* ..Normally, the absolute difference between the two azimuths will be 180 degrees.
+   ************* ..You can turn on the report: Output:Surfaces:List,Details; to inspect your surfaces.
+   ************* Nominally Unused Constructions
+   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause
+   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm
+   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).
+   *************
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 34 Warning; 0 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 35 Warning; 0 Severe Errors; Elapsed Time=00hr 00min  4.17sec

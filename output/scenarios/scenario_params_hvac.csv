@@ -1,66 +1,486 @@
-scenario_index,ogc_fid,param_name,assigned_value
-0,4136730,heating_day_setpoint,10.639426798457883
-0,4136730,heating_day_setpoint_range,0.0
-0,4136730,heating_night_setpoint,15.025010755222667
-0,4136730,heating_night_setpoint_range,0.0
-0,4136730,cooling_day_setpoint,25.6
-0,4136730,cooling_day_setpoint_range,0.0
-0,4136730,cooling_night_setpoint,26.446421476297644
-0,4136730,cooling_night_setpoint_range,0.0
-0,4136730,max_heating_supply_air_temp,52.364712141640126
-0,4136730,max_heating_supply_air_temp_range,0.0
-0,4136730,min_cooling_supply_air_temp,13.353398974845822
-0,4136730,min_cooling_supply_air_temp_range,0.0
-0,4136730,schedule_details,0.0
-1,4136730,heating_day_setpoint,10.639426798457883
-1,4136730,heating_day_setpoint_range,0.0
-1,4136730,heating_night_setpoint,15.025010755222667
-1,4136730,heating_night_setpoint_range,0.0
-1,4136730,cooling_day_setpoint,25.6
-1,4136730,cooling_day_setpoint_range,0.0
-1,4136730,cooling_night_setpoint,26.446421476297644
-1,4136730,cooling_night_setpoint_range,0.0
-1,4136730,max_heating_supply_air_temp,52.364712141640126
-1,4136730,max_heating_supply_air_temp_range,0.0
-1,4136730,min_cooling_supply_air_temp,13.353398974845822
-1,4136730,min_cooling_supply_air_temp_range,0.0
-1,4136730,schedule_details,0.0
-2,4136730,heating_day_setpoint,10.639426798457883
-2,4136730,heating_day_setpoint_range,0.0
-2,4136730,heating_night_setpoint,15.025010755222667
-2,4136730,heating_night_setpoint_range,0.0
-2,4136730,cooling_day_setpoint,25.6
-2,4136730,cooling_day_setpoint_range,0.0
-2,4136730,cooling_night_setpoint,26.446421476297644
-2,4136730,cooling_night_setpoint_range,0.0
-2,4136730,max_heating_supply_air_temp,52.364712141640126
-2,4136730,max_heating_supply_air_temp_range,0.0
-2,4136730,min_cooling_supply_air_temp,13.353398974845822
-2,4136730,min_cooling_supply_air_temp_range,0.0
-2,4136730,schedule_details,0.0
-3,4136730,heating_day_setpoint,10.639426798457883
-3,4136730,heating_day_setpoint_range,0.0
-3,4136730,heating_night_setpoint,15.025010755222667
-3,4136730,heating_night_setpoint_range,0.0
-3,4136730,cooling_day_setpoint,25.6
-3,4136730,cooling_day_setpoint_range,0.0
-3,4136730,cooling_night_setpoint,26.446421476297644
-3,4136730,cooling_night_setpoint_range,0.0
-3,4136730,max_heating_supply_air_temp,52.364712141640126
-3,4136730,max_heating_supply_air_temp_range,0.0
-3,4136730,min_cooling_supply_air_temp,13.353398974845822
-3,4136730,min_cooling_supply_air_temp_range,0.0
-3,4136730,schedule_details,0.0
-4,4136730,heating_day_setpoint,10.639426798457883
-4,4136730,heating_day_setpoint_range,0.0
-4,4136730,heating_night_setpoint,15.025010755222667
-4,4136730,heating_night_setpoint_range,0.0
-4,4136730,cooling_day_setpoint,25.6
-4,4136730,cooling_day_setpoint_range,0.0
-4,4136730,cooling_night_setpoint,26.446421476297644
-4,4136730,cooling_night_setpoint_range,0.0
-4,4136730,max_heating_supply_air_temp,52.364712141640126
-4,4136730,max_heating_supply_air_temp_range,0.0
-4,4136730,min_cooling_supply_air_temp,13.353398974845822
-4,4136730,min_cooling_supply_air_temp_range,0.0
-4,4136730,schedule_details,0.0
+scenario_index,ogc_fid,zone_name,param_name,param_value,param_min,param_max,picking_method
+0,4136730,,heating_day_setpoint,10.639426798457883,10.0,11.0,random_uniform
+0,4136730,,heating_night_setpoint,15.025010755222667,15.0,16.0,random_uniform
+0,4136730,,cooling_day_setpoint,25.6,25.6,25.6,random_uniform
+0,4136730,,cooling_night_setpoint,26.446421476297644,26.0,28.0,random_uniform
+0,4136730,,max_heating_supply_air_temp,52.364712141640126,45.0,55.0,random_uniform
+0,4136730,,min_cooling_supply_air_temp,13.353398974845822,12.0,14.0,random_uniform
+0,4136730,,schedule_details,"{'day_start': '07:00', 'day_end': '23:00', 'occupancy_schedule': {'weekday': 'FullOccupancy', 'weekend': 'FullOccupancy'}}",,,random_uniform
+0,4136730,Zone1_FrontPerimeter,hvac_object_name,Zone1_FrontPerimeter Ideal Loads,,,random_uniform
+0,4136730,Zone1_FrontPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+0,4136730,Zone1_FrontPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+0,4136730,Zone1_FrontPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+0,4136730,Zone1_FrontPerimeter,thermostat_name,Zone1_FrontPerimeter CONTROLS,,,random_uniform
+0,4136730,Zone1_FrontPerimeter,thermostat_dualsetpoint_name,Zone1_FrontPerimeter SETPOINTS,,,random_uniform
+0,4136730,Zone1_RightPerimeter,hvac_object_name,Zone1_RightPerimeter Ideal Loads,,,random_uniform
+0,4136730,Zone1_RightPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+0,4136730,Zone1_RightPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+0,4136730,Zone1_RightPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+0,4136730,Zone1_RightPerimeter,thermostat_name,Zone1_RightPerimeter CONTROLS,,,random_uniform
+0,4136730,Zone1_RightPerimeter,thermostat_dualsetpoint_name,Zone1_RightPerimeter SETPOINTS,,,random_uniform
+0,4136730,Zone1_RearPerimeter,hvac_object_name,Zone1_RearPerimeter Ideal Loads,,,random_uniform
+0,4136730,Zone1_RearPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+0,4136730,Zone1_RearPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+0,4136730,Zone1_RearPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+0,4136730,Zone1_RearPerimeter,thermostat_name,Zone1_RearPerimeter CONTROLS,,,random_uniform
+0,4136730,Zone1_RearPerimeter,thermostat_dualsetpoint_name,Zone1_RearPerimeter SETPOINTS,,,random_uniform
+0,4136730,Zone1_LeftPerimeter,hvac_object_name,Zone1_LeftPerimeter Ideal Loads,,,random_uniform
+0,4136730,Zone1_LeftPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+0,4136730,Zone1_LeftPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+0,4136730,Zone1_LeftPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+0,4136730,Zone1_LeftPerimeter,thermostat_name,Zone1_LeftPerimeter CONTROLS,,,random_uniform
+0,4136730,Zone1_LeftPerimeter,thermostat_dualsetpoint_name,Zone1_LeftPerimeter SETPOINTS,,,random_uniform
+0,4136730,Zone1_Core,hvac_object_name,Zone1_Core Ideal Loads,,,random_uniform
+0,4136730,Zone1_Core,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+0,4136730,Zone1_Core,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+0,4136730,Zone1_Core,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+0,4136730,Zone1_Core,thermostat_name,Zone1_Core CONTROLS,,,random_uniform
+0,4136730,Zone1_Core,thermostat_dualsetpoint_name,Zone1_Core SETPOINTS,,,random_uniform
+0,4136730,Zone2_FrontPerimeter,hvac_object_name,Zone2_FrontPerimeter Ideal Loads,,,random_uniform
+0,4136730,Zone2_FrontPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+0,4136730,Zone2_FrontPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+0,4136730,Zone2_FrontPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+0,4136730,Zone2_FrontPerimeter,thermostat_name,Zone2_FrontPerimeter CONTROLS,,,random_uniform
+0,4136730,Zone2_FrontPerimeter,thermostat_dualsetpoint_name,Zone2_FrontPerimeter SETPOINTS,,,random_uniform
+0,4136730,Zone2_RightPerimeter,hvac_object_name,Zone2_RightPerimeter Ideal Loads,,,random_uniform
+0,4136730,Zone2_RightPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+0,4136730,Zone2_RightPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+0,4136730,Zone2_RightPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+0,4136730,Zone2_RightPerimeter,thermostat_name,Zone2_RightPerimeter CONTROLS,,,random_uniform
+0,4136730,Zone2_RightPerimeter,thermostat_dualsetpoint_name,Zone2_RightPerimeter SETPOINTS,,,random_uniform
+0,4136730,Zone2_RearPerimeter,hvac_object_name,Zone2_RearPerimeter Ideal Loads,,,random_uniform
+0,4136730,Zone2_RearPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+0,4136730,Zone2_RearPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+0,4136730,Zone2_RearPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+0,4136730,Zone2_RearPerimeter,thermostat_name,Zone2_RearPerimeter CONTROLS,,,random_uniform
+0,4136730,Zone2_RearPerimeter,thermostat_dualsetpoint_name,Zone2_RearPerimeter SETPOINTS,,,random_uniform
+0,4136730,Zone2_LeftPerimeter,hvac_object_name,Zone2_LeftPerimeter Ideal Loads,,,random_uniform
+0,4136730,Zone2_LeftPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+0,4136730,Zone2_LeftPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+0,4136730,Zone2_LeftPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+0,4136730,Zone2_LeftPerimeter,thermostat_name,Zone2_LeftPerimeter CONTROLS,,,random_uniform
+0,4136730,Zone2_LeftPerimeter,thermostat_dualsetpoint_name,Zone2_LeftPerimeter SETPOINTS,,,random_uniform
+0,4136730,Zone2_Core,hvac_object_name,Zone2_Core Ideal Loads,,,random_uniform
+0,4136730,Zone2_Core,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+0,4136730,Zone2_Core,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+0,4136730,Zone2_Core,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+0,4136730,Zone2_Core,thermostat_name,Zone2_Core CONTROLS,,,random_uniform
+0,4136730,Zone2_Core,thermostat_dualsetpoint_name,Zone2_Core SETPOINTS,,,random_uniform
+0,4136730,Zone3_FrontPerimeter,hvac_object_name,Zone3_FrontPerimeter Ideal Loads,,,random_uniform
+0,4136730,Zone3_FrontPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+0,4136730,Zone3_FrontPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+0,4136730,Zone3_FrontPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+0,4136730,Zone3_FrontPerimeter,thermostat_name,Zone3_FrontPerimeter CONTROLS,,,random_uniform
+0,4136730,Zone3_FrontPerimeter,thermostat_dualsetpoint_name,Zone3_FrontPerimeter SETPOINTS,,,random_uniform
+0,4136730,Zone3_RightPerimeter,hvac_object_name,Zone3_RightPerimeter Ideal Loads,,,random_uniform
+0,4136730,Zone3_RightPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+0,4136730,Zone3_RightPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+0,4136730,Zone3_RightPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+0,4136730,Zone3_RightPerimeter,thermostat_name,Zone3_RightPerimeter CONTROLS,,,random_uniform
+0,4136730,Zone3_RightPerimeter,thermostat_dualsetpoint_name,Zone3_RightPerimeter SETPOINTS,,,random_uniform
+0,4136730,Zone3_RearPerimeter,hvac_object_name,Zone3_RearPerimeter Ideal Loads,,,random_uniform
+0,4136730,Zone3_RearPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+0,4136730,Zone3_RearPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+0,4136730,Zone3_RearPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+0,4136730,Zone3_RearPerimeter,thermostat_name,Zone3_RearPerimeter CONTROLS,,,random_uniform
+0,4136730,Zone3_RearPerimeter,thermostat_dualsetpoint_name,Zone3_RearPerimeter SETPOINTS,,,random_uniform
+0,4136730,Zone3_LeftPerimeter,hvac_object_name,Zone3_LeftPerimeter Ideal Loads,,,random_uniform
+0,4136730,Zone3_LeftPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+0,4136730,Zone3_LeftPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+0,4136730,Zone3_LeftPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+0,4136730,Zone3_LeftPerimeter,thermostat_name,Zone3_LeftPerimeter CONTROLS,,,random_uniform
+0,4136730,Zone3_LeftPerimeter,thermostat_dualsetpoint_name,Zone3_LeftPerimeter SETPOINTS,,,random_uniform
+0,4136730,Zone3_Core,hvac_object_name,Zone3_Core Ideal Loads,,,random_uniform
+0,4136730,Zone3_Core,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+0,4136730,Zone3_Core,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+0,4136730,Zone3_Core,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+0,4136730,Zone3_Core,thermostat_name,Zone3_Core CONTROLS,,,random_uniform
+0,4136730,Zone3_Core,thermostat_dualsetpoint_name,Zone3_Core SETPOINTS,,,random_uniform
+1,4136730,,heating_day_setpoint,10.892179567704845,10.0,11.0,random_uniform
+1,4136730,,heating_night_setpoint,15.086938832629416,15.0,16.0,random_uniform
+1,4136730,,cooling_day_setpoint,25.6,25.6,25.6,random_uniform
+1,4136730,,cooling_night_setpoint,26.05959443887614,26.0,28.0,random_uniform
+1,4136730,,max_heating_supply_air_temp,47.18637974803603,45.0,55.0,random_uniform
+1,4136730,,min_cooling_supply_air_temp,13.010710576206725,12.0,14.0,random_uniform
+1,4136730,,schedule_details,"{'day_start': '07:00', 'day_end': '23:00', 'occupancy_schedule': {'weekday': 'FullOccupancy', 'weekend': 'FullOccupancy'}}",,,random_uniform
+1,4136730,Zone1_FrontPerimeter,hvac_object_name,Zone1_FrontPerimeter Ideal Loads,,,random_uniform
+1,4136730,Zone1_FrontPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+1,4136730,Zone1_FrontPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+1,4136730,Zone1_FrontPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+1,4136730,Zone1_FrontPerimeter,thermostat_name,Zone1_FrontPerimeter CONTROLS,,,random_uniform
+1,4136730,Zone1_FrontPerimeter,thermostat_dualsetpoint_name,Zone1_FrontPerimeter SETPOINTS,,,random_uniform
+1,4136730,Zone1_RightPerimeter,hvac_object_name,Zone1_RightPerimeter Ideal Loads,,,random_uniform
+1,4136730,Zone1_RightPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+1,4136730,Zone1_RightPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+1,4136730,Zone1_RightPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+1,4136730,Zone1_RightPerimeter,thermostat_name,Zone1_RightPerimeter CONTROLS,,,random_uniform
+1,4136730,Zone1_RightPerimeter,thermostat_dualsetpoint_name,Zone1_RightPerimeter SETPOINTS,,,random_uniform
+1,4136730,Zone1_RearPerimeter,hvac_object_name,Zone1_RearPerimeter Ideal Loads,,,random_uniform
+1,4136730,Zone1_RearPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+1,4136730,Zone1_RearPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+1,4136730,Zone1_RearPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+1,4136730,Zone1_RearPerimeter,thermostat_name,Zone1_RearPerimeter CONTROLS,,,random_uniform
+1,4136730,Zone1_RearPerimeter,thermostat_dualsetpoint_name,Zone1_RearPerimeter SETPOINTS,,,random_uniform
+1,4136730,Zone1_LeftPerimeter,hvac_object_name,Zone1_LeftPerimeter Ideal Loads,,,random_uniform
+1,4136730,Zone1_LeftPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+1,4136730,Zone1_LeftPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+1,4136730,Zone1_LeftPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+1,4136730,Zone1_LeftPerimeter,thermostat_name,Zone1_LeftPerimeter CONTROLS,,,random_uniform
+1,4136730,Zone1_LeftPerimeter,thermostat_dualsetpoint_name,Zone1_LeftPerimeter SETPOINTS,,,random_uniform
+1,4136730,Zone1_Core,hvac_object_name,Zone1_Core Ideal Loads,,,random_uniform
+1,4136730,Zone1_Core,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+1,4136730,Zone1_Core,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+1,4136730,Zone1_Core,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+1,4136730,Zone1_Core,thermostat_name,Zone1_Core CONTROLS,,,random_uniform
+1,4136730,Zone1_Core,thermostat_dualsetpoint_name,Zone1_Core SETPOINTS,,,random_uniform
+1,4136730,Zone2_FrontPerimeter,hvac_object_name,Zone2_FrontPerimeter Ideal Loads,,,random_uniform
+1,4136730,Zone2_FrontPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+1,4136730,Zone2_FrontPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+1,4136730,Zone2_FrontPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+1,4136730,Zone2_FrontPerimeter,thermostat_name,Zone2_FrontPerimeter CONTROLS,,,random_uniform
+1,4136730,Zone2_FrontPerimeter,thermostat_dualsetpoint_name,Zone2_FrontPerimeter SETPOINTS,,,random_uniform
+1,4136730,Zone2_RightPerimeter,hvac_object_name,Zone2_RightPerimeter Ideal Loads,,,random_uniform
+1,4136730,Zone2_RightPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+1,4136730,Zone2_RightPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+1,4136730,Zone2_RightPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+1,4136730,Zone2_RightPerimeter,thermostat_name,Zone2_RightPerimeter CONTROLS,,,random_uniform
+1,4136730,Zone2_RightPerimeter,thermostat_dualsetpoint_name,Zone2_RightPerimeter SETPOINTS,,,random_uniform
+1,4136730,Zone2_RearPerimeter,hvac_object_name,Zone2_RearPerimeter Ideal Loads,,,random_uniform
+1,4136730,Zone2_RearPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+1,4136730,Zone2_RearPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+1,4136730,Zone2_RearPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+1,4136730,Zone2_RearPerimeter,thermostat_name,Zone2_RearPerimeter CONTROLS,,,random_uniform
+1,4136730,Zone2_RearPerimeter,thermostat_dualsetpoint_name,Zone2_RearPerimeter SETPOINTS,,,random_uniform
+1,4136730,Zone2_LeftPerimeter,hvac_object_name,Zone2_LeftPerimeter Ideal Loads,,,random_uniform
+1,4136730,Zone2_LeftPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+1,4136730,Zone2_LeftPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+1,4136730,Zone2_LeftPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+1,4136730,Zone2_LeftPerimeter,thermostat_name,Zone2_LeftPerimeter CONTROLS,,,random_uniform
+1,4136730,Zone2_LeftPerimeter,thermostat_dualsetpoint_name,Zone2_LeftPerimeter SETPOINTS,,,random_uniform
+1,4136730,Zone2_Core,hvac_object_name,Zone2_Core Ideal Loads,,,random_uniform
+1,4136730,Zone2_Core,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+1,4136730,Zone2_Core,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+1,4136730,Zone2_Core,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+1,4136730,Zone2_Core,thermostat_name,Zone2_Core CONTROLS,,,random_uniform
+1,4136730,Zone2_Core,thermostat_dualsetpoint_name,Zone2_Core SETPOINTS,,,random_uniform
+1,4136730,Zone3_FrontPerimeter,hvac_object_name,Zone3_FrontPerimeter Ideal Loads,,,random_uniform
+1,4136730,Zone3_FrontPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+1,4136730,Zone3_FrontPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+1,4136730,Zone3_FrontPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+1,4136730,Zone3_FrontPerimeter,thermostat_name,Zone3_FrontPerimeter CONTROLS,,,random_uniform
+1,4136730,Zone3_FrontPerimeter,thermostat_dualsetpoint_name,Zone3_FrontPerimeter SETPOINTS,,,random_uniform
+1,4136730,Zone3_RightPerimeter,hvac_object_name,Zone3_RightPerimeter Ideal Loads,,,random_uniform
+1,4136730,Zone3_RightPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+1,4136730,Zone3_RightPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+1,4136730,Zone3_RightPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+1,4136730,Zone3_RightPerimeter,thermostat_name,Zone3_RightPerimeter CONTROLS,,,random_uniform
+1,4136730,Zone3_RightPerimeter,thermostat_dualsetpoint_name,Zone3_RightPerimeter SETPOINTS,,,random_uniform
+1,4136730,Zone3_RearPerimeter,hvac_object_name,Zone3_RearPerimeter Ideal Loads,,,random_uniform
+1,4136730,Zone3_RearPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+1,4136730,Zone3_RearPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+1,4136730,Zone3_RearPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+1,4136730,Zone3_RearPerimeter,thermostat_name,Zone3_RearPerimeter CONTROLS,,,random_uniform
+1,4136730,Zone3_RearPerimeter,thermostat_dualsetpoint_name,Zone3_RearPerimeter SETPOINTS,,,random_uniform
+1,4136730,Zone3_LeftPerimeter,hvac_object_name,Zone3_LeftPerimeter Ideal Loads,,,random_uniform
+1,4136730,Zone3_LeftPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+1,4136730,Zone3_LeftPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+1,4136730,Zone3_LeftPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+1,4136730,Zone3_LeftPerimeter,thermostat_name,Zone3_LeftPerimeter CONTROLS,,,random_uniform
+1,4136730,Zone3_LeftPerimeter,thermostat_dualsetpoint_name,Zone3_LeftPerimeter SETPOINTS,,,random_uniform
+1,4136730,Zone3_Core,hvac_object_name,Zone3_Core Ideal Loads,,,random_uniform
+1,4136730,Zone3_Core,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+1,4136730,Zone3_Core,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+1,4136730,Zone3_Core,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+1,4136730,Zone3_Core,thermostat_name,Zone3_Core CONTROLS,,,random_uniform
+1,4136730,Zone3_Core,thermostat_dualsetpoint_name,Zone3_Core SETPOINTS,,,random_uniform
+2,4136730,,heating_day_setpoint,10.026535969683863,10.0,11.0,random_uniform
+2,4136730,,heating_night_setpoint,15.198837650686649,15.0,16.0,random_uniform
+2,4136730,,cooling_day_setpoint,25.6,25.6,25.6,random_uniform
+2,4136730,,cooling_night_setpoint,27.089882961206435,26.0,28.0,random_uniform
+2,4136730,,max_heating_supply_air_temp,47.204406220406966,45.0,55.0,random_uniform
+2,4136730,,min_cooling_supply_air_temp,13.178531367751818,12.0,14.0,random_uniform
+2,4136730,,schedule_details,"{'day_start': '07:00', 'day_end': '23:00', 'occupancy_schedule': {'weekday': 'FullOccupancy', 'weekend': 'FullOccupancy'}}",,,random_uniform
+2,4136730,Zone1_FrontPerimeter,hvac_object_name,Zone1_FrontPerimeter Ideal Loads,,,random_uniform
+2,4136730,Zone1_FrontPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+2,4136730,Zone1_FrontPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+2,4136730,Zone1_FrontPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+2,4136730,Zone1_FrontPerimeter,thermostat_name,Zone1_FrontPerimeter CONTROLS,,,random_uniform
+2,4136730,Zone1_FrontPerimeter,thermostat_dualsetpoint_name,Zone1_FrontPerimeter SETPOINTS,,,random_uniform
+2,4136730,Zone1_RightPerimeter,hvac_object_name,Zone1_RightPerimeter Ideal Loads,,,random_uniform
+2,4136730,Zone1_RightPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+2,4136730,Zone1_RightPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+2,4136730,Zone1_RightPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+2,4136730,Zone1_RightPerimeter,thermostat_name,Zone1_RightPerimeter CONTROLS,,,random_uniform
+2,4136730,Zone1_RightPerimeter,thermostat_dualsetpoint_name,Zone1_RightPerimeter SETPOINTS,,,random_uniform
+2,4136730,Zone1_RearPerimeter,hvac_object_name,Zone1_RearPerimeter Ideal Loads,,,random_uniform
+2,4136730,Zone1_RearPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+2,4136730,Zone1_RearPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+2,4136730,Zone1_RearPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+2,4136730,Zone1_RearPerimeter,thermostat_name,Zone1_RearPerimeter CONTROLS,,,random_uniform
+2,4136730,Zone1_RearPerimeter,thermostat_dualsetpoint_name,Zone1_RearPerimeter SETPOINTS,,,random_uniform
+2,4136730,Zone1_LeftPerimeter,hvac_object_name,Zone1_LeftPerimeter Ideal Loads,,,random_uniform
+2,4136730,Zone1_LeftPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+2,4136730,Zone1_LeftPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+2,4136730,Zone1_LeftPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+2,4136730,Zone1_LeftPerimeter,thermostat_name,Zone1_LeftPerimeter CONTROLS,,,random_uniform
+2,4136730,Zone1_LeftPerimeter,thermostat_dualsetpoint_name,Zone1_LeftPerimeter SETPOINTS,,,random_uniform
+2,4136730,Zone1_Core,hvac_object_name,Zone1_Core Ideal Loads,,,random_uniform
+2,4136730,Zone1_Core,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+2,4136730,Zone1_Core,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+2,4136730,Zone1_Core,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+2,4136730,Zone1_Core,thermostat_name,Zone1_Core CONTROLS,,,random_uniform
+2,4136730,Zone1_Core,thermostat_dualsetpoint_name,Zone1_Core SETPOINTS,,,random_uniform
+2,4136730,Zone2_FrontPerimeter,hvac_object_name,Zone2_FrontPerimeter Ideal Loads,,,random_uniform
+2,4136730,Zone2_FrontPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+2,4136730,Zone2_FrontPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+2,4136730,Zone2_FrontPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+2,4136730,Zone2_FrontPerimeter,thermostat_name,Zone2_FrontPerimeter CONTROLS,,,random_uniform
+2,4136730,Zone2_FrontPerimeter,thermostat_dualsetpoint_name,Zone2_FrontPerimeter SETPOINTS,,,random_uniform
+2,4136730,Zone2_RightPerimeter,hvac_object_name,Zone2_RightPerimeter Ideal Loads,,,random_uniform
+2,4136730,Zone2_RightPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+2,4136730,Zone2_RightPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+2,4136730,Zone2_RightPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+2,4136730,Zone2_RightPerimeter,thermostat_name,Zone2_RightPerimeter CONTROLS,,,random_uniform
+2,4136730,Zone2_RightPerimeter,thermostat_dualsetpoint_name,Zone2_RightPerimeter SETPOINTS,,,random_uniform
+2,4136730,Zone2_RearPerimeter,hvac_object_name,Zone2_RearPerimeter Ideal Loads,,,random_uniform
+2,4136730,Zone2_RearPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+2,4136730,Zone2_RearPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+2,4136730,Zone2_RearPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+2,4136730,Zone2_RearPerimeter,thermostat_name,Zone2_RearPerimeter CONTROLS,,,random_uniform
+2,4136730,Zone2_RearPerimeter,thermostat_dualsetpoint_name,Zone2_RearPerimeter SETPOINTS,,,random_uniform
+2,4136730,Zone2_LeftPerimeter,hvac_object_name,Zone2_LeftPerimeter Ideal Loads,,,random_uniform
+2,4136730,Zone2_LeftPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+2,4136730,Zone2_LeftPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+2,4136730,Zone2_LeftPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+2,4136730,Zone2_LeftPerimeter,thermostat_name,Zone2_LeftPerimeter CONTROLS,,,random_uniform
+2,4136730,Zone2_LeftPerimeter,thermostat_dualsetpoint_name,Zone2_LeftPerimeter SETPOINTS,,,random_uniform
+2,4136730,Zone2_Core,hvac_object_name,Zone2_Core Ideal Loads,,,random_uniform
+2,4136730,Zone2_Core,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+2,4136730,Zone2_Core,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+2,4136730,Zone2_Core,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+2,4136730,Zone2_Core,thermostat_name,Zone2_Core CONTROLS,,,random_uniform
+2,4136730,Zone2_Core,thermostat_dualsetpoint_name,Zone2_Core SETPOINTS,,,random_uniform
+2,4136730,Zone3_FrontPerimeter,hvac_object_name,Zone3_FrontPerimeter Ideal Loads,,,random_uniform
+2,4136730,Zone3_FrontPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+2,4136730,Zone3_FrontPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+2,4136730,Zone3_FrontPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+2,4136730,Zone3_FrontPerimeter,thermostat_name,Zone3_FrontPerimeter CONTROLS,,,random_uniform
+2,4136730,Zone3_FrontPerimeter,thermostat_dualsetpoint_name,Zone3_FrontPerimeter SETPOINTS,,,random_uniform
+2,4136730,Zone3_RightPerimeter,hvac_object_name,Zone3_RightPerimeter Ideal Loads,,,random_uniform
+2,4136730,Zone3_RightPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+2,4136730,Zone3_RightPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+2,4136730,Zone3_RightPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+2,4136730,Zone3_RightPerimeter,thermostat_name,Zone3_RightPerimeter CONTROLS,,,random_uniform
+2,4136730,Zone3_RightPerimeter,thermostat_dualsetpoint_name,Zone3_RightPerimeter SETPOINTS,,,random_uniform
+2,4136730,Zone3_RearPerimeter,hvac_object_name,Zone3_RearPerimeter Ideal Loads,,,random_uniform
+2,4136730,Zone3_RearPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+2,4136730,Zone3_RearPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+2,4136730,Zone3_RearPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+2,4136730,Zone3_RearPerimeter,thermostat_name,Zone3_RearPerimeter CONTROLS,,,random_uniform
+2,4136730,Zone3_RearPerimeter,thermostat_dualsetpoint_name,Zone3_RearPerimeter SETPOINTS,,,random_uniform
+2,4136730,Zone3_LeftPerimeter,hvac_object_name,Zone3_LeftPerimeter Ideal Loads,,,random_uniform
+2,4136730,Zone3_LeftPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+2,4136730,Zone3_LeftPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+2,4136730,Zone3_LeftPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+2,4136730,Zone3_LeftPerimeter,thermostat_name,Zone3_LeftPerimeter CONTROLS,,,random_uniform
+2,4136730,Zone3_LeftPerimeter,thermostat_dualsetpoint_name,Zone3_LeftPerimeter SETPOINTS,,,random_uniform
+2,4136730,Zone3_Core,hvac_object_name,Zone3_Core Ideal Loads,,,random_uniform
+2,4136730,Zone3_Core,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+2,4136730,Zone3_Core,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+2,4136730,Zone3_Core,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+2,4136730,Zone3_Core,thermostat_name,Zone3_Core CONTROLS,,,random_uniform
+2,4136730,Zone3_Core,thermostat_dualsetpoint_name,Zone3_Core SETPOINTS,,,random_uniform
+3,4136730,,heating_day_setpoint,10.809430456677827,10.0,11.0,random_uniform
+3,4136730,,heating_night_setpoint,15.006498759678061,15.0,16.0,random_uniform
+3,4136730,,cooling_day_setpoint,25.6,25.6,25.6,random_uniform
+3,4136730,,cooling_night_setpoint,27.396278789976453,26.0,28.0,random_uniform
+3,4136730,,max_heating_supply_air_temp,48.40250516517992,45.0,55.0,random_uniform
+3,4136730,,min_cooling_supply_air_temp,12.310958999623564,12.0,14.0,random_uniform
+3,4136730,,schedule_details,"{'day_start': '07:00', 'day_end': '23:00', 'occupancy_schedule': {'weekday': 'FullOccupancy', 'weekend': 'FullOccupancy'}}",,,random_uniform
+3,4136730,Zone1_FrontPerimeter,hvac_object_name,Zone1_FrontPerimeter Ideal Loads,,,random_uniform
+3,4136730,Zone1_FrontPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+3,4136730,Zone1_FrontPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+3,4136730,Zone1_FrontPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+3,4136730,Zone1_FrontPerimeter,thermostat_name,Zone1_FrontPerimeter CONTROLS,,,random_uniform
+3,4136730,Zone1_FrontPerimeter,thermostat_dualsetpoint_name,Zone1_FrontPerimeter SETPOINTS,,,random_uniform
+3,4136730,Zone1_RightPerimeter,hvac_object_name,Zone1_RightPerimeter Ideal Loads,,,random_uniform
+3,4136730,Zone1_RightPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+3,4136730,Zone1_RightPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+3,4136730,Zone1_RightPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+3,4136730,Zone1_RightPerimeter,thermostat_name,Zone1_RightPerimeter CONTROLS,,,random_uniform
+3,4136730,Zone1_RightPerimeter,thermostat_dualsetpoint_name,Zone1_RightPerimeter SETPOINTS,,,random_uniform
+3,4136730,Zone1_RearPerimeter,hvac_object_name,Zone1_RearPerimeter Ideal Loads,,,random_uniform
+3,4136730,Zone1_RearPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+3,4136730,Zone1_RearPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+3,4136730,Zone1_RearPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+3,4136730,Zone1_RearPerimeter,thermostat_name,Zone1_RearPerimeter CONTROLS,,,random_uniform
+3,4136730,Zone1_RearPerimeter,thermostat_dualsetpoint_name,Zone1_RearPerimeter SETPOINTS,,,random_uniform
+3,4136730,Zone1_LeftPerimeter,hvac_object_name,Zone1_LeftPerimeter Ideal Loads,,,random_uniform
+3,4136730,Zone1_LeftPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+3,4136730,Zone1_LeftPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+3,4136730,Zone1_LeftPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+3,4136730,Zone1_LeftPerimeter,thermostat_name,Zone1_LeftPerimeter CONTROLS,,,random_uniform
+3,4136730,Zone1_LeftPerimeter,thermostat_dualsetpoint_name,Zone1_LeftPerimeter SETPOINTS,,,random_uniform
+3,4136730,Zone1_Core,hvac_object_name,Zone1_Core Ideal Loads,,,random_uniform
+3,4136730,Zone1_Core,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+3,4136730,Zone1_Core,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+3,4136730,Zone1_Core,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+3,4136730,Zone1_Core,thermostat_name,Zone1_Core CONTROLS,,,random_uniform
+3,4136730,Zone1_Core,thermostat_dualsetpoint_name,Zone1_Core SETPOINTS,,,random_uniform
+3,4136730,Zone2_FrontPerimeter,hvac_object_name,Zone2_FrontPerimeter Ideal Loads,,,random_uniform
+3,4136730,Zone2_FrontPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+3,4136730,Zone2_FrontPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+3,4136730,Zone2_FrontPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+3,4136730,Zone2_FrontPerimeter,thermostat_name,Zone2_FrontPerimeter CONTROLS,,,random_uniform
+3,4136730,Zone2_FrontPerimeter,thermostat_dualsetpoint_name,Zone2_FrontPerimeter SETPOINTS,,,random_uniform
+3,4136730,Zone2_RightPerimeter,hvac_object_name,Zone2_RightPerimeter Ideal Loads,,,random_uniform
+3,4136730,Zone2_RightPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+3,4136730,Zone2_RightPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+3,4136730,Zone2_RightPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+3,4136730,Zone2_RightPerimeter,thermostat_name,Zone2_RightPerimeter CONTROLS,,,random_uniform
+3,4136730,Zone2_RightPerimeter,thermostat_dualsetpoint_name,Zone2_RightPerimeter SETPOINTS,,,random_uniform
+3,4136730,Zone2_RearPerimeter,hvac_object_name,Zone2_RearPerimeter Ideal Loads,,,random_uniform
+3,4136730,Zone2_RearPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+3,4136730,Zone2_RearPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+3,4136730,Zone2_RearPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+3,4136730,Zone2_RearPerimeter,thermostat_name,Zone2_RearPerimeter CONTROLS,,,random_uniform
+3,4136730,Zone2_RearPerimeter,thermostat_dualsetpoint_name,Zone2_RearPerimeter SETPOINTS,,,random_uniform
+3,4136730,Zone2_LeftPerimeter,hvac_object_name,Zone2_LeftPerimeter Ideal Loads,,,random_uniform
+3,4136730,Zone2_LeftPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+3,4136730,Zone2_LeftPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+3,4136730,Zone2_LeftPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+3,4136730,Zone2_LeftPerimeter,thermostat_name,Zone2_LeftPerimeter CONTROLS,,,random_uniform
+3,4136730,Zone2_LeftPerimeter,thermostat_dualsetpoint_name,Zone2_LeftPerimeter SETPOINTS,,,random_uniform
+3,4136730,Zone2_Core,hvac_object_name,Zone2_Core Ideal Loads,,,random_uniform
+3,4136730,Zone2_Core,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+3,4136730,Zone2_Core,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+3,4136730,Zone2_Core,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+3,4136730,Zone2_Core,thermostat_name,Zone2_Core CONTROLS,,,random_uniform
+3,4136730,Zone2_Core,thermostat_dualsetpoint_name,Zone2_Core SETPOINTS,,,random_uniform
+3,4136730,Zone3_FrontPerimeter,hvac_object_name,Zone3_FrontPerimeter Ideal Loads,,,random_uniform
+3,4136730,Zone3_FrontPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+3,4136730,Zone3_FrontPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+3,4136730,Zone3_FrontPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+3,4136730,Zone3_FrontPerimeter,thermostat_name,Zone3_FrontPerimeter CONTROLS,,,random_uniform
+3,4136730,Zone3_FrontPerimeter,thermostat_dualsetpoint_name,Zone3_FrontPerimeter SETPOINTS,,,random_uniform
+3,4136730,Zone3_RightPerimeter,hvac_object_name,Zone3_RightPerimeter Ideal Loads,,,random_uniform
+3,4136730,Zone3_RightPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+3,4136730,Zone3_RightPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+3,4136730,Zone3_RightPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+3,4136730,Zone3_RightPerimeter,thermostat_name,Zone3_RightPerimeter CONTROLS,,,random_uniform
+3,4136730,Zone3_RightPerimeter,thermostat_dualsetpoint_name,Zone3_RightPerimeter SETPOINTS,,,random_uniform
+3,4136730,Zone3_RearPerimeter,hvac_object_name,Zone3_RearPerimeter Ideal Loads,,,random_uniform
+3,4136730,Zone3_RearPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+3,4136730,Zone3_RearPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+3,4136730,Zone3_RearPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+3,4136730,Zone3_RearPerimeter,thermostat_name,Zone3_RearPerimeter CONTROLS,,,random_uniform
+3,4136730,Zone3_RearPerimeter,thermostat_dualsetpoint_name,Zone3_RearPerimeter SETPOINTS,,,random_uniform
+3,4136730,Zone3_LeftPerimeter,hvac_object_name,Zone3_LeftPerimeter Ideal Loads,,,random_uniform
+3,4136730,Zone3_LeftPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+3,4136730,Zone3_LeftPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+3,4136730,Zone3_LeftPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+3,4136730,Zone3_LeftPerimeter,thermostat_name,Zone3_LeftPerimeter CONTROLS,,,random_uniform
+3,4136730,Zone3_LeftPerimeter,thermostat_dualsetpoint_name,Zone3_LeftPerimeter SETPOINTS,,,random_uniform
+3,4136730,Zone3_Core,hvac_object_name,Zone3_Core Ideal Loads,,,random_uniform
+3,4136730,Zone3_Core,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+3,4136730,Zone3_Core,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+3,4136730,Zone3_Core,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+3,4136730,Zone3_Core,thermostat_name,Zone3_Core CONTROLS,,,random_uniform
+3,4136730,Zone3_Core,thermostat_dualsetpoint_name,Zone3_Core SETPOINTS,,,random_uniform
+4,4136730,,heating_day_setpoint,10.95721307220678,10.0,11.0,random_uniform
+4,4136730,,heating_night_setpoint,15.336594545112627,15.0,16.0,random_uniform
+4,4136730,,cooling_day_setpoint,25.6,25.6,25.6,random_uniform
+4,4136730,,cooling_night_setpoint,26.19343275366693,26.0,28.0,random_uniform
+4,4136730,,max_heating_supply_air_temp,53.4749436634746,45.0,55.0,random_uniform
+4,4136730,,min_cooling_supply_air_temp,13.207452062733783,12.0,14.0,random_uniform
+4,4136730,,schedule_details,"{'day_start': '07:00', 'day_end': '23:00', 'occupancy_schedule': {'weekday': 'FullOccupancy', 'weekend': 'FullOccupancy'}}",,,random_uniform
+4,4136730,Zone1_FrontPerimeter,hvac_object_name,Zone1_FrontPerimeter Ideal Loads,,,random_uniform
+4,4136730,Zone1_FrontPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+4,4136730,Zone1_FrontPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+4,4136730,Zone1_FrontPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+4,4136730,Zone1_FrontPerimeter,thermostat_name,Zone1_FrontPerimeter CONTROLS,,,random_uniform
+4,4136730,Zone1_FrontPerimeter,thermostat_dualsetpoint_name,Zone1_FrontPerimeter SETPOINTS,,,random_uniform
+4,4136730,Zone1_RightPerimeter,hvac_object_name,Zone1_RightPerimeter Ideal Loads,,,random_uniform
+4,4136730,Zone1_RightPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+4,4136730,Zone1_RightPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+4,4136730,Zone1_RightPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+4,4136730,Zone1_RightPerimeter,thermostat_name,Zone1_RightPerimeter CONTROLS,,,random_uniform
+4,4136730,Zone1_RightPerimeter,thermostat_dualsetpoint_name,Zone1_RightPerimeter SETPOINTS,,,random_uniform
+4,4136730,Zone1_RearPerimeter,hvac_object_name,Zone1_RearPerimeter Ideal Loads,,,random_uniform
+4,4136730,Zone1_RearPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+4,4136730,Zone1_RearPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+4,4136730,Zone1_RearPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+4,4136730,Zone1_RearPerimeter,thermostat_name,Zone1_RearPerimeter CONTROLS,,,random_uniform
+4,4136730,Zone1_RearPerimeter,thermostat_dualsetpoint_name,Zone1_RearPerimeter SETPOINTS,,,random_uniform
+4,4136730,Zone1_LeftPerimeter,hvac_object_name,Zone1_LeftPerimeter Ideal Loads,,,random_uniform
+4,4136730,Zone1_LeftPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+4,4136730,Zone1_LeftPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+4,4136730,Zone1_LeftPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+4,4136730,Zone1_LeftPerimeter,thermostat_name,Zone1_LeftPerimeter CONTROLS,,,random_uniform
+4,4136730,Zone1_LeftPerimeter,thermostat_dualsetpoint_name,Zone1_LeftPerimeter SETPOINTS,,,random_uniform
+4,4136730,Zone1_Core,hvac_object_name,Zone1_Core Ideal Loads,,,random_uniform
+4,4136730,Zone1_Core,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+4,4136730,Zone1_Core,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+4,4136730,Zone1_Core,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+4,4136730,Zone1_Core,thermostat_name,Zone1_Core CONTROLS,,,random_uniform
+4,4136730,Zone1_Core,thermostat_dualsetpoint_name,Zone1_Core SETPOINTS,,,random_uniform
+4,4136730,Zone2_FrontPerimeter,hvac_object_name,Zone2_FrontPerimeter Ideal Loads,,,random_uniform
+4,4136730,Zone2_FrontPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+4,4136730,Zone2_FrontPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+4,4136730,Zone2_FrontPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+4,4136730,Zone2_FrontPerimeter,thermostat_name,Zone2_FrontPerimeter CONTROLS,,,random_uniform
+4,4136730,Zone2_FrontPerimeter,thermostat_dualsetpoint_name,Zone2_FrontPerimeter SETPOINTS,,,random_uniform
+4,4136730,Zone2_RightPerimeter,hvac_object_name,Zone2_RightPerimeter Ideal Loads,,,random_uniform
+4,4136730,Zone2_RightPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+4,4136730,Zone2_RightPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+4,4136730,Zone2_RightPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+4,4136730,Zone2_RightPerimeter,thermostat_name,Zone2_RightPerimeter CONTROLS,,,random_uniform
+4,4136730,Zone2_RightPerimeter,thermostat_dualsetpoint_name,Zone2_RightPerimeter SETPOINTS,,,random_uniform
+4,4136730,Zone2_RearPerimeter,hvac_object_name,Zone2_RearPerimeter Ideal Loads,,,random_uniform
+4,4136730,Zone2_RearPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+4,4136730,Zone2_RearPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+4,4136730,Zone2_RearPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+4,4136730,Zone2_RearPerimeter,thermostat_name,Zone2_RearPerimeter CONTROLS,,,random_uniform
+4,4136730,Zone2_RearPerimeter,thermostat_dualsetpoint_name,Zone2_RearPerimeter SETPOINTS,,,random_uniform
+4,4136730,Zone2_LeftPerimeter,hvac_object_name,Zone2_LeftPerimeter Ideal Loads,,,random_uniform
+4,4136730,Zone2_LeftPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+4,4136730,Zone2_LeftPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+4,4136730,Zone2_LeftPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+4,4136730,Zone2_LeftPerimeter,thermostat_name,Zone2_LeftPerimeter CONTROLS,,,random_uniform
+4,4136730,Zone2_LeftPerimeter,thermostat_dualsetpoint_name,Zone2_LeftPerimeter SETPOINTS,,,random_uniform
+4,4136730,Zone2_Core,hvac_object_name,Zone2_Core Ideal Loads,,,random_uniform
+4,4136730,Zone2_Core,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+4,4136730,Zone2_Core,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+4,4136730,Zone2_Core,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+4,4136730,Zone2_Core,thermostat_name,Zone2_Core CONTROLS,,,random_uniform
+4,4136730,Zone2_Core,thermostat_dualsetpoint_name,Zone2_Core SETPOINTS,,,random_uniform
+4,4136730,Zone3_FrontPerimeter,hvac_object_name,Zone3_FrontPerimeter Ideal Loads,,,random_uniform
+4,4136730,Zone3_FrontPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+4,4136730,Zone3_FrontPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+4,4136730,Zone3_FrontPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+4,4136730,Zone3_FrontPerimeter,thermostat_name,Zone3_FrontPerimeter CONTROLS,,,random_uniform
+4,4136730,Zone3_FrontPerimeter,thermostat_dualsetpoint_name,Zone3_FrontPerimeter SETPOINTS,,,random_uniform
+4,4136730,Zone3_RightPerimeter,hvac_object_name,Zone3_RightPerimeter Ideal Loads,,,random_uniform
+4,4136730,Zone3_RightPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+4,4136730,Zone3_RightPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+4,4136730,Zone3_RightPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+4,4136730,Zone3_RightPerimeter,thermostat_name,Zone3_RightPerimeter CONTROLS,,,random_uniform
+4,4136730,Zone3_RightPerimeter,thermostat_dualsetpoint_name,Zone3_RightPerimeter SETPOINTS,,,random_uniform
+4,4136730,Zone3_RearPerimeter,hvac_object_name,Zone3_RearPerimeter Ideal Loads,,,random_uniform
+4,4136730,Zone3_RearPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+4,4136730,Zone3_RearPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+4,4136730,Zone3_RearPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+4,4136730,Zone3_RearPerimeter,thermostat_name,Zone3_RearPerimeter CONTROLS,,,random_uniform
+4,4136730,Zone3_RearPerimeter,thermostat_dualsetpoint_name,Zone3_RearPerimeter SETPOINTS,,,random_uniform
+4,4136730,Zone3_LeftPerimeter,hvac_object_name,Zone3_LeftPerimeter Ideal Loads,,,random_uniform
+4,4136730,Zone3_LeftPerimeter,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+4,4136730,Zone3_LeftPerimeter,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+4,4136730,Zone3_LeftPerimeter,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+4,4136730,Zone3_LeftPerimeter,thermostat_name,Zone3_LeftPerimeter CONTROLS,,,random_uniform
+4,4136730,Zone3_LeftPerimeter,thermostat_dualsetpoint_name,Zone3_LeftPerimeter SETPOINTS,,,random_uniform
+4,4136730,Zone3_Core,hvac_object_name,Zone3_Core Ideal Loads,,,random_uniform
+4,4136730,Zone3_Core,hvac_object_type,ZONEHVAC:IDEALLOADSAIRSYSTEM,,,random_uniform
+4,4136730,Zone3_Core,heating_setpoint_schedule,ZONE HEATING SETPOINTS,,,random_uniform
+4,4136730,Zone3_Core,cooling_setpoint_schedule,ZONE COOLING SETPOINTS,,,random_uniform
+4,4136730,Zone3_Core,thermostat_name,Zone3_Core CONTROLS,,,random_uniform
+4,4136730,Zone3_Core,thermostat_dualsetpoint_name,Zone3_Core SETPOINTS,,,random_uniform

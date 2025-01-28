@@ -1,8 +1,8 @@
 ogc_fid,param_name,param_value
-4136730,infiltration_base,1.2278853596915769
-4136730,infiltration_base_range,"(1.1, 1.3)"
-4136730,year_factor,0.9050021510445334
-4136730,year_factor_range,"(0.9, 1.1)"
+4136730,infiltration_base,100.36394267984579
+4136730,infiltration_base_range,"(100.3, 100.4)"
+4136730,year_factor,21.402501075522267
+4136730,year_factor_range,"(21.4, 21.5)"
 4136730,fan_pressure,0.0
 4136730,fan_pressure_range,"(0.0, 0.0)"
 4136730,f_ctrl,0.9223210738148823
@@ -13,7 +13,7 @@ ogc_fid,param_name,param_value
 4136730,ventilation_schedule_name,VentSched_DayNight
 4136730,system_type,A
 4136730,flow_exponent,0.67
-4136730,infiltration_total_m3_s,0.0019798221857973927
+4136730,infiltration_total_m3_s,3.8270223208617793
 4136730,ventilation_total_m3_s,0.035
 4136732,infiltration_base,0.6278853596915768
 4136732,infiltration_base_range,"(0.5, 0.7)"

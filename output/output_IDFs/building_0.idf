@@ -174,7 +174,7 @@ SCHEDULE:COMPACT,
     Temperature,              !- Schedule Type Limits Name
     Through: 12/31,           !- Field 1
     For: AllDays,             !- Field 2
-    Until: 24:00, 588.9317909948885;    !- Field 3
+    Until: 24:00, 59.472942428328025;    !- Field 3
 
 SCHEDULE:COMPACT,
     ZONE CONTROL TYPE SCHEDULE,    !- Name
@@ -778,6 +778,24 @@ ZONE,
     ,                         !- Zone Inside Convection Algorithm
     ,                         !- Zone Outside Convection Algorithm
     Yes;                      !- Part of Total Floor Area
+
+ZONELIST,
+    ALL_ZONES,                !- Name
+    Zone1_FrontPerimeter,     !- Zone 1 Name
+    Zone1_RightPerimeter,     !- Zone 2 Name
+    Zone1_RearPerimeter,      !- Zone 3 Name
+    Zone1_LeftPerimeter,      !- Zone 4 Name
+    Zone1_Core,               !- Zone 5 Name
+    Zone2_FrontPerimeter,     !- Zone 6 Name
+    Zone2_RightPerimeter,     !- Zone 7 Name
+    Zone2_RearPerimeter,      !- Zone 8 Name
+    Zone2_LeftPerimeter,      !- Zone 9 Name
+    Zone2_Core,               !- Zone 10 Name
+    Zone3_FrontPerimeter,     !- Zone 11 Name
+    Zone3_RightPerimeter,     !- Zone 12 Name
+    Zone3_RearPerimeter,      !- Zone 13 Name
+    Zone3_LeftPerimeter,      !- Zone 14 Name
+    Zone3_Core;               !- Zone 15 Name
 
 BUILDINGSURFACE:DETAILED,
     Zone1_FrontPerimeter_Floor,    !- Name
