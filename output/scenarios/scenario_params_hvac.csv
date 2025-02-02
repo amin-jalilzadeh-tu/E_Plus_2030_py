@@ -1,9 +1,9 @@
 scenario_index,ogc_fid,zone_name,param_name,param_value,param_min,param_max,picking_method
 0,4136730,,heating_day_setpoint,10.639426798457883,10.0,11.0,random_uniform
-0,4136730,,heating_night_setpoint,15.025010755222667,15.0,16.0,random_uniform
+0,4136730,,heating_night_setpoint,16.0,16.0,16.0,random_uniform
 0,4136730,,cooling_day_setpoint,25.6,25.6,25.6,random_uniform
-0,4136730,,cooling_night_setpoint,26.446421476297644,26.0,28.0,random_uniform
-0,4136730,,max_heating_supply_air_temp,52.364712141640126,45.0,55.0,random_uniform
+0,4136730,,cooling_night_setpoint,26.223210738148822,26.0,27.0,random_uniform
+0,4136730,,max_heating_supply_air_temp,49.63105969982962,48.6,50.0,random_uniform
 0,4136730,,min_cooling_supply_air_temp,13.353398974845822,12.0,14.0,random_uniform
 0,4136730,,schedule_details,"{'day_start': '07:00', 'day_end': '23:00', 'occupancy_schedule': {'weekday': 'FullOccupancy', 'weekend': 'FullOccupancy'}}",,,random_uniform
 0,4136730,Zone1_FrontPerimeter,hvac_object_name,Zone1_FrontPerimeter Ideal Loads,,,random_uniform
@@ -97,10 +97,10 @@ scenario_index,ogc_fid,zone_name,param_name,param_value,param_min,param_max,pick
 0,4136730,Zone3_Core,thermostat_name,Zone3_Core CONTROLS,,,random_uniform
 0,4136730,Zone3_Core,thermostat_dualsetpoint_name,Zone3_Core SETPOINTS,,,random_uniform
 1,4136730,,heating_day_setpoint,10.892179567704845,10.0,11.0,random_uniform
-1,4136730,,heating_night_setpoint,15.086938832629416,15.0,16.0,random_uniform
+1,4136730,,heating_night_setpoint,16.0,16.0,16.0,random_uniform
 1,4136730,,cooling_day_setpoint,25.6,25.6,25.6,random_uniform
-1,4136730,,cooling_night_setpoint,26.05959443887614,26.0,28.0,random_uniform
-1,4136730,,max_heating_supply_air_temp,47.18637974803603,45.0,55.0,random_uniform
+1,4136730,,cooling_night_setpoint,26.02979721943807,26.0,27.0,random_uniform
+1,4136730,,max_heating_supply_air_temp,48.90609316472504,48.6,50.0,random_uniform
 1,4136730,,min_cooling_supply_air_temp,13.010710576206725,12.0,14.0,random_uniform
 1,4136730,,schedule_details,"{'day_start': '07:00', 'day_end': '23:00', 'occupancy_schedule': {'weekday': 'FullOccupancy', 'weekend': 'FullOccupancy'}}",,,random_uniform
 1,4136730,Zone1_FrontPerimeter,hvac_object_name,Zone1_FrontPerimeter Ideal Loads,,,random_uniform
@@ -194,10 +194,10 @@ scenario_index,ogc_fid,zone_name,param_name,param_value,param_min,param_max,pick
 1,4136730,Zone3_Core,thermostat_name,Zone3_Core CONTROLS,,,random_uniform
 1,4136730,Zone3_Core,thermostat_dualsetpoint_name,Zone3_Core SETPOINTS,,,random_uniform
 2,4136730,,heating_day_setpoint,10.026535969683863,10.0,11.0,random_uniform
-2,4136730,,heating_night_setpoint,15.198837650686649,15.0,16.0,random_uniform
+2,4136730,,heating_night_setpoint,16.0,16.0,16.0,random_uniform
 2,4136730,,cooling_day_setpoint,25.6,25.6,25.6,random_uniform
-2,4136730,,cooling_night_setpoint,27.089882961206435,26.0,28.0,random_uniform
-2,4136730,,max_heating_supply_air_temp,47.204406220406966,45.0,55.0,random_uniform
+2,4136730,,cooling_night_setpoint,26.544941480603217,26.0,27.0,random_uniform
+2,4136730,,max_heating_supply_air_temp,48.908616870856974,48.6,50.0,random_uniform
 2,4136730,,min_cooling_supply_air_temp,13.178531367751818,12.0,14.0,random_uniform
 2,4136730,,schedule_details,"{'day_start': '07:00', 'day_end': '23:00', 'occupancy_schedule': {'weekday': 'FullOccupancy', 'weekend': 'FullOccupancy'}}",,,random_uniform
 2,4136730,Zone1_FrontPerimeter,hvac_object_name,Zone1_FrontPerimeter Ideal Loads,,,random_uniform
@@ -291,10 +291,10 @@ scenario_index,ogc_fid,zone_name,param_name,param_value,param_min,param_max,pick
 2,4136730,Zone3_Core,thermostat_name,Zone3_Core CONTROLS,,,random_uniform
 2,4136730,Zone3_Core,thermostat_dualsetpoint_name,Zone3_Core SETPOINTS,,,random_uniform
 3,4136730,,heating_day_setpoint,10.809430456677827,10.0,11.0,random_uniform
-3,4136730,,heating_night_setpoint,15.006498759678061,15.0,16.0,random_uniform
+3,4136730,,heating_night_setpoint,16.0,16.0,16.0,random_uniform
 3,4136730,,cooling_day_setpoint,25.6,25.6,25.6,random_uniform
-3,4136730,,cooling_night_setpoint,27.396278789976453,26.0,28.0,random_uniform
-3,4136730,,max_heating_supply_air_temp,48.40250516517992,45.0,55.0,random_uniform
+3,4136730,,cooling_night_setpoint,26.698139394988228,26.0,27.0,random_uniform
+3,4136730,,max_heating_supply_air_temp,49.07635072312519,48.6,50.0,random_uniform
 3,4136730,,min_cooling_supply_air_temp,12.310958999623564,12.0,14.0,random_uniform
 3,4136730,,schedule_details,"{'day_start': '07:00', 'day_end': '23:00', 'occupancy_schedule': {'weekday': 'FullOccupancy', 'weekend': 'FullOccupancy'}}",,,random_uniform
 3,4136730,Zone1_FrontPerimeter,hvac_object_name,Zone1_FrontPerimeter Ideal Loads,,,random_uniform
@@ -388,10 +388,10 @@ scenario_index,ogc_fid,zone_name,param_name,param_value,param_min,param_max,pick
 3,4136730,Zone3_Core,thermostat_name,Zone3_Core CONTROLS,,,random_uniform
 3,4136730,Zone3_Core,thermostat_dualsetpoint_name,Zone3_Core SETPOINTS,,,random_uniform
 4,4136730,,heating_day_setpoint,10.95721307220678,10.0,11.0,random_uniform
-4,4136730,,heating_night_setpoint,15.336594545112627,15.0,16.0,random_uniform
+4,4136730,,heating_night_setpoint,16.0,16.0,16.0,random_uniform
 4,4136730,,cooling_day_setpoint,25.6,25.6,25.6,random_uniform
-4,4136730,,cooling_night_setpoint,26.19343275366693,26.0,28.0,random_uniform
-4,4136730,,max_heating_supply_air_temp,53.4749436634746,45.0,55.0,random_uniform
+4,4136730,,cooling_night_setpoint,26.096716376833463,26.0,27.0,random_uniform
+4,4136730,,max_heating_supply_air_temp,49.78649211288644,48.6,50.0,random_uniform
 4,4136730,,min_cooling_supply_air_temp,13.207452062733783,12.0,14.0,random_uniform
 4,4136730,,schedule_details,"{'day_start': '07:00', 'day_end': '23:00', 'occupancy_schedule': {'weekday': 'FullOccupancy', 'weekend': 'FullOccupancy'}}",,,random_uniform
 4,4136730,Zone1_FrontPerimeter,hvac_object_name,Zone1_FrontPerimeter Ideal Loads,,,random_uniform

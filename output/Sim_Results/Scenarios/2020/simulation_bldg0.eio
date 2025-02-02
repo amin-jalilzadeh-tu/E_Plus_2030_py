@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.01.28 12:57
+Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.02.02 01:33
 ! <Version>, Version ID
  Version, 23.2
 ! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
@@ -205,65 +205,65 @@ Zone Volume Capacitance Multiplier,   1.000 ,   1.000,   1.000,   1.000
  Cooling Sizing Factor Information, Global,   1.0000    
 ! <Zone Sizing Information>, Zone Name, Load Type, Calc Des Load {W}, User Des Load {W}, Calc Des Air Flow Rate {m3/s}, User Des Air Flow Rate {m3/s}, Design Day Name, Date/Time of Peak, Temperature at Peak {C}, Humidity Ratio at Peak {kgWater/kgDryAir}, Floor Area {m2}, # Occupants, Calc Outdoor Air Flow Rate {m3/s}, Calc DOAS Heat Addition Rate {W}
  Zone Sizing Information, ZONE1_FRONTPERIMETER, Cooling, 653.56542, 653.56542, 4.63385E-002, 4.63385E-002, NETHERLANDS ANN CLG 1% CONDNS DB=>MWB, 7/21 15:00:00, 28.00000, 7.54161E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
- Zone Sizing Information, ZONE1_FRONTPERIMETER, Heating, 7149.62116, 7149.62116, 0.17653, 0.17653, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
+ Zone Sizing Information, ZONE1_FRONTPERIMETER, Heating, 7553.31804, 7553.31804, 0.19204, 0.19204, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
  Zone Sizing Information, ZONE1_RIGHTPERIMETER, Cooling, 555.92063, 555.92063, 3.94164E-002, 3.94164E-002, NETHERLANDS ANN CLG 1% CONDNS DB=>MWB, 7/21 15:00:00, 28.00000, 7.54161E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
- Zone Sizing Information, ZONE1_RIGHTPERIMETER, Heating, 6990.71372, 6990.71372, 0.17261, 0.17261, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
+ Zone Sizing Information, ZONE1_RIGHTPERIMETER, Heating, 7386.26601, 7386.26601, 0.18782, 0.18782, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
  Zone Sizing Information, ZONE1_REARPERIMETER, Cooling, 575.20857, 575.20857, 4.07842E-002, 4.07842E-002, NETHERLANDS ANN CLG 1% CONDNS DB=>MWB, 7/21 15:00:00, 28.00000, 7.54161E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
- Zone Sizing Information, ZONE1_REARPERIMETER, Heating, 7149.62124, 7149.62124, 0.17653, 0.17653, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
+ Zone Sizing Information, ZONE1_REARPERIMETER, Heating, 7553.31797, 7553.31797, 0.19204, 0.19204, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
  Zone Sizing Information, ZONE1_LEFTPERIMETER, Cooling, 648.65704, 648.65704, 4.59900E-002, 4.59900E-002, NETHERLANDS ANN CLG 1% CONDNS DB=>MWB, 7/21 15:00:00, 28.00000, 7.54161E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
- Zone Sizing Information, ZONE1_LEFTPERIMETER, Heating, 7092.33646, 7092.33646, 0.17512, 0.17512, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
+ Zone Sizing Information, ZONE1_LEFTPERIMETER, Heating, 7490.11568, 7490.11568, 0.19047, 0.19047, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
  Zone Sizing Information, ZONE1_CORE, Cooling, 670.80141, 670.80141, 4.75581E-002, 4.75581E-002, NETHERLANDS ANN CLG 1% CONDNS DB=>MWB, 7/21 15:00:00, 28.00000, 7.54161E-003, 2.00000, 0.00000, 6.10000E-004, 0.00000
- Zone Sizing Information, ZONE1_CORE, Heating, 6926.05098, 6926.05098, 0.17100, 0.17100, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 2.00000, 0.00000, 6.10000E-004, 0.00000
+ Zone Sizing Information, ZONE1_CORE, Heating, 7283.49048, 7283.49048, 0.18520, 0.18520, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 2.00000, 0.00000, 6.10000E-004, 0.00000
  Zone Sizing Information, ZONE2_FRONTPERIMETER, Cooling, 660.04919, 660.04919, 4.67980E-002, 4.67980E-002, NETHERLANDS ANN CLG 1% CONDNS DB=>MWB, 7/21 15:00:00, 28.00000, 7.54161E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
- Zone Sizing Information, ZONE2_FRONTPERIMETER, Heating, 7133.28227, 7133.28227, 0.17612, 0.17612, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
+ Zone Sizing Information, ZONE2_FRONTPERIMETER, Heating, 7539.74631, 7539.74631, 0.19170, 0.19170, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
  Zone Sizing Information, ZONE2_RIGHTPERIMETER, Cooling, 559.56868, 559.56868, 3.96750E-002, 3.96750E-002, NETHERLANDS ANN CLG 1% CONDNS DB=>MWB, 7/21 15:00:00, 28.00000, 7.54161E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
- Zone Sizing Information, ZONE2_RIGHTPERIMETER, Heating, 6979.99576, 6979.99576, 0.17235, 0.17235, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
+ Zone Sizing Information, ZONE2_RIGHTPERIMETER, Heating, 7373.98981, 7373.98981, 0.18751, 0.18751, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
  Zone Sizing Information, ZONE2_REARPERIMETER, Cooling, 583.55775, 583.55775, 4.13761E-002, 4.13761E-002, NETHERLANDS ANN CLG 1% CONDNS DB=>MWB, 7/21 15:00:00, 28.00000, 7.54161E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
- Zone Sizing Information, ZONE2_REARPERIMETER, Heating, 7133.28214, 7133.28214, 0.17612, 0.17612, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
+ Zone Sizing Information, ZONE2_REARPERIMETER, Heating, 7539.74618, 7539.74618, 0.19170, 0.19170, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
  Zone Sizing Information, ZONE2_LEFTPERIMETER, Cooling, 650.76893, 650.76893, 4.61396E-002, 4.61396E-002, NETHERLANDS ANN CLG 1% CONDNS DB=>MWB, 7/21 15:00:00, 28.00000, 7.54161E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
- Zone Sizing Information, ZONE2_LEFTPERIMETER, Heating, 7085.15036, 7085.15036, 0.17495, 0.17495, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
+ Zone Sizing Information, ZONE2_LEFTPERIMETER, Heating, 7481.67945, 7481.67945, 0.19025, 0.19025, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
  Zone Sizing Information, ZONE2_CORE, Cooling, 669.57986, 669.57986, 4.74715E-002, 4.74715E-002, NETHERLANDS ANN CLG 1% CONDNS DB=>MWB, 7/21 15:00:00, 28.00000, 7.54161E-003, 2.00000, 0.00000, 6.10000E-004, 0.00000
- Zone Sizing Information, ZONE2_CORE, Heating, 6924.83815, 6924.83815, 0.17097, 0.17097, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 2.00000, 0.00000, 6.10000E-004, 0.00000
+ Zone Sizing Information, ZONE2_CORE, Heating, 7281.78957, 7281.78957, 0.18515, 0.18515, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 2.00000, 0.00000, 6.10000E-004, 0.00000
  Zone Sizing Information, ZONE3_FRONTPERIMETER, Cooling, 676.48414, 676.48414, 4.79628E-002, 4.79628E-002, NETHERLANDS ANN CLG 1% CONDNS DB=>MWB, 7/21 15:00:00, 28.00000, 7.54161E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
- Zone Sizing Information, ZONE3_FRONTPERIMETER, Heating, 7224.38828, 7224.38828, 0.17837, 0.17837, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
+ Zone Sizing Information, ZONE3_FRONTPERIMETER, Heating, 7628.29360, 7628.29360, 0.19395, 0.19395, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
  Zone Sizing Information, ZONE3_RIGHTPERIMETER, Cooling, 572.14769, 572.14769, 4.05667E-002, 4.05667E-002, NETHERLANDS ANN CLG 1% CONDNS DB=>MWB, 7/21 15:00:00, 28.00000, 7.54161E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
- Zone Sizing Information, ZONE3_RIGHTPERIMETER, Heating, 7026.15967, 7026.15967, 0.17349, 0.17349, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
+ Zone Sizing Information, ZONE3_RIGHTPERIMETER, Heating, 7421.94275, 7421.94275, 0.18873, 0.18873, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
  Zone Sizing Information, ZONE3_REARPERIMETER, Cooling, 604.35897, 604.35897, 4.28506E-002, 4.28506E-002, NETHERLANDS ANN CLG 1% CONDNS DB=>MWB, 7/21 15:00:00, 28.00000, 7.54161E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
- Zone Sizing Information, ZONE3_REARPERIMETER, Heating, 7224.38822, 7224.38822, 0.17837, 0.17837, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
+ Zone Sizing Information, ZONE3_REARPERIMETER, Heating, 7628.29341, 7628.29341, 0.19395, 0.19395, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 8.75000, 0.00000, 2.66875E-003, 0.00000
  Zone Sizing Information, ZONE3_LEFTPERIMETER, Cooling, 658.80936, 658.80936, 4.67095E-002, 4.67095E-002, NETHERLANDS ANN CLG 1% CONDNS DB=>MWB, 7/21 15:00:00, 28.00000, 7.54161E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
- Zone Sizing Information, ZONE3_LEFTPERIMETER, Heating, 7137.43481, 7137.43481, 0.17624, 0.17624, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
+ Zone Sizing Information, ZONE3_LEFTPERIMETER, Heating, 7525.96384, 7525.96384, 0.19138, 0.19138, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 5.25000, 0.00000, 1.60125E-003, 0.00000
  Zone Sizing Information, ZONE3_CORE, Cooling, 671.73367, 671.73367, 4.76241E-002, 4.76241E-002, NETHERLANDS ANN CLG 1% CONDNS DB=>MWB, 7/21 15:00:00, 28.00000, 7.54161E-003, 2.00000, 0.00000, 6.10000E-004, 0.00000
- Zone Sizing Information, ZONE3_CORE, Heating, 6945.70057, 6945.70057, 0.17149, 0.17149, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 2.00000, 0.00000, 6.10000E-004, 0.00000
+ Zone Sizing Information, ZONE3_CORE, Heating, 7303.16398, 7303.16398, 0.18570, 0.18570, NETHERLANDS ANN HTG 99.6% CONDNS DB, 1/21 20:00:00, -5.00000, 2.45958E-003, 2.00000, 0.00000, 6.10000E-004, 0.00000
 ! <Component Sizing Information>, Component Type, Component Name, Input Field Description, Value
- Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE1_FRONTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.17653
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE1_FRONTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.19204
  Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE1_FRONTPERIMETER IDEAL LOADS, Design Size Maximum Cooling Air Flow Rate [m3/s], 4.63385E-002
- Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE1_RIGHTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.17261
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE1_RIGHTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.18782
  Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE1_RIGHTPERIMETER IDEAL LOADS, Design Size Maximum Cooling Air Flow Rate [m3/s], 3.94164E-002
- Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE1_REARPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.17653
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE1_REARPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.19204
  Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE1_REARPERIMETER IDEAL LOADS, Design Size Maximum Cooling Air Flow Rate [m3/s], 4.07842E-002
- Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE1_LEFTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.17512
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE1_LEFTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.19047
  Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE1_LEFTPERIMETER IDEAL LOADS, Design Size Maximum Cooling Air Flow Rate [m3/s], 4.59900E-002
- Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE1_CORE IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.17100
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE1_CORE IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.18520
  Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE1_CORE IDEAL LOADS, Design Size Maximum Cooling Air Flow Rate [m3/s], 4.75581E-002
- Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE2_FRONTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.17612
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE2_FRONTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.19170
  Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE2_FRONTPERIMETER IDEAL LOADS, Design Size Maximum Cooling Air Flow Rate [m3/s], 4.67980E-002
- Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE2_RIGHTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.17235
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE2_RIGHTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.18751
  Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE2_RIGHTPERIMETER IDEAL LOADS, Design Size Maximum Cooling Air Flow Rate [m3/s], 3.96750E-002
- Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE2_REARPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.17612
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE2_REARPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.19170
  Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE2_REARPERIMETER IDEAL LOADS, Design Size Maximum Cooling Air Flow Rate [m3/s], 4.13761E-002
- Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE2_LEFTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.17495
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE2_LEFTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.19025
  Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE2_LEFTPERIMETER IDEAL LOADS, Design Size Maximum Cooling Air Flow Rate [m3/s], 4.61396E-002
- Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE2_CORE IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.17097
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE2_CORE IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.18515
  Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE2_CORE IDEAL LOADS, Design Size Maximum Cooling Air Flow Rate [m3/s], 4.74715E-002
- Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE3_FRONTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.17837
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE3_FRONTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.19395
  Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE3_FRONTPERIMETER IDEAL LOADS, Design Size Maximum Cooling Air Flow Rate [m3/s], 4.79628E-002
- Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE3_RIGHTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.17349
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE3_RIGHTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.18873
  Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE3_RIGHTPERIMETER IDEAL LOADS, Design Size Maximum Cooling Air Flow Rate [m3/s], 4.05667E-002
- Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE3_REARPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.17837
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE3_REARPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.19395
  Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE3_REARPERIMETER IDEAL LOADS, Design Size Maximum Cooling Air Flow Rate [m3/s], 4.28506E-002
- Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE3_LEFTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.17624
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE3_LEFTPERIMETER IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.19138
  Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE3_LEFTPERIMETER IDEAL LOADS, Design Size Maximum Cooling Air Flow Rate [m3/s], 4.67095E-002
- Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE3_CORE IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.17149
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE3_CORE IDEAL LOADS, Design Size Maximum Heating Air Flow Rate [m3/s], 0.18570
  Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, ZONE3_CORE IDEAL LOADS, Design Size Maximum Cooling Air Flow Rate [m3/s], 4.76241E-002
 Water Heater Information,WaterHeater:Mixed,MYDHW_0_WATERHEATER,0.2775,4223.2,0.903,0.6913
 Water Heater Information,WaterHeater:Mixed,SCENARIO_0_WATERHEATER,0.2525,4275.0,0.937,0.9378
@@ -277,21 +277,21 @@ Environment:WarmupDays,  2
 ! <Tabular Report>,Style,Unit Conversion
 Tabular Report,HTML,None
 ! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
- Warmup Convergence Information,ZONE1_FRONTPERIMETER,RunPeriod: RUN PERIOD 1,9.1458333333E-002,0.6213367839,Pass,Pass,2.2157047157E-002,8.2271038515E-002,Pass,Pass
- Warmup Convergence Information,ZONE1_RIGHTPERIMETER,RunPeriod: RUN PERIOD 1,9.1458333333E-002,0.6216662702,Pass,Pass,2.2392414904E-002,8.7167399700E-002,Pass,Pass
- Warmup Convergence Information,ZONE1_REARPERIMETER,RunPeriod: RUN PERIOD 1,9.1458333333E-002,0.6212921916,Pass,Pass,2.1924714445E-002,8.2270942907E-002,Pass,Pass
- Warmup Convergence Information,ZONE1_LEFTPERIMETER,RunPeriod: RUN PERIOD 1,9.1458333333E-002,0.6214499227,Pass,Pass,2.1146523935E-002,8.0892151692E-002,Pass,Pass
- Warmup Convergence Information,ZONE1_CORE,RunPeriod: RUN PERIOD 1,9.1458333333E-002,0.6210535541,Pass,Pass,1.9725069487E-002,7.2456529953E-002,Pass,Pass
- Warmup Convergence Information,ZONE2_FRONTPERIMETER,RunPeriod: RUN PERIOD 1,9.1458333333E-002,0.6210004537,Pass,Pass,2.2668321721E-002,8.5656171360E-002,Pass,Pass
- Warmup Convergence Information,ZONE2_RIGHTPERIMETER,RunPeriod: RUN PERIOD 1,9.1458333333E-002,0.6217559196,Pass,Pass,2.2661107157E-002,9.0155385919E-002,Pass,Pass
- Warmup Convergence Information,ZONE2_REARPERIMETER,RunPeriod: RUN PERIOD 1,9.1458333333E-002,0.6210659510,Pass,Pass,2.2441898607E-002,8.4948339039E-002,Pass,Pass
- Warmup Convergence Information,ZONE2_LEFTPERIMETER,RunPeriod: RUN PERIOD 1,9.1458333333E-002,0.6215016399,Pass,Pass,2.1443794768E-002,8.2569180600E-002,Pass,Pass
- Warmup Convergence Information,ZONE2_CORE,RunPeriod: RUN PERIOD 1,9.1458333333E-002,0.6210859274,Pass,Pass,1.9891388309E-002,7.3288764188E-002,Pass,Pass
- Warmup Convergence Information,ZONE3_FRONTPERIMETER,RunPeriod: RUN PERIOD 1,9.1458333333E-002,0.6213148233,Pass,Pass,2.1918800963E-002,8.2386827277E-002,Pass,Pass
- Warmup Convergence Information,ZONE3_RIGHTPERIMETER,RunPeriod: RUN PERIOD 1,9.1458333333E-002,0.6216714215,Pass,Pass,2.2206244465E-002,8.7668098157E-002,Pass,Pass
- Warmup Convergence Information,ZONE3_REARPERIMETER,RunPeriod: RUN PERIOD 1,9.1458333333E-002,0.6213944390,Pass,Pass,2.1698669431E-002,8.1608230397E-002,Pass,Pass
- Warmup Convergence Information,ZONE3_LEFTPERIMETER,RunPeriod: RUN PERIOD 1,9.1458333333E-002,0.6213979357,Pass,Pass,2.0983823408E-002,7.9751829614E-002,Pass,Pass
- Warmup Convergence Information,ZONE3_CORE,RunPeriod: RUN PERIOD 1,9.1458333333E-002,0.6210439831,Pass,Pass,1.9719962730E-002,7.2462140558E-002,Pass,Pass
+ Warmup Convergence Information,ZONE1_FRONTPERIMETER,RunPeriod: RUN PERIOD 1,0.1116666667,0.7542624676,Pass,Pass,2.4966916082E-002,0.1029714308,Pass,Pass
+ Warmup Convergence Information,ZONE1_RIGHTPERIMETER,RunPeriod: RUN PERIOD 1,0.1116666667,0.7602571776,Pass,Pass,2.4972788128E-002,0.1045734517,Pass,Pass
+ Warmup Convergence Information,ZONE1_REARPERIMETER,RunPeriod: RUN PERIOD 1,0.1116666667,0.7542304469,Pass,Pass,2.4940491725E-002,0.1030777849,Pass,Pass
+ Warmup Convergence Information,ZONE1_LEFTPERIMETER,RunPeriod: RUN PERIOD 1,0.1116666667,0.7601643720,Pass,Pass,2.3569751148E-002,0.1011758562,Pass,Pass
+ Warmup Convergence Information,ZONE1_CORE,RunPeriod: RUN PERIOD 1,0.1116666667,0.7596563929,Pass,Pass,2.1542753434E-002,8.6726322308E-002,Pass,Pass
+ Warmup Convergence Information,ZONE2_FRONTPERIMETER,RunPeriod: RUN PERIOD 1,0.1116666667,0.7545325770,Pass,Pass,2.5231021239E-002,0.1013250895,Pass,Pass
+ Warmup Convergence Information,ZONE2_RIGHTPERIMETER,RunPeriod: RUN PERIOD 1,0.1116666667,0.7603469587,Pass,Pass,2.5349494847E-002,0.1081934335,Pass,Pass
+ Warmup Convergence Information,ZONE2_REARPERIMETER,RunPeriod: RUN PERIOD 1,0.1116666667,0.7544472050,Pass,Pass,2.4964142007E-002,0.1019114862,Pass,Pass
+ Warmup Convergence Information,ZONE2_LEFTPERIMETER,RunPeriod: RUN PERIOD 1,0.1116666667,0.7601408877,Pass,Pass,2.3826276966E-002,0.1005040174,Pass,Pass
+ Warmup Convergence Information,ZONE2_CORE,RunPeriod: RUN PERIOD 1,0.1116666667,0.7596901589,Pass,Pass,2.1740080898E-002,8.7781905360E-002,Pass,Pass
+ Warmup Convergence Information,ZONE3_FRONTPERIMETER,RunPeriod: RUN PERIOD 1,0.1116666667,0.7542576423,Pass,Pass,2.4938809581E-002,0.1031577700,Pass,Pass
+ Warmup Convergence Information,ZONE3_RIGHTPERIMETER,RunPeriod: RUN PERIOD 1,0.1116666667,0.7602527173,Pass,Pass,2.4787780963E-002,0.1047900456,Pass,Pass
+ Warmup Convergence Information,ZONE3_REARPERIMETER,RunPeriod: RUN PERIOD 1,0.1116666667,0.7542404446,Pass,Pass,2.4872206555E-002,0.1031456039,Pass,Pass
+ Warmup Convergence Information,ZONE3_LEFTPERIMETER,RunPeriod: RUN PERIOD 1,0.1116666667,0.7601475156,Pass,Pass,2.3514350575E-002,0.1011222083,Pass,Pass
+ Warmup Convergence Information,ZONE3_CORE,RunPeriod: RUN PERIOD 1,0.1116666667,0.7596425633,Pass,Pass,2.1511391389E-002,8.6625682269E-002,Pass,Pass
 ! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
 Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
 End of Data

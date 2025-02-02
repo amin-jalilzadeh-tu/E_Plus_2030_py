@@ -188,18 +188,18 @@ SCHEDULE:COMPACT,
     Temperature,              !- Schedule Type Limits Name
     Through: 12/31,           !- Field 1
     For: AllDays,             !- Field 2
-    Until: 07:00,15.05,       !- Field 3
-    Until: 19:00,21.28,       !- Field 4
-    Until: 24:00,15.05;       !- Field 5
+    Until: 07:00,16.00,       !- Field 3
+    Until: 19:00,20.00,       !- Field 4
+    Until: 24:00,16.00;       !- Field 5
 
 SCHEDULE:COMPACT,
     ZONE COOLING SETPOINTS,    !- Name
     Temperature,              !- Schedule Type Limits Name
     Through: 12/31,           !- Field 1
     For: AllDays,             !- Field 2
-    Until: 07:00,25.45,       !- Field 3
-    Until: 19:00,23.55,       !- Field 4
-    Until: 24:00,25.45;       !- Field 5
+    Until: 07:00,26.00,       !- Field 3
+    Until: 19:00,24.00,       !- Field 4
+    Until: 24:00,26.00;       !- Field 5
 
 SCHEDULE:COMPACT,
     VentSched_DayNight,       !- Name
@@ -2733,7 +2733,7 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     Zone1_FrontPerimeter INLETS,    !- Zone Supply Air Node Name
     ,                         !- Zone Exhaust Air Node Name
     ,                         !- System Inlet Air Node Name
-    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    49.63105969982962,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
     0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
@@ -2762,7 +2762,7 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     Zone1_RightPerimeter INLETS,    !- Zone Supply Air Node Name
     ,                         !- Zone Exhaust Air Node Name
     ,                         !- System Inlet Air Node Name
-    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    49.63105969982962,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
     0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
@@ -2791,7 +2791,7 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     Zone1_RearPerimeter INLETS,    !- Zone Supply Air Node Name
     ,                         !- Zone Exhaust Air Node Name
     ,                         !- System Inlet Air Node Name
-    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    49.63105969982962,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
     0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
@@ -2820,7 +2820,7 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     Zone1_LeftPerimeter INLETS,    !- Zone Supply Air Node Name
     ,                         !- Zone Exhaust Air Node Name
     ,                         !- System Inlet Air Node Name
-    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    49.63105969982962,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
     0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
@@ -2849,7 +2849,7 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     Zone1_Core INLETS,        !- Zone Supply Air Node Name
     ,                         !- Zone Exhaust Air Node Name
     ,                         !- System Inlet Air Node Name
-    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    49.63105969982962,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
     0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
@@ -2878,7 +2878,7 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     Zone2_FrontPerimeter INLETS,    !- Zone Supply Air Node Name
     ,                         !- Zone Exhaust Air Node Name
     ,                         !- System Inlet Air Node Name
-    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    49.63105969982962,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
     0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
@@ -2907,7 +2907,7 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     Zone2_RightPerimeter INLETS,    !- Zone Supply Air Node Name
     ,                         !- Zone Exhaust Air Node Name
     ,                         !- System Inlet Air Node Name
-    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    49.63105969982962,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
     0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
@@ -2936,7 +2936,7 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     Zone2_RearPerimeter INLETS,    !- Zone Supply Air Node Name
     ,                         !- Zone Exhaust Air Node Name
     ,                         !- System Inlet Air Node Name
-    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    49.63105969982962,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
     0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
@@ -2965,7 +2965,7 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     Zone2_LeftPerimeter INLETS,    !- Zone Supply Air Node Name
     ,                         !- Zone Exhaust Air Node Name
     ,                         !- System Inlet Air Node Name
-    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    49.63105969982962,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
     0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
@@ -2994,7 +2994,7 @@ ZONEHVAC:IDEALLOADSAIRSYSTEM,
     Zone2_Core INLETS,        !- Zone Supply Air Node Name
     ,                         !- Zone Exhaust Air Node Name
     ,                         !- System Inlet Air Node Name
-    67.36471214164013,        !- Maximum Heating Supply Air Temperature
+    49.63105969982962,        !- Maximum Heating Supply Air Temperature
     13.353398974845822,       !- Minimum Cooling Supply Air Temperature
     0.015,                    !- Maximum Heating Supply Air Humidity Ratio
     0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
