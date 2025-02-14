@@ -1,6 +1,6 @@
-Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.02.02 11:17
+Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.02.02 23:59
 ! <Version>, Version ID
- Version, 23.2
+ Version, 22.2
 ! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
  Timesteps per Hour,  4, 15
 ! <System Convergence Limits>, Minimum System TimeStep {minutes}, Max HVAC Iterations, Minimum Plant Iterations, Maximum Plant Iterations

@@ -1,16 +1,16 @@
  ReadVarsESO
- processing:d:\Documents\E_Plus_2030_py\output\scenario_idfs\building_4136730_scenario_4_40b51e.rvi
+ processing:d:\Documents\E_Plus_2030_py\output\scenario_idfs\building_4136730_scenario_4_a25354.rvi
  input file:d:\Documents\E_Plus_2030_py\output\Sim_Results\Scenarios\2020\simulation_bldg4.eso
  output file:d:\Documents\E_Plus_2030_py\output\Sim_Results\Scenarios\2020\simulation_bldg4.csv
  getting all vars from:d:\Documents\E_Plus_2030_py\output\Sim_Results\Scenarios\2020\simulation_bldg4.eso
   number variables requested for output=          12
- ReadVars Run Time=00hr 00min  0.19sec
+ ReadVars Run Time=00hr 00min  0.17sec
  ReadVarsESO program completed successfully.
  ReadVarsESO
- processing:d:\Documents\E_Plus_2030_py\output\scenario_idfs\building_4136730_scenario_4_40b51e.mvi
+ processing:d:\Documents\E_Plus_2030_py\output\scenario_idfs\building_4136730_scenario_4_a25354.mvi
  input file:d:\Documents\E_Plus_2030_py\output\Sim_Results\Scenarios\2020\simulation_bldg4.mtr
  output file:d:\Documents\E_Plus_2030_py\output\Sim_Results\Scenarios\2020\simulation_bldg4Meter.csv
  getting all vars from:d:\Documents\E_Plus_2030_py\output\Sim_Results\Scenarios\2020\simulation_bldg4.mtr
   number variables requested for output=           3
- ReadVars Run Time=00hr 00min  0.14sec
+ ReadVars Run Time=00hr 00min  0.12sec
  ReadVarsESO program completed successfully.

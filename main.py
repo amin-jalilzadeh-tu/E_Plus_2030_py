@@ -1,28 +1,22 @@
 """
 main.py
 
-Orchestrates the entire workflow:
-  1) Loads main_config.json (which has two sets of override flags: 
-     excel_overrides, user_config_overrides) plus a "structuring" section 
-     for post-processing logs into structured CSVs.
-  2) Applies Excel overrides if "override_*_excel" is True.
-  3) Applies JSON overrides if "override_*_json" is True, 
-     loading fenestration.json, dhw.json, etc.
-  4) Creates base IDFs (optional), runs simulations & merges results (optional).
-  5) If "perform_structuring" is true, restructures the assigned_* CSV logs 
-     into more refined CSVs for scenario usage.
-  6) If "perform_modification" is true, calls `run_modification_workflow` 
-     to create scenario-based IDFs & run them.
-  7) If "perform_validation" is true, calls global validation.
-  8) If "perform_sensitivity" is true, runs a sensitivity analysis.
-  9) If "perform_surrogate" is true, builds a surrogate model.
- 10) If "perform_calibration" is true, does calibration steps using `run_unified_calibration`.
+Runs as a FastAPI application, exposing endpoints to orchestrate the workflow
+that was previously done by the command-line main() function.
+
+Endpoints:
+  - GET /health => returns a simple JSON for health check
+  - POST /run_workflow => triggers the entire orchestration process
 """
 
 import os
 import json
 import logging
+from typing import Optional
+
 import pandas as pd
+from fastapi import FastAPI, Body
+import uvicorn
 
 # --------------------------------------------------------------------------
 # A) Overriding modules (Excel + JSON partial overrides)
@@ -39,6 +33,7 @@ from idf_objects.fenez.fenez_config_manager import build_fenez_config
 # --------------------------------------------------------------------------
 # B) IDF creation & scenario modules
 # --------------------------------------------------------------------------
+import idf_creation
 from idf_creation import create_idfs_for_all_buildings
 from main_modifi import run_modification_workflow
 
@@ -60,8 +55,12 @@ from cal.unified_surrogate import (
     merge_params_with_results,
     build_and_save_surrogate
 )
-# Import the new calibration entry point:
 from cal.unified_calibration import run_unified_calibration
+
+# --------------------------------------------------------------------------
+# DB loader (if "use_database": true in main_config)
+# --------------------------------------------------------------------------
+from database_handler import load_buildings_from_db
 
 
 ###############################################################################
@@ -87,25 +86,49 @@ def load_json(filepath):
 
 
 ###############################################################################
-# 3) Main Orchestration
+# 3) Orchestration function (previously 'main')
 ###############################################################################
-def main():
+def orchestrate_workflow():
+    """
+    This function encapsulates the entire workflow that was previously run
+    in the old 'main()' function. Now it can be invoked by a FastAPI endpoint.
+    """
     logger = setup_logging()
-    logger.info("=== Starting main.py ===")
+    logger.info("=== Starting orchestrate_workflow ===")
 
     # --------------------------------------------------------------------------
     # A) Load main_config.json
+    #    (Adjust path to match your Docker or local directory structure)
     # --------------------------------------------------------------------------
-    user_configs_folder = r"D:\Documents\E_Plus_2030_py\user_configs"
+    user_configs_folder = os.path.join(os.path.dirname(__file__), "user_configs")
     main_config_path = os.path.join(user_configs_folder, "main_config.json")
 
     if not os.path.isfile(main_config_path):
-        logger.error(f"[ERROR] Cannot find main_config.json at {main_config_path}")
-        return
+        msg = f"[ERROR] Cannot find main_config.json at {main_config_path}"
+        logger.error(msg)
+        return {"status": "error", "detail": msg}
 
     main_config = load_json(main_config_path)
-    
+
+    # --------------------------------------------------------------------------
+    # B) Override idf_creation config with environment variables (if present)
+    # --------------------------------------------------------------------------
+    env_idd_path = os.environ.get("IDD_PATH")
+    if env_idd_path:
+        idf_creation.idf_config["iddfile"] = env_idd_path
+
+    env_base_idf = os.environ.get("BASE_IDF_PATH")
+    if env_base_idf:
+        idf_creation.idf_config["idf_file_path"] = env_base_idf
+
+    env_out_dir = os.environ.get("OUTPUT_DIR")
+    if env_out_dir:
+        out_idf_dir = os.path.join(env_out_dir, "output_IDFs")
+        idf_creation.idf_config["output_dir"] = out_idf_dir
+
+    # --------------------------------------------------------------------------
     # Extract top-level sections
+    # --------------------------------------------------------------------------
     paths_dict       = main_config.get("paths", {})
     excel_flags      = main_config.get("excel_overrides", {})
     user_flags       = main_config.get("user_config_overrides", {})
@@ -119,7 +142,7 @@ def main():
     cal_cfg          = main_config.get("calibration", {})
 
     # --------------------------------------------------------------------------
-    # B) Setup default dictionaries (fenestration + others)
+    # C) Setup default dictionaries (fenestration + others)
     # --------------------------------------------------------------------------
     base_res_data    = def_dicts.get("res_data", {})
     base_nonres_data = def_dicts.get("nonres_data", {})
@@ -130,7 +153,7 @@ def main():
     vent_lookup      = def_dicts.get("vent", {})
 
     # --------------------------------------------------------------------------
-    # C) Excel-based overrides if flagged
+    # D) Excel-based overrides if flagged
     # --------------------------------------------------------------------------
     override_fenez_excel = excel_flags.get("override_fenez_excel", False)
     fenez_excel_path     = paths_dict.get("fenez_excel", "")
@@ -141,7 +164,7 @@ def main():
         base_nonres_data=base_nonres_data,
         excel_path=fenez_excel_path,
         do_excel_override=override_fenez_excel,
-        user_fenez_overrides=[]  # JSON overrides come next
+        user_fenez_overrides=[]
     )
 
     # Other Excel overrides
@@ -177,9 +200,9 @@ def main():
         )
 
     # --------------------------------------------------------------------------
-    # D) User JSON overrides if flagged
+    # E) User JSON overrides if flagged
     # --------------------------------------------------------------------------
-    # Fenestration
+    #  - Fenestration
     override_fenez_json = user_flags.get("override_fenez_json", False)
     if override_fenez_json:
         fenestration_json_path = os.path.join(user_configs_folder, "fenestration.json")
@@ -205,7 +228,7 @@ def main():
         user_fenez_overrides=user_fenez_overrides
     )
 
-    # DHW JSON
+    #  - DHW JSON
     override_dhw_json = user_flags.get("override_dhw_json", False)
     user_config_dhw = None
     if override_dhw_json:
@@ -218,7 +241,7 @@ def main():
                 logger.error(f"[ERROR] loading dhw.json => {e}")
                 user_config_dhw = None
 
-    # EPW JSON
+    #  - EPW JSON
     override_epw_json = user_flags.get("override_epw_json", False)
     user_config_epw = []
     if override_epw_json:
@@ -227,7 +250,7 @@ def main():
             epw_data = load_json(epw_json_path)
             user_config_epw = epw_data.get("epw", [])
 
-    # Lighting JSON
+    #  - Lighting JSON
     override_lighting_json = user_flags.get("override_lighting_json", False)
     user_config_lighting = None
     if override_lighting_json:
@@ -240,7 +263,7 @@ def main():
                 logger.error(f"[ERROR] loading lighting.json => {e}")
                 user_config_lighting = None
 
-    # HVAC JSON
+    #  - HVAC JSON
     override_hvac_json = user_flags.get("override_hvac_json", False)
     user_config_hvac = None
     if override_hvac_json:
@@ -251,7 +274,7 @@ def main():
         else:
             logger.warning("[WARN] hvac.json not found.")
 
-    # Vent JSON
+    #  - Vent JSON
     override_vent_json = user_flags.get("override_vent_json", False)
     user_config_vent = []
     if override_vent_json:
@@ -262,7 +285,7 @@ def main():
         else:
             user_config_vent = []
 
-    # Geometry JSON
+    #  - Geometry JSON
     override_geometry_json = user_flags.get("override_geometry_json", False)
     geometry_dict = {}
     geom_data = {}
@@ -276,7 +299,7 @@ def main():
             except Exception as e:
                 logger.error(f"[ERROR] loading geometry.json => {e}")
 
-    # Shading JSON
+    #  - Shading JSON
     override_shading_json = user_flags.get("override_shading_json", False)
     shading_dict = {}
     if override_shading_json:
@@ -290,18 +313,26 @@ def main():
                 logger.error(f"[ERROR] loading shading.json => {e}")
 
     # --------------------------------------------------------------------------
-    # E) IDF Creation (if enabled)
+    # F) IDF Creation (if enabled)
     # --------------------------------------------------------------------------
     if idf_cfg.get("perform_idf_creation", False):
         logger.info("[INFO] IDF creation is ENABLED.")
 
-        # Load building data
-        bldg_data_path = paths_dict.get("building_data", "")
-        if os.path.isfile(bldg_data_path):
-            df_buildings = pd.read_csv(bldg_data_path)
+        use_database = main_config.get("use_database", False)
+        db_filter = main_config.get("db_filter", {})
+
+        if use_database:
+            logger.info("[INFO] Loading building data from PostgreSQL using filter criteria.")
+            df_buildings = load_buildings_from_db(db_filter)
+            if df_buildings.empty:
+                logger.warning("[WARN] No buildings returned from the DB based on filters; using empty DataFrame.")
         else:
-            logger.warning(f"[WARN] Building data CSV not found at {bldg_data_path}. Using empty DF.")
-            df_buildings = pd.DataFrame()
+            bldg_data_path = paths_dict.get("building_data", "")
+            if os.path.isfile(bldg_data_path):
+                df_buildings = pd.read_csv(bldg_data_path)
+            else:
+                logger.warning(f"[WARN] Building data CSV not found at {bldg_data_path}. Using empty DF.")
+                df_buildings = pd.DataFrame()
 
         create_idfs_for_all_buildings(
             df_buildings=df_buildings,
@@ -316,7 +347,7 @@ def main():
             nonres_data=updated_nonres_data,
             user_config_hvac=user_config_hvac,
             user_config_vent=user_config_vent,
-            user_config_epw=user_config_epw,  # if your create_idfs_for_all_buildings uses it
+            user_config_epw=user_config_epw,
             run_simulations=idf_cfg.get("run_simulations", True),
             simulate_config={"num_workers": idf_cfg.get("num_workers", 4)},
             post_process=idf_cfg.get("post_process", True)
@@ -325,26 +356,23 @@ def main():
         logger.info("[INFO] Skipping IDF creation per user config.")
 
     # --------------------------------------------------------------------------
-    # F) Structuring Step
+    # G) Structuring Step
     # --------------------------------------------------------------------------
     if structuring_cfg.get("perform_structuring", False):
         logger.info("[INFO] Performing log structuring (fenestration, dhw, hvac, vent).")
 
-        # 1) Fenestration
         from idf_objects.structuring.fenestration_structuring import transform_fenez_log_to_structured_with_ranges
         fenez_conf = structuring_cfg.get("fenestration", {})
         fenez_in   = fenez_conf.get("csv_in",  "output/assigned/assigned_fenez_params.csv")
         fenez_out  = fenez_conf.get("csv_out", "output/assigned/structured_fenez_params.csv")
         transform_fenez_log_to_structured_with_ranges(csv_input=fenez_in, csv_output=fenez_out)
 
-        # 2) DHW
         from idf_objects.structuring.dhw_structuring import transform_dhw_log_to_structured
         dhw_conf = structuring_cfg.get("dhw", {})
         dhw_in   = dhw_conf.get("csv_in",  "output/assigned/assigned_dhw_params.csv")
         dhw_out  = dhw_conf.get("csv_out", "output/assigned/structured_dhw_params.csv")
         transform_dhw_log_to_structured(csv_input=dhw_in, csv_output=dhw_out)
 
-        # 3) HVAC
         from idf_objects.structuring.flatten_hvac import flatten_hvac_data, parse_assigned_value
         hvac_conf = structuring_cfg.get("hvac", {})
         hvac_in   = hvac_conf.get("csv_in",    "output/assigned/assigned_hvac_params.csv")
@@ -358,7 +386,6 @@ def main():
         else:
             logger.warning(f"[WARN] HVAC input CSV not found at {hvac_in}; skipping.")
 
-        # 4) Vent
         from idf_objects.structuring.flatten_assigned_vent import flatten_ventilation_data, parse_assigned_value
         vent_conf = structuring_cfg.get("vent", {})
         vent_in   = vent_conf.get("csv_in",    "output/assigned/assigned_ventilation.csv")
@@ -375,7 +402,7 @@ def main():
         logger.info("[INFO] Skipping structuring step (perform_structuring=false).")
 
     # --------------------------------------------------------------------------
-    # G) Scenario Modification / Generation
+    # H) Scenario Modification / Generation
     # --------------------------------------------------------------------------
     if modification_cfg.get("perform_modification", False):
         logger.info("[INFO] Scenario modification is ENABLED.")
@@ -384,7 +411,7 @@ def main():
         logger.info("[INFO] Skipping scenario modification.")
 
     # --------------------------------------------------------------------------
-    # H) Global Validation
+    # I) Global Validation
     # --------------------------------------------------------------------------
     if validation_cfg.get("perform_validation", False):
         logger.info("[INFO] Global Validation is ENABLED.")
@@ -393,7 +420,7 @@ def main():
         logger.info("[INFO] Skipping global validation.")
 
     # --------------------------------------------------------------------------
-    # I) Sensitivity Analysis
+    # J) Sensitivity Analysis
     # --------------------------------------------------------------------------
     if sens_cfg.get("perform_sensitivity", False):
         logger.info("[INFO] Sensitivity Analysis is ENABLED.")
@@ -411,7 +438,7 @@ def main():
         logger.info("[INFO] Skipping sensitivity analysis.")
 
     # --------------------------------------------------------------------------
-    # J) Surrogate Modeling
+    # K) Surrogate Modeling
     # --------------------------------------------------------------------------
     if sur_cfg.get("perform_surrogate", False):
         logger.info("[INFO] Surrogate Modeling is ENABLED.")
@@ -454,20 +481,45 @@ def main():
         logger.info("[INFO] Skipping surrogate modeling.")
 
     # --------------------------------------------------------------------------
-    # K) Calibration
+    # L) Calibration
     # --------------------------------------------------------------------------
     if cal_cfg.get("perform_calibration", False):
         logger.info("[INFO] Calibration steps are ENABLED.")
-        # Simply call run_unified_calibration with the entire cal_cfg
         run_unified_calibration(cal_cfg)
     else:
         logger.info("[INFO] Skipping calibration steps.")
 
-    logger.info("=== End of main.py ===")
+    logger.info("=== End of orchestrate_workflow ===")
+
+    return {"status": "ok", "detail": "Workflow completed successfully."}
 
 
 ###############################################################################
-# 4) Script Entry
+# 4) FastAPI Application Setup
+###############################################################################
+
+app = FastAPI()
+
+@app.get("/health")
+def health_check():
+    """
+    Simple health check endpoint.
+    """
+    return {"status": "ok"}
+
+@app.post("/run_workflow")
+def run_workflow():
+    """
+    Endpoint to run the entire orchestration workflow.
+    Returns a JSON status with success or error info.
+    """
+    result = orchestrate_workflow()
+    return result
+
+
+###############################################################################
+# 5) Optional - if you want to run uvicorn from main.py
 ###############################################################################
 if __name__ == "__main__":
-    main()
+    # If you prefer to run "python main.py" directly in Docker or locally:
+    uvicorn.run(app, host="0.0.0.0", port=8000)
